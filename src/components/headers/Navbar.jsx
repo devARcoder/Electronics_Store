@@ -1,9 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {HeartIcon, MenuIcon, SearchIcon, ShoppingBagIcon, UserIcon } from '../../assets/svg';
-import Sidebar from './Sidebar';
-import TopBar from './TopBar';
-import SearchBar from './SearchBar';
-
+import { Sidebar, TopBar, SearchBar } from '../shared/imports';
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
