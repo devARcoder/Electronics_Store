@@ -1,5 +1,5 @@
 import React from 'react';
-import { SearchIcon } from '../assets/svg';
+import { SearchIcon } from '../../assets/svg';
 
 const SearchBar = () => {
   return (
@@ -9,7 +9,7 @@ const SearchBar = () => {
         placeholder="Search..."
         className="flex-grow px-4 py-2 rounded-l-full outline-none bg-white text-black"
       />
-      <button className=" text-black py-2 px-4 rounded-r-md">
+      <button className=" text-black py-2 px-4 rounded-r-full hover:bg-gray-700 hover:text-white transform transition-all cursor-pointer">
         <SearchIcon className="w-6 h-6" />
       </button>
     </div>

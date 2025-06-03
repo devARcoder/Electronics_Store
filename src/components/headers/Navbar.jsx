@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {HeartIcon, MenuIcon, SearchIcon, ShoppingBagIcon, UserIcon } from '../assets/svg';
+import {HeartIcon, MenuIcon, SearchIcon, ShoppingBagIcon, UserIcon } from '../../assets/svg';
 import Sidebar from './Sidebar';
 import TopBar from './TopBar';
 import SearchBar from './SearchBar';
@@ -26,12 +26,12 @@ const Navbar = () => {
           <UserIcon className='md:hidden' />
           <div className="hidden md:inline-block md:relative">
             <HeartIcon size={28} />
-            <span className='bg-gray-700 text-white px-1 py-0.5 text-sm rounded-full absolute top-7 right-1 translate-x-1/2 -translate-y-1/2 font-semibold md:bg-yellow-300 md:text-black'>10</span>
+            <span className='bg-gray-700 text-white px-1 py-0.5 text-sm rounded-full absolute top-7 right-1 translate-x-1/2 -translate-y-1/2 font-semibold md:bg-yellow-300 md:text-black'>17</span>
             
           </div>
           <div className="relative">
             <ShoppingBagIcon />
-            <span className='bg-gray-700 text-white px-1 py-0.5 text-sm rounded-full absolute top-7 right-1 translate-x-1/2 -translate-y-1/2 font-semibold md:bg-yellow-300 md:text-black'>10</span>
+            <span className='bg-gray-700 text-white px-1 py-0.5 text-sm rounded-full absolute top-7 right-1 translate-x-1/2 -translate-y-1/2 font-semibold md:bg-yellow-300 md:text-black'>16</span>
             
           </div>
           <p className='hidden md:inline-block font-bold text-gray-700'>$0.00</p>
