@@ -50,3 +50,27 @@ export const giftCardItems = [
       image: '/images/giftCard4.webp',
     },
   ];
+
+// OfferProducts data
+export const offerCardItems = [
+    {
+      title: 'CATCH BIG DEAL ON THE CAMERAS',
+      discount: '20%',
+      image: '/images/camera.png',
+    },
+    {
+      title: 'COMPUTER AND LAPTOPS AND MORE',
+      discount: '35%',
+      image: '/images/computerLaptop.png',
+    },
+    {
+      title: 'SHOP THE HOTTEST PRODUCTS',
+      discount: '70%',
+      image: '/images/mobile.png',
+    },
+    {
+      title: 'THE NEW STANDER PRODUCTS ',
+      discount: '50%',
+      image: '/images/headphone.png',
+    },
+  ];

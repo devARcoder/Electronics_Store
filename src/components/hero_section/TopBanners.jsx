@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { slides } from '../../data/data';
 import { Button } from '../shared/imports';
+import OfferProducts from './OfferProducts';
 const TopBanners = () => {
   const [current, setCurrent] = useState(0);
 
@@ -16,6 +17,7 @@ const TopBanners = () => {
   const prevSlide = () => setCurrent((current - 1 + slides.length) % slides.length);
 
   return (
+    <>
     <div className="w-full bg-gray-100 relative overflow-hidden py-10 md:py-0">
       <div className="max-w-7xl mx-auto px-6 md:px-10 h-[500px] flex items-center">
         <div className="flex flex-col md:flex-row items-center justify-between w-full">
@@ -36,7 +38,7 @@ const TopBanners = () => {
               src={slides[current].image}
               alt="Smartwatch"
               className="w-full max-w-md object-contain transition-opacity duration-700 opacity-100"
-            />
+              />
           </div>
         </div>
       </div>
@@ -53,13 +55,15 @@ const TopBanners = () => {
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {slides.map((_, i) => (
           <button
-            key={i}
-            onClick={() => goToSlide(i)}
-            className={`w-3 h-3 rounded-full ${i === current ? 'bg-yellow-400' : 'bg-gray-400'} transition-all`}
+          key={i}
+          onClick={() => goToSlide(i)}
+          className={`w-3 h-3 rounded-full ${i === current ? 'bg-yellow-400' : 'bg-gray-400'} transition-all`}
           />
         ))}
       </div>
     </div>
+    <OfferProducts/>
+        </>
   );
 };
 
