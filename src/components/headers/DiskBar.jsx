@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { giftCardItems } from '../../data/data';
 const DiskBar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
 
@@ -10,36 +10,6 @@ const DiskBar = () => {
     { label: 'Pages', dropdown: null },
     { label: 'Features', dropdown: null },
   ];
-
-  const giftCardItems = [
-    {
-      title: 'Daltex Product Example',
-      price: '$200.00',
-      oldPrice: '$250.00',
-      discount: '20%',
-      image: '/images/giftCard1.webp',
-    },
-    {
-      title: 'Donkix Product Sample',
-      price: '$60.00',
-      oldPrice: '$80.00',
-      discount: '25%',
-      image: '/images/giftCard2.webp',
-    },
-    {
-      title: 'Faxtex Product Sample',
-      price: '$110.00',
-      oldPrice: '$199.00',
-      discount: '45%',
-      image: '/images/giftCard3.webp',
-    },
-    {
-      title: 'Fixair Product Sample',
-      price: '$210.00',
-      image: '/images/giftCard4.webp',
-    },
-  ];
-
   return (
     <div className="relative hidden md:flex justify-center gap-6 bg-white py-4 shadow">
       {navigation.map((item, index) => (
