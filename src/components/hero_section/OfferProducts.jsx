@@ -13,7 +13,7 @@ const OfferProducts = () => {
             {/* Overlay */}
             <div
               className="
-                absolute inset-0 bg-white opacity-0 
+                absolute inset-0 bg-zinc-50 opacity-0 
                 translate-y-full 
                 group-hover:opacity-50 group-hover:translate-y-0 
                 transition-all duration-500 ease-in-out

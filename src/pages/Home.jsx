@@ -1,10 +1,11 @@
 import React from 'react'
+import TopBanners from '../components/hero_section/TopBanners'
 
 const Home = () => {
   return (
-    <div className='h-screen w-full'>
-      <h1>home page</h1>
-    </div>
+    <>
+      <TopBanners/>
+    </>
   )
 }
 
