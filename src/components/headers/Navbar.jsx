@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import {HeartIcon, MenuIcon, SearchIcon, ShoppingBagIcon, UserIcon } from '../../assets/svg';
 import { Sidebar, TopBar, SearchBar } from '../shared/imports';
+import DiskBar from './DiskBar';
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -34,6 +35,7 @@ const Navbar = () => {
           <p className='hidden md:inline-block font-bold text-gray-700'>$0.00</p>
         </div>
       </div>
+      <DiskBar/>
       <Sidebar isOpen={isSidebarOpen} onClose={toggleSidebar} />
     </>
   );

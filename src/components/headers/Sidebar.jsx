@@ -39,7 +39,7 @@ const Sidebar = ({ isOpen, onClose }) => {
           size={28}
           className="cursor-pointer"
           fill={isFavourite ? "red" : "none"}   // toggle fill color
-          stroke={isFavourite ? "red" : "currentColor"} // stroke color for red heart
+          stroke={isFavourite ? "black" : "currentColor"} // stroke color for red heart
           onClick={toggleFavourite}
           />
           <span className='bg-gray-700 text-white px-1 py-0.5 text-sm rounded-full absolute top-7 right-1 translate-x-1/2 -translate-y-1/2 font-semibold md:bg-yellow-300 md:text-black'>16</span>
