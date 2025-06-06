@@ -11,7 +11,7 @@ const FeatureTab = () => {
           key={i}
           onClick={() => setActive(label)}
           className={`text-xl transition ${
-            active === label ? "text-yellow-500 font-bold  overline" : "text-gray-700"
+            active === label ? "text-yellow-500 font-bold underline  underline-offset-4" : "text-gray-700"
           }`}
         >
           {label}
