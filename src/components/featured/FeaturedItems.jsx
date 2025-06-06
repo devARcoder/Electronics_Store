@@ -6,9 +6,15 @@ const FeaturedItems = () => {
     <>
     <div className="grid grid-cols-1 md:grid-cols-2 place-items-center">
 
-    <div className="flex flex-col justify-center items-center border-2 border-yellow-400 rounded-2xl mx-4">
-        
-            <img src="/images/game-1.webp" alt="" className='' />
+    <div className="flex flex-col justify-center items-center border-2 border-yellow-400 rounded-2xl mx-4 py-6">
+        <div className="flex justify-between items-center space-x-16 pt-6 px-4 sm:space-x-64">
+            <h1 className='text-3xl'>Special Offer</h1>
+            <div className="bg-yellow-400 text-black px-5 py-3 rounded-full text-2xl">
+                <p className='text-gray-600'>Save</p>
+                <p>36%</p>
+            </div>
+        </div>
+            <img src="/images/game-1.webp" alt="" className='object-cover' />
             <h1 className='text-blue-500 font-bold text-lg'>Black Fashion Zapda</h1>
             <div className="prices flex items-center space-x-2 text-3xl text-red-500">
                 <p>$350.00</p>
