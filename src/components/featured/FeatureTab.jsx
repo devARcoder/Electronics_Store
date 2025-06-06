@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// commit
 const FeatureTab = () => {
   const featureTab = ["Featured", "On Sale", "Top Rated"];
   const [active, setActive] = useState("Featured");

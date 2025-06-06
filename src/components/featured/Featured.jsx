@@ -6,6 +6,7 @@ const Featured = () => {
     <>
       <div className="">
         <FeatureTab/>
+        
       </div>
     </>
   )
