@@ -74,3 +74,71 @@ export const offerCardItems = [
       image: '/images/headphone.png',
     },
   ];
+
+  
+// featured data
+export const featuredItems = [
+    {
+      types: 'Special Offer',
+      title: 'Black Fashion Zapda',
+      price: '$350.00',
+      oldPrice: '$550.00',
+      discount: '36%',
+      image: '/images/game-1.webp',
+    },
+    {
+      type : 'Bulgari',
+      title: 'Faxtex Product Sample',
+      price: '$110.00',
+      oldPrice: '$199.00',
+      discount: '45%',
+      image: '/images/ipadgreen.webp',
+    },
+    {
+      type : 'Christian Dior',
+      title: 'Finity Product Sample',
+      price: '$95.00',
+      oldPrice: '$120.00',
+      discount: '21%',
+      image: '/images/printer.webp',
+    },
+    {
+      type : 'Dolc & Gabbana',
+      title: 'Fixiar Product Sample',
+      price: '$210.00',
+      image: '/images/ipadLap.webp',
+    },
+    {
+      type : 'Donna Karan',
+      title: 'Freecof Product Sample',
+      price: '$450.00',
+      image: '/images/appleTablet.webp',
+    },
+    {
+      type : 'Armani',
+      title: 'Freshkix Product Sample',
+      price: '$120.00',
+      oldPrice: '$150.00',
+      discount: '20%',
+      image: '/images/lgphone.webp',
+    },
+    {
+      type : 'Bulgari',
+      title: 'Georgeous White Bag',
+      sold: "Sold out",
+      image: '/images/iphone.webp',
+    },
+    {
+      type : 'Donna Karan',
+      title: 'Georgeous White Dresses',
+      price: '$350.00',
+      image: '/images/onePlus.webp',
+    },
+    {
+      type : 'Dolc & Gabbana',
+      title: 'Gold Diamond Chain',
+      price: '$399.00',
+      image: '/images/smartWatch.webp',
+    },
+    
+  ];
