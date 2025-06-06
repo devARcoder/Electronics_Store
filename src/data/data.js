@@ -77,15 +77,17 @@ export const offerCardItems = [
 
   
 // featured data
-export const featuredItems = [
-    {
+export const featuredOneItem = [
+  {
       types: 'Special Offer',
       title: 'Black Fashion Zapda',
       price: '$350.00',
       oldPrice: '$550.00',
       discount: '36%',
       image: '/images/game-1.webp',
-    },
+    }
+]
+export const featuredItems = [
     {
       type : 'Bulgari',
       title: 'Faxtex Product Sample',
