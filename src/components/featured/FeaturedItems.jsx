@@ -4,10 +4,11 @@ import { featuredItems } from '../../data/data'
 const FeaturedItems = () => {
   return (
     <>
+
     <div className="grid grid-cols-1 md:grid-cols-2 place-items-center">
 
-    <div className="flex flex-col justify-center items-center border-2 border-yellow-400 rounded-2xl mx-4 py-6">
-        <div className="flex justify-between items-center space-x-16 pt-6 px-4 sm:space-x-64">
+    <div className="flex flex-col justify-center items-center border-2 border-yellow-400 rounded-2xl mx-4 py-6 md:py-3">
+        <div className="flex justify-between items-center space-x-16 pt-6 px-4 md:px-0 sm:space-x-64">
             <h1 className='text-3xl'>Special Offer</h1>
             <div className="bg-yellow-400 text-black px-5 py-3 rounded-full text-2xl">
                 <p className='text-gray-600'>Save</p>
@@ -22,15 +23,16 @@ const FeaturedItems = () => {
             </div>
             
         </div>
+        <div className="h-[1px] w-full bg-gray-300 mt-6 mb-0 md:hidden"></div>
         
-      <div className="mx-6 my-4 md:my-0 space-y-3 md:space-y-0">
+      <div className="mx-6 my-0 md:my-0 space-y-3 md:space-y-0">
   {Array.from({ length: Math.ceil(featuredItems.length / 2) }, (_, i) => {
     const first = featuredItems[i * 2];
     const second = featuredItems[i * 2 + 1];
 
     return (
-      <div className="relative grid grid-cols-2 gap-10 md:gap-20 cursor-pointer" key={i}>
-        <div className="absolute top-12 bottom-16 left-1/2 w-[1px] bg-gray-300 z-10" />
+      <div className="relative grid grid-cols-2 md:grid-cols- gap-10 md:gap-20 cursor-pointer" key={i}>
+        <div className="absolute4 top-12 bottom-16 left-1/2 w-[1px] bg-gray-300 z-10" />
 
         {[first, second].map(
           (item, indx) =>
@@ -45,11 +47,11 @@ const FeaturedItems = () => {
 
                 <div className="relative my-5">
                   {item.discount && (
-                    <div className="absolute bg-yellow-400 text-black rounded-full text-xs w-8 py-2 px-1 font-semibold">
+                    <div className="absolute bg-yellow-400 text-gray-600 rounded-full text-xs w-8 py-2 px-1 font-semibold">
                       <p>{item.discount}</p>
                     </div>
                   )}
-                  <img className="w-36 h-36" src={item.image} alt={item.title} />
+                  <img className="w-36 h-36 sm:w-64 sm:h-64 md:w-32 md:h-32" src={item.image} alt={item.title} />
                 </div>
 
                 <div className="flex space-x-2">
