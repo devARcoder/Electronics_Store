@@ -23,24 +23,24 @@ const FeaturedItems = () => {
             
         </div>
         
-      <div className="grid grid-cols-2 gap-4 mx-4 my-4">
+      <div className="grid grid-cols-2 gap-4 mx-6 my-4">
         
         {featuredItems.map((item, indx)=>(
-            <div className='my-3' key={indx}>
+            <div className='my-2 border-b py-3' key={indx}>
                 <p className='text-gray-500 text-sm hover:text-yellow-400'>{item.type}</p>
-                <h1 className='line-clamp-1'>{item.title}</h1>
-                <div className="realtive">
-                  <div className="absolute bg-yellow-400 text-black rounded-full text-xs w-8 py-2 px-1 font-bold">
+                <h1 className='line-clamp-1 text-blue-600 text-md font-bold hover:text-yellow-400'>{item.title}</h1>
+                <div className="realtive my-5 border-r">
+                  <div className={item.discount ? "absolute bg-yellow-400 text-black rounded-full text-xs w-8 py-2 px-1 font-semibold" : "bg-none"}>
                 
                 <p className=''>{item.discount}</p>
             </div>
-                <img className='w-36 h-32' src={item.image} alt={item.title} />
+                <img className='w-36 h-36' src={item.image} alt={item.title} />
                 </div>
                 <div className="flex space-x-2">
-                  <p>{item.price ? item.price : (
+                  <p className='text-red-500 text-xl'>{item.price ? item.price : (
                     <p className='text-xl text-gray-500 font-semibold'>Sold out</p>
                   )}</p>
-                  <p className='line-through text-gray-400'>{item.oldPrice}</p>
+                  <p className='line-through text-gray-400 text-xl'>{item.oldPrice}</p>
                 </div>
             </div>
         ))}
