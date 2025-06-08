@@ -23,28 +23,54 @@ const FeaturedItems = () => {
             
         </div>
         
-      <div className="grid grid-cols-2 gap-4 mx-6 my-4">
-        
-        {featuredItems.map((item, indx)=>(
-            <div className='my-2 border-b py-3' key={indx}>
-                <p className='text-gray-500 text-sm hover:text-yellow-400'>{item.type}</p>
-                <h1 className='line-clamp-1 text-blue-600 text-md font-bold hover:text-yellow-400'>{item.title}</h1>
-                <div className="realtive my-5 border-r">
-                  <div className={item.discount ? "absolute bg-yellow-400 text-black rounded-full text-xs w-8 py-2 px-1 font-semibold" : "bg-none"}>
-                
-                <p className=''>{item.discount}</p>
-            </div>
-                <img className='w-36 h-36' src={item.image} alt={item.title} />
+      <div className="mx-6 my-4 md:my-0 space-y-3 md:space-y-0">
+  {Array.from({ length: Math.ceil(featuredItems.length / 2) }, (_, i) => {
+    const first = featuredItems[i * 2];
+    const second = featuredItems[i * 2 + 1];
+
+    return (
+      <div className="relative grid grid-cols-2 gap-10 md:gap-20 cursor-pointer" key={i}>
+        {/* Vertical Line Between 2 Cards */}
+        <div className="absolute top-12 bottom-16 left-1/2 w-[1px] bg-gray-300 z-10" />
+
+        {[first, second].map(
+          (item, indx) =>
+            item && (
+              <div className="relative z-20 my-2 py-3" key={indx}>
+                {/* Horizontal Line at bottom of each card */}
+                <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gray-300 md:hidden" />
+
+                <p className="text-gray-500 text-sm hover:text-yellow-400">{item.type}</p>
+                <h1 className="line-clamp-1 text-blue-600 text-md font-bold hover:text-yellow-400">
+                  {item.title}
+                </h1>
+
+                <div className="relative my-5">
+                  {item.discount && (
+                    <div className="absolute bg-yellow-400 text-black rounded-full text-xs w-8 py-2 px-1 font-semibold">
+                      <p>{item.discount}</p>
+                    </div>
+                  )}
+                  <img className="w-36 h-36" src={item.image} alt={item.title} />
                 </div>
+
                 <div className="flex space-x-2">
-                  <p className='text-red-500 text-xl'>{item.price ? item.price : (
-                    <p className='text-xl text-gray-500 font-semibold'>Sold out</p>
-                  )}</p>
-                  <p className='line-through text-gray-400 text-xl'>{item.oldPrice}</p>
+                  {item.price ? (
+                    <p className="text-red-500 text-xl">{item.price}</p>
+                  ) : (
+                    <p className="text-xl text-gray-500 font-semibold">Sold out</p>
+                  )}
+                  <p className="line-through text-gray-400 text-xl">{item.oldPrice}</p>
                 </div>
-            </div>
-        ))}
+              </div>
+            )
+        )}
       </div>
+    );
+  })}
+</div>
+
+
         </div>
     </>
   )
