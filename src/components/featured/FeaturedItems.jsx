@@ -30,14 +30,12 @@ const FeaturedItems = () => {
 
     return (
       <div className="relative grid grid-cols-2 gap-10 md:gap-20 cursor-pointer" key={i}>
-        {/* Vertical Line Between 2 Cards */}
         <div className="absolute top-12 bottom-16 left-1/2 w-[1px] bg-gray-300 z-10" />
 
         {[first, second].map(
           (item, indx) =>
             item && (
               <div className="relative z-20 my-2 py-3" key={indx}>
-                {/* Horizontal Line at bottom of each card */}
                 <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gray-300 md:hidden" />
 
                 <p className="text-gray-500 text-sm hover:text-yellow-400">{item.type}</p>
