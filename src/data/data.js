@@ -117,7 +117,7 @@ export const featuredItems = [
     {
       type : 'Bulgari',
       title: 'Georgeous White Bag',
-      sold: "Sold out",
+      sold: "Sold",
       image: '/images/iphone.webp',
     },
     {
