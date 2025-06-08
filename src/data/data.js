@@ -76,7 +76,7 @@ export const offerCardItems = [
   ];
 
   
-// featured data
+// featured items data
 export const featuredItems = [
     {
       type : 'Bulgari',
