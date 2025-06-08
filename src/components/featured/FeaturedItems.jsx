@@ -32,7 +32,7 @@ const FeaturedItems = () => {
 
     return (
       <div className="relative grid grid-cols-2 md:grid-cols- gap-10 md:gap-20 cursor-pointer" key={i}>
-        <div className="absolute4 top-12 bottom-16 left-1/2 w-[1px] bg-gray-300 z-10" />
+        <div className="absolute top-12 bottom-16 left-1/2 w-[1px] bg-gray-300 z-10" />
 
         {[first, second].map(
           (item, indx) =>
