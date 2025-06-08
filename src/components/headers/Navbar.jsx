@@ -10,7 +10,12 @@ const Navbar = () => {
   return (
     <>
     <TopBar/>
-      <div className='flex justify-between items-center bg-yellow-300 px-3 md:px-20 pt-4 pb-4 md:pt-8 md:pb-6 relative md:bg-white'>
+      <div className='flex justify-between items-center 
+  bg-yellow-300 px-3 pt-4 pb-4 
+  md:px-20 md:pt-8 md:pb-6 
+  md:bg-white 
+  fixed top-0 w-full z-50 
+  md:relative'>
         <div className="left flex items-center space-x-4">
           <MenuIcon
             className="text-gray-700 mt-3 cursor-pointer md:hidden"
