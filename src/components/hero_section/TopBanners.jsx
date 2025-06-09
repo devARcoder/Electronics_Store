@@ -18,7 +18,7 @@ const TopBanners = () => {
 
   return (
     <>
-    <div className="w-full bg-gray-100 relative overflow-hidden py-10 md:py-0">
+    <div className="w-full bg-gray-100 relative overflow-hidden py-32 sm:py-28 md:py-0">
       <div className="max-w-7xl mx-auto px-6 md:px-10 h-[500px] flex items-center">
         <div className="flex flex-col md:flex-row items-center justify-between w-full">
 

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-const FeatureTab = () => {
+const FeatureTab = ({className}) => {
   const featureTab = ["Featured", "On Sale", "Top Rated"];
   const [active, setActive] = useState("Featured");
 
   return (
-    <div className="flex justify-between items-center px-12 py-6">
+    <div className={className}>
       {featureTab.map((label, i) => (
         <button
           key={i}
