@@ -8,7 +8,7 @@ const FeaturedItems = () => {
     <FeatureTab className="flex justify-between items-center px-10 sm:px-44 py-5 md:hidden"/>
       <div className="grid grid-cols-1 md:grid-cols-2 place-items-center md:place-items-center">
         {/* Left Side: Special Offer */}
-        <div className="flex flex-col justify-center items-center border-2 border-yellow-400 rounded-2xl mx-4 py-6 md:py-2">
+        <div className="flex flex-col justify-center items-center border-2 border-yellow-400 rounded-2xl mx-4 py-6 md:py-2 cursor-pointer">
           <div className="flex justify-between items-center space-x-16 pt-6 md:pt-0 px-4 md:px-0 sm:space-x-64">
             <h1 className="text-3xl">Special Offer</h1>
             <div className="bg-yellow-400 text-black px-5 py-3 rounded-full text-2xl">
@@ -17,7 +17,7 @@ const FeaturedItems = () => {
             </div>
           </div>
           <img src="/images/game-1.webp" alt="" className="object-cover" />
-          <h1 className="text-blue-500 font-bold text-lg">Black Fashion Zapda</h1>
+          <h1 className="text-blue-500 font-bold text-lg hover:text-yellow-400">Black Fashion Zapda</h1>
           <div className="prices flex items-center space-x-2 text-3xl text-red-500">
             <p>$350.00</p>
             <p className="text-2xl text-gray-400 line-through">$550.00</p>
