@@ -51,21 +51,25 @@ const FeaturedItems = () => {
                             {item.discount}
                           </div>
                         )}
-                        <img
+                        {!item.sold ? <img
                           className="w-36 h-36 sm:w-64 sm:h-64 md:w-32 md:h-32 object-cover"
                           src={item.image}
                           alt={item.title}
-                        />
+                        /> : <img
+                          className="w-36 h-36 sm:w-64 sm:h-64 md:w-32 md:h-32 object-cover grayscale"
+                          src={item.image}
+                          alt={item.title}
+                        /> }
                       </div>
 
                       <div className="flex space-x-2">
                         {item.price ? (
-                          <p className="text-red-500 text-xl md:text-sm">{item.price}</p>
+                          <p className="text-red-500 text-sm sm:text-xl md:text-sm">{item.price}</p>
                         ) : (
-                          <p className="text-xl text-gray-500 font-semibold md:text-sm">Sold out</p>
+                          <p className="text-gray-500 font-semibold text-sm sm:text-xl md:text-sm">Sold out</p>
                         )}
                         {item.oldPrice && (
-                          <p className="line-through text-gray-400 text-xl md:text-sm">{item.oldPrice}</p>
+                          <p className="line-through text-gray-400 text-sm sm:text-xl md:text-sm">{item.oldPrice}</p>
                         )}
                       </div>
                     </div>
