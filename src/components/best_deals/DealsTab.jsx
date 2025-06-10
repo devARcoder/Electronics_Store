@@ -10,14 +10,16 @@ const DealsTab = ({ className }) => {
         <button
           key={i}
           onClick={() => setActive(label)}
-          className={`inline-block px-2 py-1 text-md mx-2 transition whitespace-nowrap ${
-            active === label ? "text-black font-semibold border-2 border-yellow-400 rounded-full" : "text-black hover:border-2 hover:border-yellow-400 hover:rounded-full font-semibold"
+          className={`inline-block px-2 py-1 text-md transition whitespace-nowrap ${
+            active === label ? "text-gray-500 font-semibold border-2 border-yellow-400 rounded-full" : "text-gray-500 hover:border-2 hover:border-yellow-400 hover:rounded-full"
           }`}
         >
           {label}
         </button>
       ))}
+      
     </div>
+    
   );
 };
 
