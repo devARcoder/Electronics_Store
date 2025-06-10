@@ -3,7 +3,7 @@ import { products } from "../../data/data";
 
 
 const ProductCard = ({ product }) => (
-  <div className={`border p-4 shadow-sm bg-white flex flex-col justify-between ${product.highlight ? 'md:col-span-2 row-span-2' : ''}`}>
+  <div className={` p-4 shadow-sm bg-white flex flex-col justify-between ${product.highlight ? 'md:col-span-2 row-span-2' : ''}`}>
     <div>
       <p className="text-sm text-gray-500">{product.brand}</p>
       <h3 className="text-blue-700 font-semibold truncate">{product.title}</h3>
@@ -29,7 +29,7 @@ const ProductCard = ({ product }) => (
 const ProductGrid = () => {
   return (
     <div className="p-6 bg-gray-100 min-h-screen">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-1">
         {products.map((product, index) => (
           <ProductCard product={product} key={index} />
         ))}
