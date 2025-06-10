@@ -39,7 +39,7 @@ const FeaturedItems = () => {
                   key={i}
                 >
                   {group.map((item, indx) => (
-                    <div className="relative z-20 py-3" key={indx}>
+                    <div className="relative z-20 py-3 px-3 hover:shadow-xl" key={indx}>
                       <p className="text-gray-500 text-sm hover:text-yellow-400">{item.type}</p>
                       <h1 className="line-clamp-1 text-blue-600 text-md font-bold hover:text-yellow-400">
                         {item.title}
@@ -60,12 +60,12 @@ const FeaturedItems = () => {
 
                       <div className="flex space-x-2">
                         {item.price ? (
-                          <p className="text-red-500 text-xl">{item.price}</p>
+                          <p className="text-red-500 text-xl md:text-sm">{item.price}</p>
                         ) : (
-                          <p className="text-xl text-gray-500 font-semibold">Sold out</p>
+                          <p className="text-xl text-gray-500 font-semibold md:text-sm">Sold out</p>
                         )}
                         {item.oldPrice && (
-                          <p className="line-through text-gray-400 text-xl">{item.oldPrice}</p>
+                          <p className="line-through text-gray-400 text-xl md:text-sm">{item.oldPrice}</p>
                         )}
                       </div>
                     </div>
