@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { leftSideData, centerData, rightSideData } from '../../data/data';
 
 const BestDealing = () => {
-  // Store state for which image to show per center item
   const [mainImages, setMainImages] = useState(
     centerData.map(item => item.image)
   );
