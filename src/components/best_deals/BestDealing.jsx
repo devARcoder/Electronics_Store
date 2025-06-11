@@ -51,19 +51,19 @@ const BestDealing = () => {
 
               <div className="imgs flex space-x-2">
                 <img
-                  className="border border-gray-200 w-16 cursor-pointer"
+                  className="border border-gray-200 w-16 cursor-pointer hover:border-2 hover:border-b-yellow-400"
                   src="/images/deal1.webp"
                   alt=""
                   onClick={() => handleImageClick(i, "/images/deal1.webp")}
                 />
                 <img
-                  className="border border-gray-200 w-16 cursor-pointer"
+                  className="border border-gray-200 w-16 cursor-pointer hover:border-2 hover:border-b-yellow-400"
                   src="/images/deal1-2.webp"
                   alt=""
                   onClick={() => handleImageClick(i, "/images/deal1-2.webp")}
                 />
                 <img
-                  className="border border-gray-200 w-16 cursor-pointer"
+                  className="border border-gray-200 w-16 cursor-pointer hover:border-2 hover:border-b-yellow-400"
                   src="/images/deal1-3.webp"
                   alt=""
                   onClick={() => handleImageClick(i, "/images/deal1-3.webp")}
