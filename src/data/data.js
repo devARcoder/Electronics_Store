@@ -132,8 +132,9 @@ export const featuredItems = [
   },
 ];
 
-// deal products data
-export const products = [
+
+// left side 
+export const leftSideData = [
   {
     brand: "Bulgari",
     title: "Gorgeous White Bag",
@@ -148,14 +149,6 @@ export const products = [
     image: "/images/smartWatch.webp",
   },
   {
-    brand: "Givenchy",
-    title: "Dentoex Product Sample",
-    price: "$450.00",
-    oldPrice: "$499.00",
-    image: "/images/deal1.webp",
-    highlight: true,
-  },
-  {
     brand: "Christian Dior",
     title: "Lexiited Product",
     price: "$200.00",
@@ -166,7 +159,23 @@ export const products = [
     title: "Lexiwarm Product",
     price: "$35.00",
     image: "/images/deal2.webp",
+  }, 
+];
+
+// center data
+export const centerData = [
+  {
+    brand: "Givenchy",
+    title: "Dentoex Product Sample",
+    price: "$450.00",
+    oldPrice: "$499.00",
+    image: "/images/deal1.webp",
+    highlight: true,
   },
+]
+
+// right side 
+export const rightSideData = [
   {
     brand: "Christian Dior",
     title: "Golddax Product",
@@ -188,5 +197,6 @@ export const products = [
   { brand: "Armani",
     title: "Soltone Product",
     price: "$280.00", 
-    image: "/images/printer.webp" },
-];
+    image: "/images/printer.webp"
+  },
+]
