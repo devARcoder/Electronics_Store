@@ -170,7 +170,17 @@ export const centerData = [
     price: "$450.00",
     oldPrice: "$499.00",
     image: "/images/deal1.webp",
-    highlight: true,
+  },
+]
+export const centerCatagoryData = [
+  {
+    image: "/images/deal1.webp"
+  },
+  {
+    image: "/images/deal1-2.webp"
+  },
+  {
+    image: "/images/deal1-3.webp"
   },
 ]
 

@@ -14,7 +14,9 @@ const BestDealing = () => {
                     <img className='w-36 h-36 sm:w-64 sm:h-64 md:w-32 md:h-32 object-cover' src={left.image} alt="" />
                     <div className="cart flex justify-between items-center pr-4">
                         <h1 className='text-gray-700 text-lg sm:text-xl md:text-sm'>{left.price}</h1>
-                        <p>cart</p>
+                        <p>{left.soldOut ? "" : (
+                            <p>Cart</p>
+                        )}</p>
                     </div>
                 </div>
             ))}
@@ -26,6 +28,15 @@ const BestDealing = () => {
                     <h1>{center.brand}</h1>
                     <h1>{center.title}</h1>
                     <img className='w-80 object-cover' src={center.image} alt="" />
+                    <div className="imgs">
+                        
+                    </div>
+                    <div className="cart flex justify-between items-center pr-4">
+                        <h1 className='text-gray-700 text-lg sm:text-xl md:text-sm'>{center.price}</h1>
+                        <p>{center.soldOut ? "" : (
+                            <p>Cart</p>
+                        )}</p>
+                    </div>
 
                 </div>
             ))}
