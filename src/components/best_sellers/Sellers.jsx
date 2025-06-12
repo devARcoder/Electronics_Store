@@ -4,11 +4,11 @@ import Heading from '../shared/common/Heading'
 const Sellers = () => {
   return (
     <div className='px-4 py-4 md:px-24'>
-      <div className="px-4">
+      <div className="">
 
-      <div className="head md:flex justify-between items-center ">
+      <div className="head md:flex justify-between items-center md:pt-6">
         <div className="heading py-3 ">
-            <Heading name="Featured Products"/>
+            <Heading name="Bestsellers"/>
             <div className="border-b-3 border-yellow-400 md:border-none w-24 pt-2"></div>
             <div className="line border-b-1 border-gray-400 md:border-none"></div>
         </div>

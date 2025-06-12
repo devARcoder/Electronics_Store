@@ -19,7 +19,7 @@ const SellersTab = ({ className }) => {
           key={i}
           onClick={() => setActive(label)}
           className={`inline-block px-3 py-0.5 text-[16px]  transition whitespace-nowrap ${
-            active === label ? "text-gray-700 font-semibold border-2 border-yellow-400 rounded-full" : "text-gray-700 hover:border-2 hover:border-yellow-400 hover:rounded-full"
+            active === label ? "text-gray-600 border-2 border-yellow-400 rounded-full" : "text-gray-600 hover:border-2 hover:border-yellow-400 hover:rounded-full"
           }`}
         >
           {label}
