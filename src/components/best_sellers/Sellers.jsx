@@ -1,14 +1,23 @@
 import React from 'react'
 import SellersTab from './SellersTab'
-
+import Heading from '../shared/common/Heading'
 const Sellers = () => {
   return (
-    <div className='px-4 my-4'>
-        
-      <SellersTab className="flex space-x-3 pt-3 md:pt-8 pb-3"/>
-      {/* <hr className='hidden text-gray-400 mb-3'/> */}
-      <div className='hidden md:inline-block md:border-b-3 border-yellow-400 w-24 h-1'></div>
-      <hr className='md:mb-4 text-gray-400'/>
+    <div className='px-4 py-4 md:px-24'>
+      <div className="px-4">
+
+      <div className="head md:flex justify-between items-center ">
+        <div className="heading py-3 ">
+            <Heading name="Featured Products"/>
+            <div className="border-b-3 border-yellow-400 md:border-none w-24 pt-2"></div>
+            <div className="line border-b-1 border-gray-400 md:border-none"></div>
+        </div>
+        <div className="tabs flex space-x-4">
+            <SellersTab className="md:space-x-6"/>
+        </div>
+      </div>
+      <div className="hidden md:inline-block md:border-b md:bg-gray-400 h-[1px] w-full mb-10"></div>
+    </div>
     </div>
   )
 }
