@@ -1,6 +1,7 @@
 import React from 'react'
 import SellersTab from './SellersTab'
 import Heading from '../shared/common/Heading'
+import BestSelling from './BestSelling'
 const Sellers = () => {
   return (
     <div className='px-4 py-4 md:px-24'>
@@ -18,6 +19,8 @@ const Sellers = () => {
       </div>
       <div className="hidden md:inline-block md:border-b md:bg-gray-400 h-[1px] w-full mb-10"></div>
     </div>
+
+    <BestSelling/>
     </div>
   )
 }
