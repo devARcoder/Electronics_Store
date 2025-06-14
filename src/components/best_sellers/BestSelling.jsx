@@ -2,8 +2,8 @@ import React from 'react'
 
 const BestSelling = () => {
   return (
-    <div>
-      selling
+    <div className='grid grid-cols-1'>
+      
     </div>
   )
 }

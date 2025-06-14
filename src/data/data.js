@@ -210,3 +210,57 @@ export const rightSideData = [
     image: "/images/printer.webp"
   },
 ]
+
+// sellers data 
+export const sellingData = [
+  {
+    brand: "Donna Karan",
+    title: "Freecof Product Sample",
+    image: "/images/appleTablet.webp",
+    price: "$450.00"
+  },
+  {
+    brand: "Christian Dior",
+    title: "Lexiwarm Product Sample",
+    image: "/images/deal5.webp",
+    price: "$450.00"
+  },
+  {
+    brand: "Christian Dior",
+    title: "Lexiwarm Product Sample",
+    image: "/images/smartWatch.webp",
+    price: "$35.00"
+  },
+  {
+    brand: "Givenchy",
+    title: "Lamlex Product Sample",
+    image: "/images/laptopSell.webp",
+    price: "$455.99",
+    oldPrice: "$500.00"
+  },
+  {
+    brand: "Armani",
+    title: "Donkix Product Sample",
+    image: "/images/iphone.webp",
+    price: "$60.99",
+    oldPrice: "$85.90"
+  },
+  {
+    brand: "Dolc & Gabbana",
+    title: "Newity Product Sample",
+    image: "/images/ipadgreen.webp",
+    price: "$80.00",
+  },
+  {
+    brand: "Armani",
+    title: "Solton Product Sample",
+    image: "/images/printer.webp",
+    price: "$280.00",
+  },
+  {
+    brand: "Dolc & Gabbana",
+    title: "Newity Product Sample",
+    image: "/images/deal4.webp",
+    price: "$120.00",
+  },
+]
