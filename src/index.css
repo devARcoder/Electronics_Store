@@ -7,4 +7,25 @@
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+
 }
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: scrollLeft 30s linear infinite;
+  animation-play-state: running;
+  width: max-content; /* ✅ FIXED: No 200% width */
+}
+
+.group:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+
