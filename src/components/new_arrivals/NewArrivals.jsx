@@ -11,7 +11,7 @@ const NewArrivals = () => {
           {allItems.map((item, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-[50vw] md:w-[15vw] border-r border-b border-t border-gray-200 bg-white cursor-pointer hover:shadow-xl px-3 py-3"
+              className="flex-shrink-0 w-[50vw] md:w-[15vw] border-r border-t border-gray-200 bg-white cursor-pointer hover:shadow-xl px-3 py-3"
             >
               <h1 className="text-gray-500 text-sm hover:text-yellow-400">{item.brand}</h1>
               <h1 className="line-clamp-1 text-blue-600 text-md font-bold hover:text-yellow-400">

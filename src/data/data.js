@@ -320,3 +320,22 @@ export const newArrivalsData = [
     price: "$280.00"
   },
 ]
+
+// company brand data 
+export const companiesBrand = [
+  {
+    image: "/images/brand1.png",
+  },
+  {
+    image: "/images/brand2.png",
+  },
+  {
+    image: "/images/brand3.png",
+  },
+  {
+    image: "/images/brand4.png",
+  },
+  {
+    image: "/images/brand5.png",
+  }
+]
