@@ -6,6 +6,7 @@ import Sellers from '../components/best_sellers/Sellers'
 import HotProducts from '../components/hot_packs/HotProducts'
 import Arrivals from '../components/new_arrivals/Arrivals'
 import CompaniesBrand from '../components/company_brands/CompaniesBrand'
+import AllProducts from '../components/all_Products/AllProducts'
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <Sellers/>
       <HotProducts/>
       <Arrivals/>
+      <AllProducts/>
       <CompaniesBrand/>
     </>
   )

@@ -339,3 +339,64 @@ export const companiesBrand = [
     image: "/images/brand5.png",
   }
 ]
+
+// featured products data 
+export const featuredProducts = [
+  {
+    image: "/images/ipadgreen.webp",
+    title: "Faxtex Product Sample",
+    price: "$110.00",
+    oldPrice: "$199.00"
+  },
+  {
+    image: "/images/printer.webp",
+    title: "Finity Product Sample",
+    price: "$95.00",
+    oldPrice: "$120.00"
+  },
+  {
+    image: "/images/ipadLap.webp",
+    title: "Fixair Product Sample",
+    price: "$210.00",
+  },
+]
+
+// on sale products data 
+export const onSaleProducts = [
+  {
+    image: "/images/deal4.webp",
+    title: "Dentotam Product Sample",
+    price: "$22.00",
+  },
+  {
+    image: "/images/iphone.webp",
+    title: "Donkix Product Sample",
+    price: "$60.00",
+    oldPrice: "$100.00"
+  },
+  {
+    image: "/images/printer.webp",
+    title: "Finity Product Sample",
+    price: "$95.00",
+    oldPrice: "$120.00"
+  },
+]
+
+// top rated products data 
+export const topRatedProducts = [
+  {
+    image: "/images/appleTablet.webp",
+    title: "Freecof Product Sample",
+    price: "$450.00",
+  },
+  {
+    image: "/images/deal5.webp",
+    title: "Lexiwarm Product Sample",
+    price: "$35.00",
+  },
+  {
+    image: "/images/smartWatch.webp",
+    title: "Lexiited Product Sample",
+    price: "$200.00",
+  },
+]
