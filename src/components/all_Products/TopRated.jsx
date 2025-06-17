@@ -20,7 +20,7 @@ const TopRated = () => {
                   {top.title}
                 </h1>
                 <div className="prices flex space-x-2">
-                  <h1 className="text-red-400 text-md sm:text-xl md:text-md">
+                  <h1 className={top.oldPrice ? "text-red-400 text-md sm:text-xl" : "text-gray-600 text-md sm:text-xl"}>
                     {top.price}
                   </h1>
                   <h1 className="line-through text-gray-400 text-md sm:text-lg">

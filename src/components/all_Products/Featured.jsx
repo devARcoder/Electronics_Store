@@ -23,7 +23,7 @@ const Featured = () => {
                   {featured.title}
                 </h1>
                 <div className="prices flex space-x-2">
-                  <h1 className="text-red-400 text-md sm:text-xl">
+                  <h1 className={featured.oldPrice ? "text-red-400 text-md sm:text-xl" : "text-gray-400 text-md sm:text-xl"}>
                     {featured.price}
                   </h1>
                   <h1 className="line-through text-gray-400 text-md sm:text-lg">
