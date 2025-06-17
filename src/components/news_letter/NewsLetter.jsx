@@ -5,7 +5,7 @@ import { Button } from '../shared/imports'
 
 const NewsLetter = () => {
   return (
-    <div className='bg-yellow-400 flex flex-col justify-normal md:flex-row md:justify-between md:items-center px-8 py-4 space-y-4 md:space-y-0 md:px-24 my-6'>
+    <div className='bg-yellow-400 flex flex-col justify-normal md:flex-row md:justify-between md:items-center px-8 py-4 space-y-4 md:space-y-0 md:px-24 mt-6'>
        <div className="headings flex items-center space-x-2 md:mt-2">
         <NavigationIcon className='text-gray-800' size={32}/>
         <h1 className='text-xl text-gray-800'>Sign up to Newsletter</h1>
