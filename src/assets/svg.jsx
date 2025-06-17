@@ -359,8 +359,8 @@ export const NavigationIcon = ({
 // footer icons 
 export const HeadsetIcon = ({
   size = 24,
-  stroke = 'yellow',
-  strokeWidth = 2,
+  stroke = 'currentColor',
+  strokeWidth = 1,
   fill = 'none',
   className = '',
   ...props
