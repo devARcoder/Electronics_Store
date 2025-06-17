@@ -14,7 +14,7 @@ const BestDealing = () => {
 
   return (
     <>
-      <div className="container grid grid-cols-1 md:grid-cols-3 bg-gray-100">
+      <div className="container grid grid-cols-1 md:grid-cols-3 bg-gray-100 sm:mx-3 md:mx-0">
         {/* LEFT SIDE */}
         <div className="left grid grid-cols-2 gap-1">
           {leftSideData.map((left, index) => (

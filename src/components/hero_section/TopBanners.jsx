@@ -29,7 +29,7 @@ const TopBanners = () => {
             <p className="mt-4 text-lg md:text-xl text-gray-600">
               {slides[current].description}
             </p>
-            <Button name="Shope Now" className="bg-yellow-300 text-black hover:bg-gray-800 hover:text-white" />
+            <Button name="Shope Now" className="bg-yellow-300 text-black mt-6 px-6 py-3 font-bold hover:bg-gray-800 hover:text-white  rounded-xl text-lg transition-all" />
           </div>
 
           <div className="w-full md:w-1/2 flex justify-center transition-all duration-700 ease-in-out ">
