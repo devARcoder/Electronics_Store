@@ -7,6 +7,7 @@ import HotProducts from '../components/hot_packs/HotProducts'
 import Arrivals from '../components/new_arrivals/Arrivals'
 import CompaniesBrand from '../components/company_brands/CompaniesBrand'
 import AllProducts from '../components/all_Products/AllProducts'
+import NewsLetter from '../components/news_letter/NewsLetter'
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <Arrivals/>
       <AllProducts/>
       <CompaniesBrand/>
+      <NewsLetter/>
     </>
   )
 }

@@ -1,9 +1,12 @@
 import React from 'react'
+import { NavigationIcon } from '../../assets/svg'
 
 const NewsLetter = () => {
   return (
-    <div>
-      news letter 
+    <div className='bg-yellow-400'>
+       <div className="headings">
+        <NavigationIcon/>
+       </div>
     </div>
   )
 }
