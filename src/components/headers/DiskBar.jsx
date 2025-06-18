@@ -7,8 +7,9 @@ const DiskBar = () => {
     { label: 'Home', dropdown: null },
     { label: 'Catalog', dropdown: null },
     { label: 'Gift Cards', dropdown: 'giftcards' },
-    { label: 'Pages', dropdown: null },
     { label: 'Features', dropdown: null },
+    { label: 'About', dropdown: null },
+    { label: 'Contact', dropdown: null },
   ];
   return (
     <div className="relative hidden md:flex justify-center gap-6 bg-white py-4 shadow">
