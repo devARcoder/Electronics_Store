@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
-import { ChevronDownIcon, ChevronUpIcon, HeadsetIcon } from '../../assets/svg'
-import { FacebookIcon, GithubIcon, InstagramIcon, LinkedinIcon, TwitterIcon } from 'lucide-react'
+import React, { useState } from "react";
+import { ChevronDownIcon, ChevronUpIcon, HeadsetIcon } from "../../assets/svg";
 
 const FooterSection = () => {
   const [isFindOpen1, setIsFindOpen1] = useState(false);
@@ -9,103 +8,129 @@ const FooterSection = () => {
   const [isFindOpen4, setIsFindOpen4] = useState(false);
 
   return (
-    <div className='grid grid-cols-1 gap-3 md:grid-cols-5 bg-gray-100 pt-16 px-4 space-y-3 md:space-y-0 pb-6 md:px-24'>
-
+    <div className="grid grid-cols-1 gap-3 md:grid-cols-2 bg-gray-100 pt-16 px-4 space-y-3 md:space-y-0 pb-6 md:px-20">
       {/* Info Section */}
       <div className="info space-y-10">
-        <h1 className='text-gray-800 text-5xl font-bold'>electro</h1>
+        <h1 className="text-gray-800 text-5xl font-bold">electro</h1>
         <div className="cntct flex items-center space-x-4">
-          <HeadsetIcon size={56} className='text-yellow-400'/>
+          <HeadsetIcon size={56} className="text-yellow-400" />
           <div className="head">
-            <p className='text-gray-600'>Got questions? Call us</p>
-            <h1 className='text-gray-800 text-lg'>+923070925248</h1>
+            <p className="text-gray-600">Got questions? Call us 24/7</p>
+            <h1 className="text-gray-800 text-lg">+923070925248</h1>
           </div>
         </div>
         <div className="contactInfo">
-          <h1 className=' font-bold text-gray-800'>Contact Info</h1>
-          <p className='text-sm text-gray-600'>Hangu to Thall Main Road, Peshawar, Pakistan</p>
-        </div>
-        <div className="socialIcons flex space-x-4">
-          <FacebookIcon className='hover:text-blue-700'/>
-          <GithubIcon/>
-          <LinkedinIcon/>
-          <TwitterIcon/>
-          <InstagramIcon/>
+          <h1 className=" font-bold text-gray-800">Contact Info</h1>
+          <p className="text-sm text-gray-600">
+            Hangu to Thall Main Road, Peshawar, Pakistan
+          </p>
         </div>
       </div>
 
-      {/* Find In Fast */}
-      <div className="find">
-        <div onClick={() => setIsFindOpen1(prev => !prev)} className="head flex justify-between items-center cursor-pointer md:cursor-default">
-          <h1 className='font-bold text-gray-800 text-lg'>Find In Fast</h1>
-          <div className="md:hidden">
-            {!isFindOpen1 ? <ChevronDownIcon/> : <ChevronUpIcon/>}
+      
+      <div className="space-y-4 md:flex md:space-x-6 ">
+        <div className="find">
+          <div
+            onClick={() => setIsFindOpen1((prev) => !prev)}
+            className="head flex justify-between items-center cursor-pointer md:cursor-default"
+          >
+            <h1 className="font-bold text-gray-800 text-lg">Find In Fast</h1>
+            <div className="md:hidden">
+              {!isFindOpen1 ? <ChevronDownIcon /> : <ChevronUpIcon />}
+            </div>
+          </div>
+          <div
+            className={`text-gray-600 space-y-3 text-sm mt-5 ${
+              isFindOpen1 ? "block" : "hidden"
+            } md:block`}
+          >
+            <h1>Accessories</h1>
+            <h1>Gaming</h1>
+            <h1>Laptops & Computer</h1>
+            <h1>Mac Computers</h1>
+            <h1>PC Computers</h1>
+            <h1>Ultrabooks</h1>
           </div>
         </div>
-        <div className={`text-gray-600 space-y-3 text-sm mt-5 ${isFindOpen1 ? 'block' : 'hidden'} md:block`}>
-          <h1>Accessories</h1>
-          <h1>Gaming</h1>
-          <h1>Laptops & Computer</h1>
-          <h1>Mac Computers</h1>
-          <h1>PC Computers</h1>
-          <h1>Ultrabooks</h1>
-        </div>
-      </div>
 
-      {/* Information */}
-      <div className="info">
-        <div onClick={() => setIsFindOpen2(prev => !prev)} className="head flex justify-between items-center cursor-pointer md:cursor-default">
-          <h1 className='font-bold text-gray-800 text-lg'>Information</h1>
-          <div className="md:hidden">
-            {!isFindOpen2 ? <ChevronDownIcon/> : <ChevronUpIcon/>}
+        
+        <div className="info">
+          <div
+            onClick={() => setIsFindOpen2((prev) => !prev)}
+            className="head flex justify-between items-center cursor-pointer md:cursor-default"
+          >
+            <h1 className="font-bold text-gray-800 text-lg">Information</h1>
+            <div className="md:hidden">
+              {!isFindOpen2 ? <ChevronDownIcon /> : <ChevronUpIcon />}
+            </div>
+          </div>
+          <div
+            className={`text-gray-600 space-y-3 text-sm mt-5 ${
+              isFindOpen2 ? "block" : "hidden"
+            } md:block`}
+          >
+            <h1>About Us</h1>
+            <h1>Contact Us</h1>
+            <h1>All Collections</h1>
+            <h1>Privacy policy</h1>
+            <h1>Terms & Conditions</h1>
           </div>
         </div>
-        <div className={`text-gray-600 space-y-3 text-sm mt-5 ${isFindOpen2 ? 'block' : 'hidden'} md:block`}>
-          <h1>About Us</h1>
-          <h1>Contact Us</h1>
-          <h1>All Collections</h1>
-          <h1>Privacy policy</h1>
-          <h1>Terms & Conditions</h1>
-        </div>
-      </div>
 
-      {/* Customer Care */}
-      <div className="customer">
-        <div onClick={() => setIsFindOpen3(prev => !prev)} className="head flex justify-between items-center cursor-pointer md:cursor-default">
-          <h1 className='font-bold text-gray-800 text-lg'>Customer Care</h1>
-          <div className="md:hidden">
-            {!isFindOpen3 ? <ChevronDownIcon/> : <ChevronUpIcon/>}
+        
+        <div className="customer">
+          <div
+            onClick={() => setIsFindOpen3((prev) => !prev)}
+            className="head flex justify-between items-center cursor-pointer md:cursor-default"
+          >
+            <h1 className="font-bold text-gray-800 text-lg">Customer Care</h1>
+            <div className="md:hidden">
+              {!isFindOpen3 ? <ChevronDownIcon /> : <ChevronUpIcon />}
+            </div>
+          </div>
+          <div
+            className={`text-gray-600 space-y-3 text-sm mt-5 ${
+              isFindOpen3 ? "block" : "hidden"
+            } md:block`}
+          >
+            <h1>Contact Us</h1>
+            <h1>Whislist</h1>
+            <h1>Shopping Cart</h1>
+            <h1>Shipping & Return</h1>
+            <h1>FAQs</h1>
+            <h1>About Us</h1>
           </div>
         </div>
-        <div className={`text-gray-600 space-y-3 text-sm mt-5 ${isFindOpen3 ? 'block' : 'hidden'} md:block`}>
-          <h1>Contact Us</h1>
-          <h1>Whislist</h1>
-          <h1>Shopping Cart</h1>
-          <h1>Shipping & Return</h1>
-          <h1>FAQs</h1>
-          <h1>About Us</h1>
-        </div>
-      </div>
 
-      {/* In The Spotlight */}
-      <div className="spotLight">
-        <div onClick={() => setIsFindOpen4(prev => !prev)} className="head flex justify-between items-center cursor-pointer md:cursor-default">
-          <h1 className='font-bold text-gray-800 text-lg'>In The Spotlight</h1>
-          <div className="md:hidden">
-            {!isFindOpen4 ? <ChevronDownIcon/> : <ChevronUpIcon/>}
+        
+        <div className="spotLight">
+          <div
+            onClick={() => setIsFindOpen4((prev) => !prev)}
+            className="head flex justify-between items-center cursor-pointer md:cursor-default"
+          >
+            <h1 className="font-bold text-gray-800 text-lg">
+              In The Spotlight
+            </h1>
+            <div className="md:hidden">
+              {!isFindOpen4 ? <ChevronDownIcon /> : <ChevronUpIcon />}
+            </div>
           </div>
-        </div>
-        <div className={`text-gray-600 space-y-3 text-sm mt-5 ${isFindOpen4 ? 'block' : 'hidden'} md:block`}>
-          <h1>Electronics</h1>
-          <h1>Toys</h1>
-          <h1>Video Games</h1>
-          <h1>Home Products</h1>
-          <h1>Clothing</h1>
-          <h1>Sports & Outdoors</h1>
+          <div
+            className={`text-gray-600 space-y-3 text-sm mt-5 ${
+              isFindOpen4 ? "block" : "hidden"
+            } md:block`}
+          >
+            <h1>Electronics</h1>
+            <h1>Toys</h1>
+            <h1>Video Games</h1>
+            <h1>Home Products</h1>
+            <h1>Clothing</h1>
+            <h1>Sports & Outdoors</h1>
+          </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default FooterSection;
