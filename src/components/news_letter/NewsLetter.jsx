@@ -16,7 +16,7 @@ const NewsLetter = () => {
        <div className="space-y-4 md:space-y-0 md:flex">
 
        <Input placeholder='Enter your email' className='bg-white text-gray-700 w-full rounded-full md:rounded-r-lg border-none focus:outline-none focus:border-none placeholder-gray-400 px-2 py-2 md:w-96'/>
-       <Button name="Subcribe" className="bg-gray-800 text-white rounded-full md:rounded-l-lg py-2 w-full md:w-24"/>
+       <Button name="Subcribe" className="bg-gray-800 text-white rounded-full md:rounded-l-lg py-2 w-full md:w-24 cursor-pointer"/>
        </div>
     </div>
   )
