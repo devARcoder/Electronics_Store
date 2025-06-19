@@ -428,6 +428,7 @@ export const aboutBanners = [
 export const aboutTeams = [
   {
     img: "/images/aboutTeam1.webp",
-    name: "Thomas Snow"
-  }
+    name: "Thomas Snow",
+    position: "Ceo Founder"
+  },
 ]
