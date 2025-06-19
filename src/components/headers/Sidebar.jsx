@@ -1,13 +1,19 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { CloseIcon, ForwardArrowIcon, HeartIcon, ChevronDownIcon, ChevronUpIcon } from '../../assets/svg';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import {
+  CloseIcon,
+  ForwardArrowIcon,
+  HeartIcon,
+  ChevronDownIcon,
+  ChevronUpIcon,
+} from "../../assets/svg";
 
 const Sidebar = ({ isOpen, onClose }) => {
   const [isFavourite, setIsFavourite] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState(null); // For toggling dropdowns
+  const [openDropdown, setOpenDropdown] = useState(null);
 
   const toggleFavourite = () => {
-    setIsFavourite(prev => !prev);
+    setIsFavourite((prev) => !prev);
   };
 
   const toggleDropdown = (label) => {
@@ -19,9 +25,10 @@ const Sidebar = ({ isOpen, onClose }) => {
     {
       Label: "Catalog",
       dropdown: [
-        { label: "Men", to: "/catalog/men" },
-        { label: "Women", to: "/catalog/women" },
-        { label: "Kids", to: "/catalog/kids" },
+        { label: "Mobiles", to: "/catalog/mobiles" },
+        { label: "Ipad", to: "/catalog/ipad" },
+        { label: "Laptops", to: "/catalog/laptops" },
+        { label: "Electronics", to: "/catalog/electronics" },
       ],
     },
     { Label: "Gift Cards", to: "/giftcards" },
@@ -40,10 +47,9 @@ const Sidebar = ({ isOpen, onClose }) => {
   return (
     <div
       className={`fixed top-0 left-0 h-full w-full bg-white shadow-lg z-50 transform transition-transform duration-300 ${
-        isOpen ? 'translate-x-0' : '-translate-x-full'
+        isOpen ? "translate-x-0" : "-translate-x-full"
       }`}
     >
-      {/* Top Bar */}
       <div className="flex justify-between items-center bg-yellow-300 px-4 pt-5 pb-5">
         <button
           className="text-gray-700 font-bold cursor-pointer"
@@ -52,7 +58,6 @@ const Sidebar = ({ isOpen, onClose }) => {
           <CloseIcon size={32} strokeWidth={3} />
         </button>
 
-        {/* Heart Icon */}
         <div className="relative">
           <HeartIcon
             size={28}
@@ -67,11 +72,9 @@ const Sidebar = ({ isOpen, onClose }) => {
         </div>
       </div>
 
-      {/* Navigation */}
       <div className="flex flex-col">
         {SidebarNavigation.map((item, index) => (
           <div key={index}>
-            {/* Dropdown item */}
             {item.dropdown ? (
               <>
                 <div
@@ -85,7 +88,7 @@ const Sidebar = ({ isOpen, onClose }) => {
                     <ChevronDownIcon size={20} />
                   )}
                 </div>
-                {/* Dropdown Menu */}
+
                 {openDropdown === item.Label && (
                   <div className="pl-4 bg-gray-50 mx-4 mb-3">
                     {item.dropdown.map((subItem, subIndex) => (
@@ -102,7 +105,6 @@ const Sidebar = ({ isOpen, onClose }) => {
                 )}
               </>
             ) : (
-              // Simple link item
               <>
                 <Link
                   to={item.to}

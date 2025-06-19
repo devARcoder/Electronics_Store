@@ -3,6 +3,13 @@ import { Link } from "react-router-dom";
 import { giftCardItems } from "../../data/data";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
+const catalogItems = [
+  { label: "Mobiles", to: "/catalog/mobiles" },
+  { label: "Ipad", to: "/catalog/ipad" },
+  { label: "Laptops", to: "/catalog/laptops" },
+  { label: "Electronics", to: "/catalog/electronics" },
+];
+
 const DiskBar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
 
@@ -12,7 +19,7 @@ const DiskBar = () => {
 
   const navigation = [
     { label: "Home", to: "/" },
-    { label: "Catalog", to: "/catalog" },
+    { label: "Catalog", dropdown: "catalog" },
     { label: "Gift Cards", dropdown: "giftcards" },
     { label: "Features", to: "/features" },
     { label: "About", to: "/about" },
@@ -23,7 +30,7 @@ const DiskBar = () => {
   return (
     <div className="relative hidden md:flex justify-center gap-6 bg-white py-4 shadow">
       {navigation.map((item, index) => {
-        const isDropdown = item.dropdown !== null;
+        const isDropdown = item.dropdown !== undefined;
         const isOpen = openDropdown === item.dropdown;
 
         return (
@@ -38,7 +45,7 @@ const DiskBar = () => {
             ) : (
               <button
                 className="text-gray-700 px-4 py-2 text-sm hover:text-black flex items-center gap-1"
-                onClick={() => isDropdown && toggleDropdown(item.dropdown)}
+                onClick={() => toggleDropdown(item.dropdown)}
               >
                 {item.label}
                 {isDropdown &&
@@ -50,7 +57,23 @@ const DiskBar = () => {
               </button>
             )}
 
-            {/* Gift Cards Dropdown */}
+            {isOpen && item.dropdown === "catalog" && (
+              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-60 bg-white border border-gray-200 rounded-md shadow-2xl z-20 p-4">
+                <ul className="flex flex-col gap-2 text-sm text-gray-700">
+                  {catalogItems.map((catalog, i) => (
+                    <li key={i}>
+                      <Link
+                        to={catalog.to}
+                        className="hover:bg-gray-100 px-3 py-2 rounded block"
+                      >
+                        {catalog.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
             {isOpen && item.dropdown === "giftcards" && (
               <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[940px] bg-white border border-gray-200 rounded-md shadow-2xl z-20 p-6 flex gap-6">
                 {giftCardItems.map((card, idx) => (
@@ -88,7 +111,6 @@ const DiskBar = () => {
               </div>
             )}
 
-            {/* More Dropdown */}
             {isOpen && item.dropdown === "more" && (
               <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-60 bg-white border border-gray-200 rounded-md shadow-2xl z-20 p-4">
                 <ul className="flex flex-col gap-2 text-sm text-gray-700">
