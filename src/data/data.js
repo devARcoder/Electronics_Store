@@ -456,3 +456,23 @@ export const aboutTeams = [
     name: "See Details",
   },
 ]
+
+// about details data 
+export const aboutDetails = [
+  {
+    title: "What we really do?",
+    desc: "Donec libero dolor, tincidunt id laoreet vitae, ullamcorper eu tortor. Maecenas pellentesque, dui vitae iaculis mattis, tortor nisi faucibus magna, vitae ultrices lacus purus vitae metus."
+  },
+  {
+    title: "History of the Company",
+    desc: "Donec libero dolor, tincidunt id laoreet vitae, ullamcorper eu tortor. Maecenas faucibus magna, vitae ultrices lacus purus vitae metus."
+  },
+  {
+    title: "Our vision",
+    desc: "Donec libero dolor, tincidunt id laoreet vitae, ullamcorper eu tortor. Maecenas pellentesque, dui vitae iaculis mattis, tortor nisi faucibus magna, vitae ultrices lacus purus vitae metus."
+  },
+  {
+    title: "Cooperate with Us!",
+    desc: "Donec libero dolor, tincidunt id laoreet vitae, ullamcorper eu tortor. Maecenas pellentesque, dui vitae iaculis mattis, tortor nisi faucibus magna, vitae ultrices lacus purus vitae metus."
+  },
+]
