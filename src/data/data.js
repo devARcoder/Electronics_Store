@@ -431,4 +431,28 @@ export const aboutTeams = [
     name: "Thomas Snow",
     position: "Ceo Founder"
   },
+  {
+    img: "/images/aboutTeam2.avif",
+    name: "Anna Baranow",
+    position: "Client Care"
+  },
+  {
+    img: "/images/aboutTeam3.avif",
+    name: "Andrei Kowasly",
+    position: "Support Boss"
+  },
+  {
+    img: "/images/aboutTeam4.webp",
+    name: "Pamela Doe",
+    position: "Delivery Driver"
+  },
+  {
+    img: "/images/aboutTeam5.avif",
+    name: "Susan McCain",
+    position: "Packaking Girl"
+  },
+  {
+    img: "/images/aboutTeam6.png",
+    name: "See Details",
+  },
 ]
