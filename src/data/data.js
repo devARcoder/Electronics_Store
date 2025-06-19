@@ -400,3 +400,34 @@ export const topRatedProducts = [
     price: "$200.00",
   },
 ]
+
+
+// =======  About page data  ========
+
+
+// about banners data 
+export const aboutBanners = [
+  {
+    img: "/images/aboutBanner1.webp",
+    title: "What we really do?",
+    desc: "Donec libero dolor, tincidunt id laoreet vitae,ullamcorper eu tortor. Maecenas pellentesque, dui vitae iaculis mattis, tortor nisi faucibus magna, vitae ultrices lacus purus vitae metus."
+  },
+  {
+    img: "/images/aboutBanner2.webp",
+    title: "What our Mission?",
+    desc: "Donec libero dolor, tincidunt id laoreet vitae,ullamcorper eu tortor. Maecenas pellentesque, dui vitae iaculis mattis, tortor nisi faucibus magna, vitae ultrices lacus purus vitae metus."
+  },
+  {
+    img: "/images/aboutBanner3.webp",
+    title: "What we can for Clients?",
+    desc: "Donec libero dolor, tincidunt id laoreet vitae,ullamcorper eu tortor. Maecenas pellentesque, dui vitae iaculis mattis, tortor nisi faucibus magna, vitae ultrices lacus purus vitae metus."
+  },
+]
+
+// about team data 
+export const aboutTeams = [
+  {
+    img: "/images/aboutTeam1.webp",
+    name: "Thomas Snow"
+  }
+]
