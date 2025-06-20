@@ -532,7 +532,7 @@ export const allCollections = [
     catagory: "computer",
     img: "/images/collections/computer5.webp",
     name: "All in One"
-  }
+  },
   {
     catagory: "electronics",
     img: "/images/collections/electronics1.webp",

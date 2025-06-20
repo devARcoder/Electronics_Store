@@ -19,6 +19,7 @@ const DiskBar = () => {
 
   const navigation = [
     { label: "Home", to: "/" },
+    { label: "Collections", to: "/collections" },
     { label: "Catalog", dropdown: "catalog" },
     { label: "Gift Cards", dropdown: "giftcards" },
     { label: "Features", to: "/features" },

@@ -22,6 +22,7 @@ const Sidebar = ({ isOpen, onClose }) => {
 
   const SidebarNavigation = [
     { Label: "Home", to: "/" },
+    { Label: "Collections", to: "/collections" },
     {
       Label: "Catalog",
       dropdown: [
