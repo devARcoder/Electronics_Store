@@ -483,11 +483,7 @@ export const aboutDetails = [
 ]
 
 export const allCollections = [
-  {
-    catagory: "electronics",
-    img: "/images/collections/accessories1.webp",
-    name: "Accesories"
-  },
+  
   {
     catagory: "electronics",
     img: "/images/collections/accessories2.avif",
@@ -504,14 +500,14 @@ export const allCollections = [
     name: "Software"
   },
   {
-    catagory: "accesories",
-    img: "/images/collections/accessories5.webp",
-    name: "Disktop CPU"
-  },
-  {
     catagory: "computer",
     img: "/images/collections/computer1.avif",
     name: "TV"
+  },
+  {
+    catagory: "electronics",
+    img: "/images/collections/accessories1.webp",
+    name: "Accesories"
   },
   {
     catagory: "computer",
@@ -522,6 +518,17 @@ export const allCollections = [
     catagory: "computer",
     img: "/images/collections/computer3.png",
     name: "Mouse"
+  },
+  
+  {
+    catagory: "accesories",
+    img: "/images/collections/accessories5.webp",
+    name: "Disktop CPU"
+  },
+  {
+    catagory: "computer",
+    img: "/images/collections/computer1.avif",
+    name: "TV"
   },
   {
     catagory: "computer",
@@ -542,6 +549,31 @@ export const allCollections = [
     catagory: "electronics",
     img: "/images/collections/electronics2.avif",
     name: "Electric Bike"
+  },
+  {
+    catagory: "accesories",
+    img: "/images/collections/accessories5.webp",
+    name: "Disktop CPU"
+  },
+  {
+    catagory: "computer",
+    img: "/images/collections/computer5.webp",
+    name: "All in One"
+  },
+  {
+    catagory: "electronics",
+    img: "/images/collections/electronics1.webp",
+    name: "e-city Bike"
+  },
+  {
+    catagory: "electronics",
+    img: "/images/collections/accessories2.avif",
+    name: "Eyewaer"
+  },
+  {
+    catagory: "accesories",
+    img: "/images/collections/accessories3.avif",
+    name: "Gadget"
   },
   {
     catagory: "electronics",
