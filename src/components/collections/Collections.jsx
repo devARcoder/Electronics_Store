@@ -2,6 +2,7 @@ import React from 'react'
 import { allCollections } from '../../data/data'
 import { Link } from 'react-router-dom'
 import { ChevronRight } from 'lucide-react'
+import AllProducts from '../all_Products/AllProducts'
 const Collections = () => {
   return (
     <>
@@ -22,6 +23,7 @@ const Collections = () => {
       ))}
     </div>
     </div>
+    <AllProducts/>
     </>
   )
 }

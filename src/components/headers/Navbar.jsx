@@ -9,6 +9,7 @@ import {
 import { Sidebar, TopBar, SearchBar } from "../shared/imports";
 import DiskBar from "./DiskBar";
 import { XIcon } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -34,7 +35,7 @@ const Navbar = () => {
             className="text-gray-700 mt-3 cursor-pointer md:hidden"
             onClick={toggleSidebar}
           />
-          <h1 className="text-4xl font-bold text-gray-700">electro</h1>
+          <Link to="/"><h1 className="text-4xl font-bold text-gray-700">electro</h1></Link>
         </div>
 
         <div className="hidden md:block w-full max-w-xl">
