@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Cameras = () => {
+const Collections = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const Cameras = () => {
   )
 }
 
-export default Cameras
+export default Collections

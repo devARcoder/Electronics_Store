@@ -482,63 +482,70 @@ export const aboutDetails = [
   },
 ]
 
-export const electronics = [
+export const allCollections = [
   {
-    type: "electronics",
-    img: "/images/collections/Accesories.webp",
+    catagory: "electronics",
+    img: "/images/collections/accessories1.webp",
     name: "Accesories"
   },
   {
-    type: "electronics",
-    img: "/images/collections/DekstopPC.webp",
-    name: "Disktop PC"
-  }
-]
-
-export const accesories = [
-  {
-    type: "accesories",
-    img: "/images/collections/Accesories.webp",
-    name: "Accesories"
+    catagory: "electronics",
+    img: "/images/collections/accessories2.avif",
+    name: "Eyewaer"
   },
   {
-    type: "accesories",
-    img: "/images/collections/AllinOne.webp",
-    name: "All in One"
+    catagory: "accesories",
+    img: "/images/collections/accessories3.avif",
+    name: "Gadget"
   },
   {
-    type: "accesories",
-    img: "/images/collections/mouse.avif",
+    catagory: "accesories",
+    img: "/images/collections/accessories4.avif",
+    name: "Software"
+  },
+  {
+    catagory: "accesories",
+    img: "/images/collections/accessories5.webp",
+    name: "Disktop CPU"
+  },
+  {
+    catagory: "computer",
+    img: "/images/collections/computer1.avif",
+    name: "TV"
+  },
+  {
+    catagory: "computer",
+    img: "/images/collections/computer2.avif",
     name: "Modern Mouse"
   },
   {
-    type: "accesories",
-    img: "/images/collections/mouse.png",
+    catagory: "computer",
+    img: "/images/collections/computer3.png",
     name: "Mouse"
   },
   {
-    type: "accesories",
-    img: "/images/collections/VirtualGogles.avif",
-    name: "Virtual Google"
-  },
-]
-export const bikes = [
-  {
-    type: "bikes",
-    img: "/images/collections/electBikes.avif",
-    name: "Electrics Bike"
+    catagory: "computer",
+    img: "/images/collections/computer4.avif",
+    name: "Mac Computer"
   },
   {
-    type: "bikes",
-    img: "/images/collections/cityBikes.webp",
-    name: "City Bike"
+    catagory: "computer",
+    img: "/images/collections/computer5.webp",
+    name: "All in One"
   }
-]
-
-export const laptops = [
   {
-    type: "laptopComputer",
-    img: "/images/collections/Laptops.avif",
-    name: "Laptop"
+    catagory: "electronics",
+    img: "/images/collections/electronics1.webp",
+    name: "e-city Bike"
+  },
+  {
+    catagory: "electronics",
+    img: "/images/collections/electronics2.avif",
+    name: "Electric Bike"
+  },
+  {
+    catagory: "electronics",
+    img: "/images/collections/electronics3.avif",
+    name: "Printer Machine"
   }
 ]
