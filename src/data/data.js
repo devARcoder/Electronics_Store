@@ -78,6 +78,7 @@ export const offerCardItems = [
   },
 ];
 
+
 // featured items data
 export const featuredItems = [
   {
