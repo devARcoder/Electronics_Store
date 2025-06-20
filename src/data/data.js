@@ -53,21 +53,25 @@ export const giftCardItems = [
 // OfferProducts data
 export const offerCardItems = [
   {
+    type: "camera",
     title: "CATCH BIG DEAL ON THE CAMERAS",
     discount: "20%",
     image: "/images/camera.png",
   },
   {
+    type: "laptop",
     title: "COMPUTER AND LAPTOPS AND MORE",
     discount: "35%",
     image: "/images/computerLaptop.png",
   },
   {
+    type: "mobile",
     title: "SHOP THE HOTTEST PRODUCTS",
     discount: "70%",
     image: "/images/mobile.png",
   },
   {
+    type: "electronics",
     title: "THE NEW STANDER PRODUCTS ",
     discount: "50%",
     image: "/images/headphone.png",
@@ -475,4 +479,65 @@ export const aboutDetails = [
     title: "Cooperate with Us!",
     desc: "Donec libero dolor, tincidunt id laoreet vitae, ullamcorper eu tortor. Maecenas pellentesque, dui vitae iaculis mattis, tortor nisi faucibus magna, vitae ultrices lacus purus vitae metus."
   },
+]
+
+export const electronics = [
+  {
+    type: "electronics",
+    img: "/images/collections/Accesories.webp",
+    name: "Accesories"
+  },
+  {
+    type: "electronics",
+    img: "/images/collections/DekstopPC.webp",
+    name: "Disktop PC"
+  }
+]
+
+export const accesories = [
+  {
+    type: "accesories",
+    img: "/images/collections/Accesories.webp",
+    name: "Accesories"
+  },
+  {
+    type: "accesories",
+    img: "/images/collections/AllinOne.webp",
+    name: "All in One"
+  },
+  {
+    type: "accesories",
+    img: "/images/collections/mouse.avif",
+    name: "Modern Mouse"
+  },
+  {
+    type: "accesories",
+    img: "/images/collections/mouse.png",
+    name: "Mouse"
+  },
+  {
+    type: "accesories",
+    img: "/images/collections/VirtualGogles.avif",
+    name: "Virtual Google"
+  },
+]
+export const bikes = [
+  {
+    type: "bikes",
+    img: "/images/collections/electBikes.avif",
+    name: "Electrics Bike"
+  },
+  {
+    type: "bikes",
+    img: "/images/collections/cityBikes.webp",
+    name: "City Bike"
+  }
+]
+
+export const laptops = [
+  {
+    type: "laptopComputer",
+    img: "/images/collections/Laptops.avif",
+    name: "Laptop"
+  }
 ]
