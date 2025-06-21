@@ -21,7 +21,6 @@ const Navbar = () => {
   return (
     <>
       <TopBar />
-
       <div
         className="flex justify-between items-center 
         bg-yellow-300 px-3 pt-4 pb-4 
@@ -43,7 +42,7 @@ const Navbar = () => {
         </div>
 
         <div className="right flex items-center space-x-3 md:space-x-6">
-          {/* 🔁 Swap icon on mobile */}
+          
           {!isSearchOpen ? (
             <SearchIcon className="md:hidden" onClick={toggleSearch} />
           ) : (
