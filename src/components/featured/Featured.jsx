@@ -5,10 +5,9 @@ import FeaturedItems from './FeaturedItems'
 const Featured = () => {
   return (
     <>
-      <div className="">
-        
+      <>
         <FeaturedItems/>
-      </div>
+      </>
     </>
   )
 }
