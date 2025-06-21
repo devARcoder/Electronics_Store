@@ -1,6 +1,8 @@
 import React from 'react';
 import { featuredItems } from '../../data/data';
 import FeatureTab from './FeatureTab'
+import { Link } from 'react-router-dom';
+
 
 const FeaturedItems = () => {
   return (
@@ -38,42 +40,51 @@ const FeaturedItems = () => {
                   className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-6 cursor-pointer p-4 rounded-xl"
                   key={i}
                 >
-                  {group.map((item, indx) => (
-                    <div className="relative z-20 py-3 px-1 sm:px-3 hover:shadow-md" key={indx}>
-                      <p className="text-gray-500 text-sm hover:text-yellow-400">{item.type}</p>
-                      <h1 className="line-clamp-1 text-blue-600 text-md font-bold hover:text-yellow-400">
-                        {item.title}
-                      </h1>
+                  {group.map((item) => (
+  <Link to={`/item/${item.id}`} key={item.id} className="block">
+    <div className="relative z-20 py-3 px-1 sm:px-3 hover:shadow-md">
+      <p className="text-gray-500 text-sm hover:text-yellow-400">{item.type}</p>
+      <h1 className="line-clamp-1 text-blue-600 text-md font-bold hover:text-yellow-400">
+        {item.title}
+      </h1>
 
-                      <div className="relative my-5">
-                        {item.discount && (
-                          <div className="absolute bg-yellow-400 text-gray-600 rounded-full text-xs px-2 py-1 font-semibold">
-                            {item.discount}
-                          </div>
-                        )}
-                        {!item.sold ? <img
-                          className="w-36 h-36 sm:w-64 sm:h-64 md:w-32 md:h-32 object-cover"
-                          src={item.image}
-                          alt={item.title}
-                        /> : <img
-                          className="w-36 h-36 sm:w-64 sm:h-64 md:w-32 md:h-32 object-cover grayscale"
-                          src={item.image}
-                          alt={item.title}
-                        /> }
-                      </div>
+      <div className="relative my-5">
+        {item.discount && (
+          <div className="absolute bg-yellow-400 text-gray-600 rounded-full text-xs px-2 py-1 font-semibold">
+            {item.discount}
+          </div>
+        )}
+        {!item.sold ? (
+          <img
+            className="w-36 h-36 sm:w-64 sm:h-64 md:w-32 md:h-32 object-cover"
+            src={item.image}
+            alt={item.title}
+          />
+        ) : (
+          <img
+            className="w-36 h-36 sm:w-64 sm:h-64 md:w-32 md:h-32 object-cover grayscale"
+            src={item.image}
+            alt={item.title}
+          />
+        )}
+      </div>
 
-                      <div className="flex space-x-2 items-center">
-                        {item.price ? (
-                          <p className="text-red-500 text-lg sm:text-xl md:text-sm">{item.price}</p>
-                        ) : (
-                          <p className="text-gray-500 font-semibold text-lg sm:text-xl md:text-sm">Sold out</p>
-                        )}
-                        {item.oldPrice && (
-                          <p className="line-through text-gray-400 text-md sm:text-xl md:text-sm">{item.oldPrice}</p>
-                        )}
-                      </div>
-                    </div>
-                  ))}
+      <div className="flex space-x-2 items-center">
+        {item.price ? (
+          <p className="text-red-500 text-lg sm:text-xl md:text-sm">{item.price}</p>
+        ) : (
+          <p className="text-gray-500 font-semibold text-lg sm:text-xl md:text-sm">Sold out</p>
+        )}
+        {item.oldPrice && (
+          <p className="line-through text-gray-400 text-md sm:text-xl md:text-sm">
+            {item.oldPrice}
+          </p>
+        )}
+      </div>
+    </div>
+  </Link>
+))}
+
                 </div>
               );
             })

@@ -82,6 +82,7 @@ export const offerCardItems = [
 // featured items data
 export const featuredItems = [
   {
+    id: "1",
     type: "Bulgari",
     title: "Faxtex Product Sample",
     price: "$110.00",
@@ -90,6 +91,7 @@ export const featuredItems = [
     image: "/images/ipadgreen.webp",
   },
   {
+    id: "2",
     type: "Christian Dior",
     title: "Finity Product Sample",
     price: "$95.00",
@@ -98,18 +100,21 @@ export const featuredItems = [
     image: "/images/printer.webp",
   },
   {
+    id: "3",
     type: "Dolc & Gabbana",
     title: "Fixiar Product Sample",
     price: "$210.00",
     image: "/images/ipadLap.webp",
   },
   {
+    id: "4",
     type: "Donna Karan",
     title: "Freecof Product Sample",
     price: "$450.00",
     image: "/images/appleTablet.webp",
   },
   {
+    id: "5",
     type: "Armani",
     title: "Freshkix Product Sample",
     price: "$120.00",
@@ -118,24 +123,28 @@ export const featuredItems = [
     image: "/images/lgphone.webp",
   },
   {
+    id: "6",
     type: "Bulgari",
     title: "Georgeous White Bag",
     sold: "Sold",
     image: "/images/iphone.webp",
   },
   {
+    id: "7",
     type: "Donna Karan",
     title: "Georgeous White Dresses",
     price: "$350.00",
     image: "/images/onePlus.webp",
   },
   {
+    id: "8",
     type: "Dolc & Gabbana",
     title: "Gold Diamond Chain",
     price: "$399.00",
     image: "/images/smartWatch.webp",
   },
 ];
+
 
 
 // left side 
