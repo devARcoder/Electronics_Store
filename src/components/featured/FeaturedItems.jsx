@@ -28,7 +28,7 @@ const FeaturedItems = () => {
 
         <div className="h-[1px] w-full bg-gray-300 mt-6 mb-0 md:hidden"></div>
 
-        {/* Right Side: Featured Items */}
+        
         <div className="mx-6 md:mx-0 my-0 md:my-0 space-y-6 w-full px-4">
           <FeatureTab className='hidden md:flex justify-between items-center md:px-40 py-3'/>
           {
