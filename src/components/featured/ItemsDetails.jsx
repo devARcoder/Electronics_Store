@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { featuredItems } from '../../data/data';
-import { ChevronRight, FacebookIcon, Star, StarHalf, TwitterIcon } from 'lucide-react'
+import { ChevronRight, FacebookIcon, Star, TwitterIcon } from 'lucide-react'
 const ItemDetails = () => {
     const [userRating, setUserRating] = useState(3)
   const { id } = useParams();
@@ -55,7 +55,7 @@ const ItemDetails = () => {
         <p className='flex bg-blue-900 text-white items-center w-fit px-1 py-1'><FacebookIcon className='w-5 h-5' fill='white' color='none'/> Share</p>
         <p className='flex bg-blue-600 text-white items-center w-fit px-1 py-1'><TwitterIcon className='w-5 h-5' fill='white' color='none'/> Tweet</p>
     </div>
-    
+
     <h1>Product SKU:
 code</h1>
 
