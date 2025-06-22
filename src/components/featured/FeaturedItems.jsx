@@ -9,7 +9,7 @@ const FeaturedItems = () => {
     <>
     <FeatureTab className="flex justify-between items-center px-10 sm:px-44 py-5 md:hidden"/>
       <div className="grid grid-cols-1 md:grid-cols-2 place-items-center md:place-items-center">
-        {/* Left Side: Special Offer */}
+        
         <div className="flex flex-col justify-center items-center border-2 border-yellow-400 rounded-2xl mx-4 py-6 md:py-2 cursor-pointer">
           <div className="flex justify-between items-center space-x-16 pt-6 md:pt-0 px-4 md:px-0 sm:space-x-64">
             <h1 className="text-3xl">Special Offer</h1>
