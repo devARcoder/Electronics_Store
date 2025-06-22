@@ -56,7 +56,7 @@ const ItemDetails = () => {
         <p className='flex bg-blue-600 text-white items-center w-fit px-1 py-1'><TwitterIcon className='w-5 h-5' fill='white' color='none'/> Tweet</p>
     </div>
     <h1>Product SKU:
-4827521</h1>
+code</h1>
 <hr/>
       <div className="flex gap-4 items-center mt-3">
         <p className="text-red-500 text-xl">{item.price}</p>
