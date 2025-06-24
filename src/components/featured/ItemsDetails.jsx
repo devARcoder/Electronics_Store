@@ -43,7 +43,7 @@ const ItemDetails = () => {
           <div className="flex flex-col space-y-4">
             <div className="">
               <p className="text-gray-500 text-sm">{item.type}</p>
-            <h1 className="text-2xl font-bold text-gray-600">{item.title}</h1>
+            <h1 className="text-3xl text-gray-600">{item.title}</h1>
             </div>
 
             <div className="flex space-x-1 items-center">
@@ -75,7 +75,16 @@ const ItemDetails = () => {
 
             <h1>Product SKU: code</h1>
 
-            <hr />
+            <hr className="" />
+            <div className="px-4">
+              <ul className="list-disc text-gray-500">
+                <li>Accept SIM card and call</li>
+                <li>Take photos</li>
+                <li>Make calling instead of mobile phone</li>
+                <li>Sync music play and sync control music</li>
+                <li>Sync Facebook,Twitter,email and calendar</li>
+              </ul>
+            </div>
           </div>
         </div>
         </div>
