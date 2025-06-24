@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { featuredItems } from "../../data/data";
 import { ChevronRight, FacebookIcon, ShoppingCart, Star, TwitterIcon } from "lucide-react";
 import CountDownOffer from "./CountDownOffer";
+import AvailableInStock from "./AvailableInStock";
 
 const ItemDetails = () => {
   const [userRating, setUserRating] = useState(3);
@@ -31,9 +32,9 @@ const ItemDetails = () => {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3">
-        <div className="sm:flex">
-          <div className="relative pr-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-54">
+        <div className="sm:flex w-full">
+          <div className="relative  pr-10">
             {item.discount && (
               <p className="absolute bg-yellow-300 inline-block px-1 py-1 rounded-full text-[15px]">
                 {item.discount}
@@ -42,7 +43,7 @@ const ItemDetails = () => {
             <img
               src={item.image}
               alt={item.title}
-              className="w-full object-cover rounded-xl ml-3"
+              className=" object-cover rounded-xl ml-3"
             />
           </div>
           <div className="flex flex-col space-y-4">
@@ -105,6 +106,7 @@ const ItemDetails = () => {
             </div>
           </div>
         </div>
+        <AvailableInStock/>
         </div>
       </div>
     </>
