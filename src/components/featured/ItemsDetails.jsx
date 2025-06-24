@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { featuredItems } from "../../data/data";
 import { ChevronRight, FacebookIcon, Star, TwitterIcon } from "lucide-react";
+import CountDownOffer from "./CountDownOffer";
+
 const ItemDetails = () => {
   const [userRating, setUserRating] = useState(3);
   const { id } = useParams();
@@ -9,6 +11,9 @@ const ItemDetails = () => {
 
   if (!item) return <h2 className="text-center py-20">Item not found!</h2>;
 
+  const countdownEnd = new Date();
+  countdownEnd.setDate(countdownEnd.getDate() + 2);
+  countdownEnd.setHours(countdownEnd.getHours() + 7); // 1 hour from now
   return (
     <>
       <div className="px-4">
@@ -88,8 +93,12 @@ const ItemDetails = () => {
 
             <hr className="text-gray-500 " />
 
-            <div className="">
-              <h1>HURRY UP! OFFER ENDS IN</h1>
+            <div className="pt-2 pb-7 space-y-3">
+              <h1 className="font-bold text-gray-600">HURRY UP! OFFER ENDS IN</h1>
+              <CountDownOffer targetTime={countdownEnd} />
+              <div className="flex">
+                <p className="text-gray-500"><span className="font-bold">Other people want this. </span>8 people have this in their carts right now.</p>
+              </div>
             </div>
           </div>
         </div>
