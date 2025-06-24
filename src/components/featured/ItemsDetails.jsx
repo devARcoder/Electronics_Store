@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { featuredItems } from "../../data/data";
-import { ChevronRight, FacebookIcon, Star, TwitterIcon } from "lucide-react";
+import { ChevronRight, FacebookIcon, ShoppingCart, Star, TwitterIcon } from "lucide-react";
 import CountDownOffer from "./CountDownOffer";
 
 const ItemDetails = () => {
@@ -33,7 +33,7 @@ const ItemDetails = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3">
         <div className="sm:flex">
-          <div className="relative">
+          <div className="relative pr-10">
             {item.discount && (
               <p className="absolute bg-yellow-300 inline-block px-1 py-1 rounded-full text-[15px]">
                 {item.discount}
@@ -96,9 +96,12 @@ const ItemDetails = () => {
             <div className="pt-2 pb-7 space-y-3">
               <h1 className="font-bold text-gray-600">HURRY UP! OFFER ENDS IN</h1>
               <CountDownOffer targetTime={countdownEnd} />
-              <div className="flex">
+              <div className="flex items-center space-x-2 py-3">
+                <ShoppingCart className="animate-bounce" size={52} fill="white" color="yellow" />
                 <p className="text-gray-500"><span className="font-bold">Other people want this. </span>8 people have this in their carts right now.</p>
               </div>
+              <p className="text-gray-500 pr-5">Want it delivered by <span className="font-bold">Thursday, 26 June</span> Order until <span className="font-bold text-yellow-400">14:00 tomorrow
+</span></p>
             </div>
           </div>
         </div>
