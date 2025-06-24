@@ -27,7 +27,7 @@ const ItemDetails = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3">
-        <div className="md:flex">
+        <div className="sm:flex">
           <div className="relative">
             {item.discount && (
               <p className="absolute bg-yellow-300 inline-block px-1 py-1 rounded-full text-[15px]">
@@ -75,7 +75,7 @@ const ItemDetails = () => {
 
             <h1>Product SKU: code</h1>
 
-            <hr className="" />
+            <hr className="text-gray-500 " />
             <div className="px-4">
               <ul className="list-disc text-gray-500">
                 <li>Accept SIM card and call</li>
@@ -84,6 +84,12 @@ const ItemDetails = () => {
                 <li>Sync music play and sync control music</li>
                 <li>Sync Facebook,Twitter,email and calendar</li>
               </ul>
+            </div>
+
+            <hr className="text-gray-500 " />
+
+            <div className="">
+              <h1>HURRY UP! OFFER ENDS IN</h1>
             </div>
           </div>
         </div>
