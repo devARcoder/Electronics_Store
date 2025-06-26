@@ -38,7 +38,7 @@ const ItemDetails = () => {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 md:gap-x-54">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:gap-x-54">
           <div className="relative  pr-10">
               {item.discount && (
                 <p className="absolute bg-yellow-300 inline-block px-1 py-1 rounded-full text-[15px]">
@@ -48,7 +48,7 @@ const ItemDetails = () => {
               <img
                 src={item.image}
                 alt={item.title}
-                className=" object-cover rounded-xl ml-3"
+                className="w-full object-cover rounded-xl ml-3"
               />
             </div>
           <div className="sm:flex w-full">
