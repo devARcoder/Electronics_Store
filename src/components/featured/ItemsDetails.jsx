@@ -38,9 +38,8 @@ const ItemDetails = () => {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-54">
-          <div className="sm:flex w-full">
-            <div className="relative  pr-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 md:gap-x-54">
+          <div className="relative  pr-10">
               {item.discount && (
                 <p className="absolute bg-yellow-300 inline-block px-1 py-1 rounded-full text-[15px]">
                   {item.discount}
@@ -52,6 +51,8 @@ const ItemDetails = () => {
                 className=" object-cover rounded-xl ml-3"
               />
             </div>
+          <div className="sm:flex w-full">
+            
             <div className="flex flex-col space-y-4">
               <div className="">
                 <p className="text-gray-500 text-sm">{item.type}</p>
