@@ -9,7 +9,6 @@ import {
   TwitterIcon,
 } from "lucide-react";
 import CountDownOffer from "./CountDownOffer";
-import AvailableInStock from "./AvailableInStock";
 
 const ItemDetails = () => {
   const [userRating, setUserRating] = useState(3);
@@ -129,7 +128,6 @@ const ItemDetails = () => {
               </div>
             </div>
           </div>
-          <AvailableInStock />
         </div>
       </div>
     </>
