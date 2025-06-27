@@ -8,7 +8,7 @@ const Contact = () => {
       <div className='flex items-center text-gray-500 py-6 space-x-1'>
       <Link className='text-[15px] hover:text-yellow-400' to="/">Home</Link>
       <ChevronRight size={18} color='gray'/>
-      <Link className='text-[15px] hover:text-yellow-300' to="/collections">All Collections</Link>
+      <Link className='text-[15px] hover:text-yellow-300' to="/collections">Contact Us</Link>
 
     </div>
     <div className="">
