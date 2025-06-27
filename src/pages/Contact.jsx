@@ -21,6 +21,10 @@ const Contact = () => {
       <Input type="text" className="border border-gray-200 py-3 px-3 rounded-full"/>
       <label htmlFor="Name" className='font-bold text-gray-700 pt-3'>Email</label>
       <Input type="email" className="border border-gray-200 py-3 px-3 rounded-full"/>
+      <label htmlFor="Name" className='font-bold text-gray-700 pt-3'>Phone Number</label>
+      <Input type="phone" className="border border-gray-200 py-3 px-3 rounded-full"/>
+      <label htmlFor="Name" className='font-bold text-gray-700 pt-3'>Message</label>
+      <textarea name="" id="" rows={7} className='border border-gray-200 py-3 px-3 rounded-2xl'></textarea>
     </div>
     </div>
   )
