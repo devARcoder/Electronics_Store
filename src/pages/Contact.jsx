@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { ChevronRight } from 'lucide-react'
 import Input from '../components/shared/common/Input'
 import ContactBanner from '../components/contact/ContactBanner'
+import AllProducts from '../components/all_Products/AllProducts'
 const Contact = () => {
   return (
     <div className='px-4 py-2'>
@@ -34,6 +35,7 @@ const Contact = () => {
     </div>
     <ContactBanner/>
     </div>
+    <AllProducts/>
     </div>
   )
 }
