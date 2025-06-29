@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { ChevronRight } from 'lucide-react'
 import Input from '../components/shared/common/Input'
+import ContactBanner from '../components/contact/ContactBanner'
 const Contact = () => {
   return (
     <div className='px-4 py-2'>
@@ -17,17 +18,21 @@ const Contact = () => {
       <p className='text-gray-600 py-3'>If you have any questions please send us a message using the adjacent form and we will get back to you as soon as possible</p>
 
     </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 ">
+
     <div className="form flex flex-col space-y-2 mt-5">
-      <div className="">
+      <div className="flex flex-col space-y-3">
         
-      <Input type="text" className="border border-gray-200 py-3 px-3 rounded-full"/>
+      <Input placeholder="Name" type="text" className="border border-gray-200 py-3 px-3 rounded-full"/>
       
-      <Input type="email" className="border border-gray-200 py-3 px-3 rounded-full"/>
+      <Input placeholder="Email" type="email" className="border border-gray-200 py-3 px-3 rounded-full"/>
       </div>
       
-      <Input type="phone" className="border border-gray-200 py-3 px-3 rounded-full"/>
+      <Input placeholder="Phone Number" type="phone" className="border border-gray-200 py-3 px-3 rounded-full"/>
       
       <textarea placeholder='Message' name="" id="" rows={7} className='border border-gray-200 py-3 px-3 rounded-2xl'></textarea>
+    </div>
+    <ContactBanner/>
     </div>
     </div>
   )
