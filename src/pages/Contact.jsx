@@ -15,6 +15,7 @@ const Contact = () => {
       <h1 className='border-b-2 border-yellow-400 text-xl text-gray-700 font-semibold w-44 pb-3'>Leave A Message</h1>
       <hr className='text-gray-300'/>
       <p className='text-gray-600 py-3'>If you have any questions please send us a message using the adjacent form and we will get back to you as soon as possible</p>
+      
     </div>
     <div className="form flex flex-col space-y-2 mt-5">
       <label htmlFor="Name" className='font-bold text-gray-700 pt-3'>Name</label>
