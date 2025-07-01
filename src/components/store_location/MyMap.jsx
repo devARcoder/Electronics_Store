@@ -12,7 +12,7 @@ L.Icon.Default.mergeOptions({
 
 const MyMap = () => {
   return (
-    <div className="relative z-0 h-[300px] rounded-xl overflow-hidden shadow-lg">
+    <div className="relative z-0 h-[300px] md:h-[400px] rounded-xl overflow-hidden shadow-lg ">
       <MapContainer center={[34.35, 71.10]} zoom={13} className="h-full w-full">
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>'
