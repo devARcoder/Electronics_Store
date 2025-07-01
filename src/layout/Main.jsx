@@ -6,6 +6,7 @@ import Contact from '../pages/Contact'; // (Optional, if you're adding it)
 import Collections from '../components/collections/Collections';
 import ItemDetails from '../components/featured/ItemsDetails';
 import ScrollToTop from '../components/ScrollToTop';
+import StoreLocation from '../pages/StoreLocation';
 const Main = () => {
   return (
     <main className="min-h-screen">
@@ -17,6 +18,7 @@ const Main = () => {
         <Route path="/item/:id" element={<ItemDetails />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/store_locator" element={<StoreLocation/>} />
       </Routes>
     </main>
   );

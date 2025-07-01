@@ -9,7 +9,6 @@ const catalogItems = [
   { label: "Laptops", to: "/catalog/laptops" },
   { label: "Electronics", to: "/catalog/electronics" },
 ];
-
 const DiskBar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
 
@@ -113,20 +112,36 @@ const DiskBar = () => {
             )}
 
             {isOpen && item.dropdown === "more" && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-60 bg-white border border-gray-200 rounded-md shadow-2xl z-20 p-4">
-                <ul className="flex flex-col gap-2 text-sm text-gray-700">
-                  <li className="hover:bg-gray-100 px-3 py-2 rounded cursor-pointer">
-                    Store Locator
-                  </li>
-                  <li className="hover:bg-gray-100 px-3 py-2 rounded cursor-pointer">
-                    FAQs
-                  </li>
-                  <li className="hover:bg-gray-100 px-3 py-2 rounded cursor-pointer">
-                    Terms & Conditions
-                  </li>
-                </ul>
-              </div>
-            )}
+  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-60 bg-white border border-gray-200 rounded-md shadow-2xl z-20 p-4">
+    <ul className="flex flex-col gap-2 text-sm text-gray-700">
+      <li>
+        <Link
+          to="/store_locator"
+          className="hover:bg-gray-100 px-3 py-2 rounded block"
+        >
+          Store Locator
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/faqs"
+          className="hover:bg-gray-100 px-3 py-2 rounded block"
+        >
+          FAQs
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/terms"
+          className="hover:bg-gray-100 px-3 py-2 rounded block"
+        >
+          Terms & Conditions
+        </Link>
+      </li>
+    </ul>
+  </div>
+)}
+
           </div>
         );
       })}
