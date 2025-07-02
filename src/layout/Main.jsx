@@ -5,7 +5,7 @@ import About from '../pages/About';
 import Contact from '../pages/Contact'; // (Optional, if you're adding it)
 import Collections from '../components/collections/Collections';
 import ItemDetails from '../components/featured/ItemsDetails';
-import ScrollToTop from '../components/ScrollToTop';
+import ScrollToTop from '../components/shared/ScrollToTop';
 import StoreLocation from '../pages/StoreLocation';
 const Main = () => {
   return (

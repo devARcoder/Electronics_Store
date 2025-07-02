@@ -590,3 +590,67 @@ export const allCollections = [
     name: "Printer Machine"
   }
 ]
+
+export const countries = [
+  { code: "PK", name: "Pakistan" },
+  { code: "IN", name: "India" },
+  { code: "US", name: "United States" },
+];
+
+export const countryCities = {
+  Pakistan: ["Islamabad", "Lahore", "Karachi", "Peshawar", "Quetta"],
+  India: ["Delhi", "Mumbai", "Bangalore", "Hyderabad", "Kolkata"],
+  "United States": ["New York", "Los Angeles", "Chicago", "Houston", "Miami"],
+};
+
+export const cityStores = {
+  Islamabad: [
+    { address: "G-11 Markaz, Islamabad, Pakistan", lat: 33.6844, lng: 73.0479 },
+    { address: "F-6 Super Market, Islamabad, Pakistan", lat: 33.7206, lng: 73.0652 },
+  ],
+  Lahore: [
+    { address: "Gulberg III, Lahore, Pakistan", lat: 31.5204, lng: 74.3587 },
+    { address: "DHA Phase 5, Lahore, Pakistan", lat: 31.4622, lng: 74.4110 },
+  ],
+  Karachi: [
+    { address: "Clifton Block 7, Karachi, Pakistan", lat: 24.8138, lng: 67.0304 },
+    { address: "North Nazimabad, Karachi, Pakistan", lat: 24.9386, lng: 67.0423 },
+  ],
+  Peshawar: [
+    { address: "University Road, Peshawar, Pakistan", lat: 34.0151, lng: 71.5805 }
+  ],
+  Quetta: [
+    { address: "Jinnah Road, Quetta, Pakistan", lat: 30.1798, lng: 66.9750 }
+  ],
+  Delhi: [
+    { address: "Connaught Place, New Delhi, India", lat: 28.6315, lng: 77.2167 }
+  ],
+  Mumbai: [
+    { address: "Andheri West, Mumbai, India", lat: 19.1360, lng: 72.8296 }
+  ],
+  Bangalore: [
+    { address: "Koramangala, Bangalore, India", lat: 12.9352, lng: 77.6245 }
+  ],
+  Hyderabad: [
+    { address: "Banjara Hills, Hyderabad, India", lat: 17.4239, lng: 78.4294 }
+  ],
+  Kolkata: [
+    { address: "Salt Lake, Kolkata, India", lat: 22.5769, lng: 88.4332 }
+  ],
+  "New York": [
+    { address: "5th Avenue, Manhattan, New York, USA", lat: 40.7759, lng: -73.9654 }
+  ],
+  "Los Angeles": [
+    { address: "Sunset Boulevard, Los Angeles, USA", lat: 34.0983, lng: -118.3267 }
+  ],
+  Chicago: [
+    { address: "Michigan Avenue, Chicago, USA", lat: 41.8916, lng: -87.6244 }
+  ],
+  Houston: [
+    { address: "Westheimer Rd, Houston, USA", lat: 29.7370, lng: -95.4240 }
+  ],
+  Miami: [
+    { address: "Ocean Drive, Miami Beach, USA", lat: 25.7796, lng: -80.1318 }
+  ],
+};
+
