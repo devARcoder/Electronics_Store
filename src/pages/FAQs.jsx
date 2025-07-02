@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight, Plus, Minus } from 'lucide-react';
 import { faqs, faqsAccordians } from '../data/data';
+import AllProducts from '../components/all_Products/AllProducts';
 
 const FAQs = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -11,6 +12,7 @@ const FAQs = () => {
   };
 
   return (
+    <>
     <div className='px-4 py-4 md:px-24'>
       {/* Breadcrumb */}
       <div className='flex items-center text-gray-500 py-6 space-x-1'>
@@ -56,7 +58,10 @@ const FAQs = () => {
           </div>
         ))}
       </div>
+
     </div>
+      <AllProducts/>
+    </>
   );
 };
 

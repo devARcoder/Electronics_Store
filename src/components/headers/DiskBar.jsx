@@ -116,7 +116,7 @@ const DiskBar = () => {
     <ul className="flex flex-col gap-2 text-sm text-gray-700">
       <li>
         <Link
-          to="/store_locator"
+          to="/store-locator"
           className="hover:bg-gray-100 px-3 py-2 rounded block"
         >
           Store Locator

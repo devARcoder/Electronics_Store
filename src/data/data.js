@@ -733,3 +733,65 @@ export const faqsAccordians = [
       "No, you can place an order as a guest. However, creating an account allows you to track orders, save shipping addresses, and enjoy a faster checkout experience in the future.",
   },
 ];
+
+
+export const legalSections = [
+  {
+    title: "Intellectual Property",
+    content: [
+      {
+        id: 1,
+        text: "All content included on this website, such as text, graphics, logos, icons, images, audio clips, digital downloads, and software, is the property of the company or its content suppliers and is protected by international copyright laws."
+      },
+      {
+        id: 2,
+        text: "The compilation of all content on this site is the exclusive property of the company and is protected by copyright laws."
+      },
+      {
+        id: 3,
+        text: "Trademarks, service marks, and trade dress featured on this site are registered and unregistered marks of the company or third parties."
+      },
+      {
+        id: 4,
+        text: "You may not reproduce, duplicate, copy, sell, resell, or exploit any portion of the website without express written permission from the company."
+      },
+      {
+        id: 5,
+        text: "Any unauthorized use of the materials appearing on the site may violate copyright, trademark, and other applicable laws and could result in criminal or civil penalties."
+      },
+      {
+        id: 6,
+        text: "Users are granted a limited license to access and make personal use of the site and its content but not to download or modify it without consent."
+      }
+    ]
+  },
+  {
+    title: "Termination",
+    content: [
+      {
+        id: 1,
+        text: "We reserve the right to suspend or terminate your access to the services at any time, with or without notice, for conduct that we believe violates these terms or is harmful to other users or the company."
+      },
+      {
+        id: 2,
+        text: "Upon termination, all rights granted to you under these terms will cease immediately."
+      },
+      {
+        id: 3,
+        text: "You must cease all use of the services and delete any materials obtained from the platform."
+      },
+      {
+        id: 4,
+        text: "Termination does not affect any rights or obligations that have accrued before the date of termination."
+      },
+      {
+        id: 5,
+        text: "The company shall not be liable to you or any third party for any termination of your access to the services."
+      },
+      {
+        id: 6,
+        text: "Certain provisions, including but not limited to Intellectual Property, Disclaimers, Limitation of Liability, and Governing Law, will survive termination."
+      }
+    ]
+  }
+];
