@@ -64,31 +64,31 @@ const StoreLocation = () => {
     setTimeout(() => {
       setSelectedCity(value);
       setLoading(false);
-    }, 1000); // Simulate loading delay
+    }, 1000);
   };
 
   return (
     <div className='px-4 py-4 md:px-24'>
-      {/* Breadcrumb */}
+      
       <div className='flex items-center text-gray-500 py-6 space-x-1'>
         <Link className='text-[15px] hover:text-yellow-400' to="/">Home</Link>
         <ChevronRight size={18} color='gray' />
         <Link className='text-[15px] hover:text-yellow-300' to="">Store Location</Link>
       </div>
 
-      {/* Title */}
+      
       <div className="flex flex-col items-center justify-center space-y-2">
         <h1 className='text-3xl text-gray-700'>Store Location</h1>
         <p className='text-gray-500'>Visit us and discover everything</p>
       </div>
 
-      {/* Selector & Map Grid */}
+      
       <div className="pt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Left Section: Selection + Address */}
+        
         <div className="text-xl text-gray-700 space-y-4 pt-6">
           <h1>Find Store Location</h1>
 
-          {/* Country Select */}
+          
           <div>
             <p className='text-[17px] mb-3 text-gray-500'>Country</p>
             <select
