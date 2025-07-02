@@ -5,8 +5,11 @@ import Input from '../components/shared/common/Input'
 import ContactBanner from '../components/contact/ContactBanner'
 import AllProducts from '../components/all_Products/AllProducts'
 import Button from '../components/shared/common/Button'
+import CompaniesBrand from '../components/company_brands/CompaniesBrand'
+import NewsLetter from '../components/news_letter/NewsLetter'
 const Contact = () => {
   return (
+    <>
     <div className='px-4 py-2 md:px-24'>
       <div className='flex items-center text-gray-500 py-6 space-x-1'>
       <Link className='text-[15px] hover:text-yellow-400' to="/">Home</Link>
@@ -38,8 +41,11 @@ const Contact = () => {
     </div>
     <ContactBanner/>
     </div>
-    <AllProducts/>
     </div>
+    <AllProducts/>
+    <CompaniesBrand/>
+    <NewsLetter/>
+    </>
   )
 }
 

@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import { legalSections } from '../data/data';
 import AllProducts from '../components/all_Products/AllProducts';
+import CompaniesBrand from '../components/company_brands/CompaniesBrand';
+import NewsLetter from '../components/news_letter/NewsLetter';
 const TermsCondition = () => {
   return (
     <>
@@ -43,6 +45,8 @@ const TermsCondition = () => {
       
     </div>
     <AllProducts/>
+    <CompaniesBrand/>
+    <NewsLetter/>
       </>
   )
 }

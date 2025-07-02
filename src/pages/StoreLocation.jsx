@@ -6,6 +6,8 @@ import { MapPinIcon } from '../assets/svg';
 import AllProducts from '../components/all_Products/AllProducts';
 
 import { countries, countryCities, cityStores } from '../data/data';
+import CompaniesBrand from '../components/company_brands/CompaniesBrand';
+import NewsLetter from '../components/news_letter/NewsLetter';
 
 const StoreLocation = () => {
   const [selectedCountry, setSelectedCountry] = useState("");
@@ -27,6 +29,7 @@ const StoreLocation = () => {
   };
 
   return (
+    <>
     <div className='px-4 py-4 md:px-24'>
       {/* Breadcrumb */}
       <div className='flex items-center text-gray-500 py-6 space-x-1'>
@@ -114,8 +117,11 @@ const StoreLocation = () => {
           <MyMap storeLocations={cityStores[selectedCity] || []} />
         </div>
       </div>
-      <AllProducts/>
     </div>
+      <AllProducts/>
+      <CompaniesBrand/>
+      <NewsLetter/>
+    </>
   );
 };
 

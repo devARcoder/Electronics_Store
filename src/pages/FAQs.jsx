@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { ChevronRight, Plus, Minus } from 'lucide-react';
 import { faqs, faqsAccordians } from '../data/data';
 import AllProducts from '../components/all_Products/AllProducts';
+import CompaniesBrand from '../components/company_brands/CompaniesBrand';
+import NewsLetter from '../components/news_letter/NewsLetter';
 
 const FAQs = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -61,6 +63,8 @@ const FAQs = () => {
 
     </div>
       <AllProducts/>
+      <CompaniesBrand/>
+      <NewsLetter/>
     </>
   );
 };
