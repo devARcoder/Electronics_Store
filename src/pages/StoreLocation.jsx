@@ -3,7 +3,7 @@ import MyMap from '../components/store_location/MyMap';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import { MapPinIcon } from '../assets/svg';
-
+import AllProducts from '../components/all_Products/AllProducts';
 const countries = [
   { code: "PK", name: "Pakistan" },
   { code: "IN", name: "India" },
@@ -175,6 +175,7 @@ const StoreLocation = () => {
           <MyMap storeLocations={cityStores[selectedCity] || []} />
         </div>
       </div>
+      <AllProducts/>
     </div>
   );
 };
