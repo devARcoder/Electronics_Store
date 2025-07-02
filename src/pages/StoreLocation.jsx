@@ -148,7 +148,7 @@ const StoreLocation = () => {
             </div>
           )}
 
-          {/* Store Address Display */}
+          
           {selectedCity && !loading && cityStores[selectedCity] && (
             <div className="pt-2 space-y-4">
               <h2 className="text-[17px] font-bold text-gray-700">{selectedCity} Branches</h2>
