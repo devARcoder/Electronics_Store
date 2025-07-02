@@ -161,8 +161,6 @@ const StoreLocation = () => {
             </div>
           )}
         </div>
-
-        {/* Right Section: Map */}
         <div className="py-6">
           <MyMap selectedCity={selectedCity} />
         </div>
