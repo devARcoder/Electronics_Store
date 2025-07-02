@@ -7,6 +7,7 @@ import Collections from '../components/collections/Collections';
 import ItemDetails from '../components/featured/ItemsDetails';
 import ScrollToTop from '../components/shared/ScrollToTop';
 import StoreLocation from '../pages/StoreLocation';
+import FAQs from '../pages/FAQs'
 const Main = () => {
   return (
     <main className="min-h-screen">
@@ -19,6 +20,7 @@ const Main = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/store_locator" element={<StoreLocation/>} />
+        <Route path="/faqs" element={<FAQs/>} />
       </Routes>
     </main>
   );

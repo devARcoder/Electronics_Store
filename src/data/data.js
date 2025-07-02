@@ -78,7 +78,6 @@ export const offerCardItems = [
   },
 ];
 
-
 // featured items data
 export const featuredItems = [
   {
@@ -145,9 +144,7 @@ export const featuredItems = [
   },
 ];
 
-
-
-// left side 
+// left side
 export const leftSideData = [
   {
     brand: "Bulgari",
@@ -173,7 +170,7 @@ export const leftSideData = [
     title: "Lexiwarm Product",
     price: "$35.00",
     image: "/images/deal2.webp",
-  }, 
+  },
 ];
 
 // center data
@@ -185,20 +182,20 @@ export const centerData = [
     oldPrice: "$499.00",
     image: "/images/deal1.webp",
   },
-]
+];
 export const centerCatagoryData = [
   {
-    image: "/images/deal1.webp"
+    image: "/images/deal1.webp",
   },
   {
-    image: "/images/deal1-2.webp"
+    image: "/images/deal1-2.webp",
   },
   {
-    image: "/images/deal1-3.webp"
+    image: "/images/deal1-3.webp",
   },
-]
+];
 
-// right side 
+// right side
 export const rightSideData = [
   {
     brand: "Christian Dior",
@@ -218,46 +215,47 @@ export const rightSideData = [
     price: "$120.00",
     image: "/images/deal4.webp",
   },
-  { brand: "Armani",
+  {
+    brand: "Armani",
     title: "Soltone Product",
-    price: "$280.00", 
-    image: "/images/printer.webp"
+    price: "$280.00",
+    image: "/images/printer.webp",
   },
-]
+];
 
-// sellers data 
+// sellers data
 export const sellingData = [
   {
     brand: "Donna Karan",
     title: "Freecof Product Sample",
     image: "/images/appleTablet.webp",
-    price: "$450.00"
+    price: "$450.00",
   },
   {
     brand: "Christian Dior",
     title: "Lexiwarm Product Sample",
     image: "/images/deal5.webp",
-    price: "$450.00"
+    price: "$450.00",
   },
   {
     brand: "Christian Dior",
     title: "Lexiwarm Product Sample",
     image: "/images/smartWatch.webp",
-    price: "$35.00"
+    price: "$35.00",
   },
   {
     brand: "Givenchy",
     title: "Lamlex Product Sample",
     image: "/images/laptopSell.webp",
     price: "$455.99",
-    oldPrice: "$500.00"
+    oldPrice: "$500.00",
   },
   {
     brand: "Armani",
     title: "Donkix Product Sample",
     image: "/images/iphone.webp",
     price: "$60.99",
-    oldPrice: "$85.90"
+    oldPrice: "$85.90",
   },
   {
     brand: "Dolc & Gabbana",
@@ -277,33 +275,33 @@ export const sellingData = [
     image: "/images/deal4.webp",
     price: "$120.00",
   },
-]
+];
 
-// new arrivals data 
+// new arrivals data
 export const newArrivalsData = [
   {
     brand: "Christian Dior",
     title: "Lexiited Product Sample",
     image: "/images/smartWatch.webp",
-    price: "$200.00"
+    price: "$200.00",
   },
   {
     brand: "Christian Dior",
     title: "Lexiwarm Product Sample",
     image: "/images/deal5.webp",
-    price: "$35.00"
+    price: "$35.00",
   },
   {
     brand: "Donna Karan",
     title: "Georgeous White Dresses",
     image: "/images/onePlus.webp",
-    price: "$350.00"
+    price: "$350.00",
   },
   {
     brand: "Dolc & Gabbana",
     title: "Lexizimin Product Sample",
     image: "/images/deal4.webp",
-    price: "$120.00"
+    price: "$120.00",
   },
   {
     brand: "Givenchy",
@@ -311,7 +309,7 @@ export const newArrivalsData = [
     image: "/images/laptopSell.webp",
     price: "$455.99",
     oldPrice: "$500.00",
-    discount: "9%"
+    discount: "9%",
   },
   {
     brand: "Givenchy",
@@ -319,23 +317,23 @@ export const newArrivalsData = [
     image: "/images/iphone2.webp",
     price: "$150.00",
     oldPrice: "$229.00",
-    discount: "34%"
+    discount: "34%",
   },
   {
     brand: "Dolc & Gabbana",
     title: "Newity Product Sample",
     image: "/images/ipadgreen.webp",
-    price: "$80.00"
+    price: "$80.00",
   },
   {
     brand: "Armani",
     title: "Soltone Product Sample",
     image: "/images/printer.webp",
-    price: "$280.00"
+    price: "$280.00",
   },
-]
+];
 
-// company brand data 
+// company brand data
 export const companiesBrand = [
   {
     image: "/images/brand1.png",
@@ -351,31 +349,31 @@ export const companiesBrand = [
   },
   {
     image: "/images/brand5.png",
-  }
-]
+  },
+];
 
-// featured products data 
+// featured products data
 export const featuredProducts = [
   {
     image: "/images/ipadgreen.webp",
     title: "Faxtex Product Sample",
     price: "$110.00",
-    oldPrice: "$199.00"
+    oldPrice: "$199.00",
   },
   {
     image: "/images/printer.webp",
     title: "Finity Product Sample",
     price: "$95.00",
-    oldPrice: "$120.00"
+    oldPrice: "$120.00",
   },
   {
     image: "/images/ipadLap.webp",
     title: "Fixair Product Sample",
     price: "$210.00",
   },
-]
+];
 
-// on sale products data 
+// on sale products data
 export const onSaleProducts = [
   {
     image: "/images/deal4.webp",
@@ -386,17 +384,17 @@ export const onSaleProducts = [
     image: "/images/iphone.webp",
     title: "Donkix Product Sample",
     price: "$60.00",
-    oldPrice: "$100.00"
+    oldPrice: "$100.00",
   },
   {
     image: "/images/printer.webp",
     title: "Finity Product Sample",
     price: "$95.00",
-    oldPrice: "$120.00"
+    oldPrice: "$120.00",
   },
-]
+];
 
-// top rated products data 
+// top rated products data
 export const topRatedProducts = [
   {
     image: "/images/appleTablet.webp",
@@ -413,183 +411,180 @@ export const topRatedProducts = [
     title: "Lexiited Product Sample",
     price: "$200.00",
   },
-]
-
+];
 
 // =======  About page data  ========
 
-
-// about banners data 
+// about banners data
 export const aboutBanners = [
   {
     img: "/images/aboutBanner1.webp",
     title: "What we really do?",
-    desc: "Donec libero dolor, tincidunt id laoreet vitae,ullamcorper eu tortor. Maecenas pellentesque, dui vitae iaculis mattis, tortor nisi faucibus magna, vitae ultrices lacus purus vitae metus."
+    desc: "Donec libero dolor, tincidunt id laoreet vitae,ullamcorper eu tortor. Maecenas pellentesque, dui vitae iaculis mattis, tortor nisi faucibus magna, vitae ultrices lacus purus vitae metus.",
   },
   {
     img: "/images/aboutBanner2.webp",
     title: "What our Mission?",
-    desc: "Donec libero dolor, tincidunt id laoreet vitae,ullamcorper eu tortor. Maecenas pellentesque, dui vitae iaculis mattis, tortor nisi faucibus magna, vitae ultrices lacus purus vitae metus."
+    desc: "Donec libero dolor, tincidunt id laoreet vitae,ullamcorper eu tortor. Maecenas pellentesque, dui vitae iaculis mattis, tortor nisi faucibus magna, vitae ultrices lacus purus vitae metus.",
   },
   {
     img: "/images/aboutBanner3.webp",
     title: "What we can for Clients?",
-    desc: "Donec libero dolor, tincidunt id laoreet vitae,ullamcorper eu tortor. Maecenas pellentesque, dui vitae iaculis mattis, tortor nisi faucibus magna, vitae ultrices lacus purus vitae metus."
+    desc: "Donec libero dolor, tincidunt id laoreet vitae,ullamcorper eu tortor. Maecenas pellentesque, dui vitae iaculis mattis, tortor nisi faucibus magna, vitae ultrices lacus purus vitae metus.",
   },
-]
+];
 
-// about team data 
+// about team data
 export const aboutTeams = [
   {
     img: "/images/aboutTeam1.webp",
     name: "Thomas Snow",
-    position: "Ceo Founder"
+    position: "Ceo Founder",
   },
   {
     img: "/images/aboutTeam2.avif",
     name: "Anna Baranow",
-    position: "Client Care"
+    position: "Client Care",
   },
   {
     img: "/images/aboutTeam3.avif",
     name: "Andrei Kowasly",
-    position: "Support Boss"
+    position: "Support Boss",
   },
   {
     img: "/images/aboutTeam4.webp",
     name: "Pamela Doe",
-    position: "Delivery Driver"
+    position: "Delivery Driver",
   },
   {
     img: "/images/aboutTeam5.avif",
     name: "Susan McCain",
-    position: "Packaking Girl"
+    position: "Packaking Girl",
   },
   {
     img: "/images/aboutTeam6.png",
     name: "See Details",
   },
-]
+];
 
-// about details data 
+// about details data
 export const aboutDetails = [
   {
     title: "What we really do?",
-    desc: "Donec libero dolor, tincidunt id laoreet vitae, ullamcorper eu tortor. Maecenas pellentesque, dui vitae iaculis mattis, tortor nisi faucibus magna, vitae ultrices lacus purus vitae metus."
+    desc: "Donec libero dolor, tincidunt id laoreet vitae, ullamcorper eu tortor. Maecenas pellentesque, dui vitae iaculis mattis, tortor nisi faucibus magna, vitae ultrices lacus purus vitae metus.",
   },
   {
     title: "History of the Company",
-    desc: "Donec libero dolor, tincidunt id laoreet vitae, ullamcorper eu tortor. Maecenas faucibus magna, vitae ultrices lacus purus vitae metus."
+    desc: "Donec libero dolor, tincidunt id laoreet vitae, ullamcorper eu tortor. Maecenas faucibus magna, vitae ultrices lacus purus vitae metus.",
   },
   {
     title: "Our vision",
-    desc: "Donec libero dolor, tincidunt id laoreet vitae, ullamcorper eu tortor. Maecenas pellentesque, dui vitae iaculis mattis, tortor nisi faucibus magna, vitae ultrices lacus purus vitae metus."
+    desc: "Donec libero dolor, tincidunt id laoreet vitae, ullamcorper eu tortor. Maecenas pellentesque, dui vitae iaculis mattis, tortor nisi faucibus magna, vitae ultrices lacus purus vitae metus.",
   },
   {
     title: "Cooperate with Us!",
-    desc: "Donec libero dolor, tincidunt id laoreet vitae, ullamcorper eu tortor. Maecenas pellentesque, dui vitae iaculis mattis, tortor nisi faucibus magna, vitae ultrices lacus purus vitae metus."
+    desc: "Donec libero dolor, tincidunt id laoreet vitae, ullamcorper eu tortor. Maecenas pellentesque, dui vitae iaculis mattis, tortor nisi faucibus magna, vitae ultrices lacus purus vitae metus.",
   },
-]
+];
 
 export const allCollections = [
-  
   {
     catagory: "electronics",
     img: "/images/collections/accessories2.avif",
-    name: "Eyewaer"
+    name: "Eyewaer",
   },
   {
     catagory: "accesories",
     img: "/images/collections/accessories3.avif",
-    name: "Gadget"
+    name: "Gadget",
   },
   {
     catagory: "accesories",
     img: "/images/collections/accessories4.avif",
-    name: "Software"
+    name: "Software",
   },
   {
     catagory: "computer",
     img: "/images/collections/computer1.avif",
-    name: "TV"
+    name: "TV",
   },
   {
     catagory: "electronics",
     img: "/images/collections/accessories1.webp",
-    name: "Accesories"
+    name: "Accesories",
   },
   {
     catagory: "computer",
     img: "/images/collections/computer2.avif",
-    name: "Modern Mouse"
+    name: "Modern Mouse",
   },
   {
     catagory: "computer",
     img: "/images/collections/computer3.png",
-    name: "Mouse"
+    name: "Mouse",
   },
-  
+
   {
     catagory: "accesories",
     img: "/images/collections/accessories5.webp",
-    name: "Disktop CPU"
+    name: "Disktop CPU",
   },
   {
     catagory: "computer",
     img: "/images/collections/computer1.avif",
-    name: "TV"
+    name: "TV",
   },
   {
     catagory: "computer",
     img: "/images/collections/computer4.avif",
-    name: "Mac Computer"
+    name: "Mac Computer",
   },
   {
     catagory: "computer",
     img: "/images/collections/computer5.webp",
-    name: "All in One"
+    name: "All in One",
   },
   {
     catagory: "electronics",
     img: "/images/collections/electronics1.webp",
-    name: "e-city Bike"
+    name: "e-city Bike",
   },
   {
     catagory: "electronics",
     img: "/images/collections/electronics2.avif",
-    name: "Electric Bike"
+    name: "Electric Bike",
   },
   {
     catagory: "accesories",
     img: "/images/collections/accessories5.webp",
-    name: "Disktop CPU"
+    name: "Disktop CPU",
   },
   {
     catagory: "computer",
     img: "/images/collections/computer5.webp",
-    name: "All in One"
+    name: "All in One",
   },
   {
     catagory: "electronics",
     img: "/images/collections/electronics1.webp",
-    name: "e-city Bike"
+    name: "e-city Bike",
   },
   {
     catagory: "electronics",
     img: "/images/collections/accessories2.avif",
-    name: "Eyewaer"
+    name: "Eyewaer",
   },
   {
     catagory: "accesories",
     img: "/images/collections/accessories3.avif",
-    name: "Gadget"
+    name: "Gadget",
   },
   {
     catagory: "electronics",
     img: "/images/collections/electronics3.avif",
-    name: "Printer Machine"
-  }
-]
+    name: "Printer Machine",
+  },
+];
 
 export const countries = [
   { code: "PK", name: "Pakistan" },
@@ -606,51 +601,135 @@ export const countryCities = {
 export const cityStores = {
   Islamabad: [
     { address: "G-11 Markaz, Islamabad, Pakistan", lat: 33.6844, lng: 73.0479 },
-    { address: "F-6 Super Market, Islamabad, Pakistan", lat: 33.7206, lng: 73.0652 },
+    {
+      address: "F-6 Super Market, Islamabad, Pakistan",
+      lat: 33.7206,
+      lng: 73.0652,
+    },
   ],
   Lahore: [
     { address: "Gulberg III, Lahore, Pakistan", lat: 31.5204, lng: 74.3587 },
-    { address: "DHA Phase 5, Lahore, Pakistan", lat: 31.4622, lng: 74.4110 },
+    { address: "DHA Phase 5, Lahore, Pakistan", lat: 31.4622, lng: 74.411 },
   ],
   Karachi: [
-    { address: "Clifton Block 7, Karachi, Pakistan", lat: 24.8138, lng: 67.0304 },
-    { address: "North Nazimabad, Karachi, Pakistan", lat: 24.9386, lng: 67.0423 },
+    {
+      address: "Clifton Block 7, Karachi, Pakistan",
+      lat: 24.8138,
+      lng: 67.0304,
+    },
+    {
+      address: "North Nazimabad, Karachi, Pakistan",
+      lat: 24.9386,
+      lng: 67.0423,
+    },
   ],
   Peshawar: [
-    { address: "University Road, Peshawar, Pakistan", lat: 34.0151, lng: 71.5805 }
+    {
+      address: "University Road, Peshawar, Pakistan",
+      lat: 34.0151,
+      lng: 71.5805,
+    },
   ],
   Quetta: [
-    { address: "Jinnah Road, Quetta, Pakistan", lat: 30.1798, lng: 66.9750 }
+    { address: "Jinnah Road, Quetta, Pakistan", lat: 30.1798, lng: 66.975 },
   ],
   Delhi: [
-    { address: "Connaught Place, New Delhi, India", lat: 28.6315, lng: 77.2167 }
+    {
+      address: "Connaught Place, New Delhi, India",
+      lat: 28.6315,
+      lng: 77.2167,
+    },
   ],
   Mumbai: [
-    { address: "Andheri West, Mumbai, India", lat: 19.1360, lng: 72.8296 }
+    { address: "Andheri West, Mumbai, India", lat: 19.136, lng: 72.8296 },
   ],
   Bangalore: [
-    { address: "Koramangala, Bangalore, India", lat: 12.9352, lng: 77.6245 }
+    { address: "Koramangala, Bangalore, India", lat: 12.9352, lng: 77.6245 },
   ],
   Hyderabad: [
-    { address: "Banjara Hills, Hyderabad, India", lat: 17.4239, lng: 78.4294 }
+    { address: "Banjara Hills, Hyderabad, India", lat: 17.4239, lng: 78.4294 },
   ],
   Kolkata: [
-    { address: "Salt Lake, Kolkata, India", lat: 22.5769, lng: 88.4332 }
+    { address: "Salt Lake, Kolkata, India", lat: 22.5769, lng: 88.4332 },
   ],
   "New York": [
-    { address: "5th Avenue, Manhattan, New York, USA", lat: 40.7759, lng: -73.9654 }
+    {
+      address: "5th Avenue, Manhattan, New York, USA",
+      lat: 40.7759,
+      lng: -73.9654,
+    },
   ],
   "Los Angeles": [
-    { address: "Sunset Boulevard, Los Angeles, USA", lat: 34.0983, lng: -118.3267 }
+    {
+      address: "Sunset Boulevard, Los Angeles, USA",
+      lat: 34.0983,
+      lng: -118.3267,
+    },
   ],
   Chicago: [
-    { address: "Michigan Avenue, Chicago, USA", lat: 41.8916, lng: -87.6244 }
+    { address: "Michigan Avenue, Chicago, USA", lat: 41.8916, lng: -87.6244 },
   ],
   Houston: [
-    { address: "Westheimer Rd, Houston, USA", lat: 29.7370, lng: -95.4240 }
+    { address: "Westheimer Rd, Houston, USA", lat: 29.737, lng: -95.424 },
   ],
   Miami: [
-    { address: "Ocean Drive, Miami Beach, USA", lat: 25.7796, lng: -80.1318 }
+    { address: "Ocean Drive, Miami Beach, USA", lat: 25.7796, lng: -80.1318 },
   ],
 };
 
+export const faqs = [
+  {
+    question: "What Shipping Methods Are Available?",
+    answer:
+      "We offer standard, express, and next-day delivery options. Shipping methods depend on your location and the selected items. You'll see all available options during checkout.",
+  },
+  {
+    question: "How Long Will it Take To Get My Package?",
+    answer:
+      "Delivery times vary based on the shipping method and your location. Standard shipping typically takes 3–5 business days, while express options can arrive within 1–2 business days.",
+  },
+  {
+    question: "How Do I Track My Order?",
+    answer:
+      "Once your order is shipped, you will receive a tracking link via email or SMS. You can also log into your account and view your order status under the 'My Orders' section.",
+  },
+  {
+    question: "Do I Need an Account to Place an Order?",
+    answer:
+      "No, you can place an order as a guest. However, creating an account allows you to track orders, manage returns, save addresses, and enjoy a faster checkout experience.",
+  },
+];
+
+// FAQ Data (All Answers Added)
+export const faqsAccordians = [
+  {
+    question: "What Shipping Methods Are Available?",
+    answer:
+      "We offer multiple shipping methods to suit your needs, including Standard, Express, and Same-Day Delivery in select regions. Shipping options and costs are displayed at checkout based on your location. All orders are processed within 24 hours, and you'll receive tracking details once your order is dispatched.",
+  },
+  {
+    question: "How Long Will it Take To Get My Package?",
+    answer:
+      "Delivery times vary based on your location and the shipping method chosen. Standard delivery typically takes 3–5 business days, while express or priority shipping can take 1–2 days. Rural or remote areas may require additional time.",
+  },
+  {
+    question: "How Do I Track My Order?",
+    answer:
+      "Once your order has been shipped, you will receive a confirmation email with a tracking link. You can also log into your account and find tracking details under the 'My Orders' section.",
+  },
+  {
+    question: "How Do I Place an Order?",
+    answer:
+      "Browse our products, add items to your cart, and proceed to checkout. Fill in your shipping and payment information, then confirm your order. You’ll receive a confirmation email shortly after.",
+  },
+  {
+    question: "How Should I to Contact if I Have Any Queries?",
+    answer:
+      "You can contact our customer support team via the 'Contact Us' page, live chat, or email at support@example.com. We aim to respond to all inquiries within 24 hours.",
+  },
+  {
+    question: "Do I Need an Account to Place an Order?",
+    answer:
+      "No, you can place an order as a guest. However, creating an account allows you to track orders, save shipping addresses, and enjoy a faster checkout experience in the future.",
+  },
+];
