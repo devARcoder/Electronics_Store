@@ -105,7 +105,7 @@ const StoreLocation = () => {
             </select>
           </div>
 
-          {/* City Select */}
+          
           {selectedCountry && (
             <div>
               <p className='text-[17px] mb-3 text-gray-500'>City</p>
@@ -126,7 +126,7 @@ const StoreLocation = () => {
 
           <hr className='text-gray-300' />
 
-          {/* Loader */}
+          
           {loading && (
             <div className="flex items-center space-x-2 text-sm text-gray-500 animate-pulse">
               <svg className="h-5 w-5 animate-spin text-yellow-500" viewBox="0 0 24 24" fill="none">
