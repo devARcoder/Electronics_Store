@@ -13,7 +13,7 @@ const Featured = () => {
             <div className="flex space-x-2" key={i}>
               <div className="img">
                 <img
-                  className="w-24 md:w-20"
+                  className="w-24 md:w-20 "
                   src={featured.image}
                   alt={featured.title}
                 />

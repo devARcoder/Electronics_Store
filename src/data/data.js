@@ -149,9 +149,9 @@ export const leftSideData = [
     id: "left-1",
     brand: "Bulgari",
     title: "Gorgeous White Bag",
-    price: "Sold out",
+    price: "",
     image: "/images/iphone.webp",
-    soldOut: true,
+    sold: "Sold",
   },
   {
     id: "left-2",

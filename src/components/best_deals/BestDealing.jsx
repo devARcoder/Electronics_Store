@@ -27,7 +27,11 @@ const BestDealing = () => {
                 alt={left.title}
               />
               <div className="cart flex justify-between items-center pr-4">
-                <h1 className="text-gray-700 text-lg">{left.price}</h1>
+                <h1 className="text-gray-700 text-lg">{left.price ? left.price : (
+                            <p className="text-gray-500 font-semibold text-lg sm:text-xl md:text-sm">
+                              Sold out
+                            </p>
+                          )}</h1>
               </div>
             </div>
           </Link>
