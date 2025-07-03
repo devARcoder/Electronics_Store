@@ -17,6 +17,8 @@ import {
 } from "lucide-react";
 import CountDownOffer from "./CountDownOffer";
 import AllProducts from "../all_Products/AllProducts";
+import CompaniesBrand from "../company_brands/CompaniesBrand";
+import NewsLetter from "../news_letter/NewsLetter";
 
 const ProductDetails = () => {
   const [userRating, setUserRating] = useState(3);
@@ -119,20 +121,20 @@ const ProductDetails = () => {
             All Collections
           </Link>
           <ChevronRight size={18} color="gray" />
-          <Link className="text-[15px] hover:text-yellow-400" to="/collections">
-            Laptops & Mobiles
+          <Link className="text-[15px] hover:text-yellow-400" to="#">
+            {product.title} Details
           </Link>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-0 mt-6">
           <div className="relative">
-            <img src={product.image} alt="" />
+            <img className={`${product.sold ? "grayscale" : ""}`} src={product.image} alt="" />
             {product.discount && (
               <div className="absolute top-0 left-0 md:-left-0 text-gray-600 bg-yellow-400 text-sm font-bold px-1 py-1.5 rounded-full shadow">
                 {product.discount}
               </div>
             )}
             {product.sold && (
-              <div className="absolute top-4 right-4 bg-gray-400 text-white text-xs font-semibold px-3 py-1 rounded-full shadow">
+              <div className="absolute top-0 left-0 bg-gray-400 text-white text-xs font-semibold px-1 py-5 rounded-full shadow">
                 Sold Out
               </div>
             )}
@@ -238,6 +240,8 @@ const ProductDetails = () => {
         </div>
       </div>
       <AllProducts/>
+      <CompaniesBrand/>
+      <NewsLetter/>
     </>
   );
 };
