@@ -9,6 +9,7 @@ import ScrollToTop from '../components/shared/ScrollToTop';
 import StoreLocation from '../pages/StoreLocation';
 import FAQs from '../pages/FAQs'
 import TermsCondition from '../pages/TermsCondition'
+import Features from '../pages/Features';
 const Main = () => {
   return (
     <main className="min-h-screen">
@@ -23,6 +24,7 @@ const Main = () => {
         <Route path="/store-locator" element={<StoreLocation/>} />
         <Route path="/faqs" element={<FAQs/>} />
         <Route path="/terms" element={<TermsCondition/>} />
+        <Route path="/features" element={<Features/>} />
       </Routes>
     </main>
   );

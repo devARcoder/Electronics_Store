@@ -3,6 +3,8 @@ import { allCollections } from '../../data/data'
 import { Link } from 'react-router-dom'
 import { ChevronRight } from 'lucide-react'
 import AllProducts from '../all_Products/AllProducts'
+import CompaniesBrand from '../company_brands/CompaniesBrand'
+import NewsLetter from '../news_letter/NewsLetter'
 const Collections = () => {
   return (
     <>
@@ -24,6 +26,8 @@ const Collections = () => {
     </div>
     </div>
     <AllProducts/>
+    <CompaniesBrand/>
+    <NewsLetter/>
     </>
   )
 }
