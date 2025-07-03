@@ -18,7 +18,7 @@ const News = () => {
             <hr className='text-gray-200 my-4'/>
             <div className="flex space-x-3 items-center pt-4 pb-12">
 
-            <Button name="Read More" className="bg-gray-200 px-8 py-3 rounded-full text-gray-700"/>
+            <Button name="Read More" className="bg-gray-200 px-8 py-3 rounded-full text-gray-700 cursor-pointer"/>
 
             <div className="comments flex items-center space-x-1 text-gray-700">
 

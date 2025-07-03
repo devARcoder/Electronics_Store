@@ -4,12 +4,13 @@ import Home from '../pages/Home';
 import About from '../pages/About';
 import Contact from '../pages/Contact'; // (Optional, if you're adding it)
 import Collections from '../components/collections/Collections';
-import ItemDetails from '../components/featured/ItemsDetails';
+// import ItemDetails from '../components/featured/ItemsDetails';
 import ScrollToTop from '../components/shared/ScrollToTop';
 import StoreLocation from '../pages/StoreLocation';
 import FAQs from '../pages/FAQs'
 import TermsCondition from '../pages/TermsCondition'
 import Features from '../pages/Features';
+import ProductDetails from '../components/shared/ProductDetails';
 const Main = () => {
   return (
     <main className="min-h-screen">
@@ -18,7 +19,9 @@ const Main = () => {
         
         <Route path="/" element={<Home />} />
         <Route path="/collections" element={<Collections />} />
-        <Route path="/item/:id" element={<ItemDetails />} />
+        {/* <Route path="/item/:id" element={<ItemDetails />} /> */}
+        
+        <Route path="/product/:id" element={<ProductDetails/>} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/store-locator" element={<StoreLocation/>} />

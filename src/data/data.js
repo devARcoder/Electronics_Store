@@ -143,10 +143,10 @@ export const featuredItems = [
     image: "/images/smartWatch.webp",
   },
 ];
-
 // left side
 export const leftSideData = [
   {
+    id: "left-1",
     brand: "Bulgari",
     title: "Gorgeous White Bag",
     price: "Sold out",
@@ -154,18 +154,21 @@ export const leftSideData = [
     soldOut: true,
   },
   {
+    id: "left-2",
     brand: "Dolce & Gabbana",
     title: "Gold Diamond Chain",
     price: "$399.00",
     image: "/images/smartWatch.webp",
   },
   {
+    id: "left-3",
     brand: "Christian Dior",
     title: "Lexiited Product",
     price: "$200.00",
     image: "/images/deal3.webp",
   },
   {
+    id: "left-4",
     brand: "Christian Dior",
     title: "Lexiwarm Product",
     price: "$35.00",
@@ -174,15 +177,6 @@ export const leftSideData = [
 ];
 
 // center data
-export const centerData = [
-  {
-    brand: "Givenchy",
-    title: "Dentoex Product Sample",
-    price: "$450.00",
-    oldPrice: "$499.00",
-    image: "/images/deal1.webp",
-  },
-];
 export const centerCatagoryData = [
   {
     image: "/images/deal1.webp",
@@ -198,24 +192,28 @@ export const centerCatagoryData = [
 // right side
 export const rightSideData = [
   {
+    id: "right-1",
     brand: "Christian Dior",
     title: "Golddax Product",
     price: "$120.00",
     image: "/images/smartWatch.webp",
   },
   {
+    id: "right-2",
     brand: "Donna Karan",
     title: "Kinairer Product",
     price: "$320.00",
     image: "/images/deal5.webp",
   },
   {
+    id: "right-3",
     brand: "Dolce & Gabbana",
     title: "Lexizimin Product",
     price: "$120.00",
     image: "/images/deal4.webp",
   },
   {
+    id: "right-4",
     brand: "Armani",
     title: "Soltone Product",
     price: "$280.00",
@@ -223,27 +221,32 @@ export const rightSideData = [
   },
 ];
 
+
 // sellers data
 export const sellingData = [
   {
+    id: "sell-1",
     brand: "Donna Karan",
     title: "Freecof Product Sample",
     image: "/images/appleTablet.webp",
     price: "$450.00",
   },
   {
+    id: "sell-2",
     brand: "Christian Dior",
     title: "Lexiwarm Product Sample",
     image: "/images/deal5.webp",
     price: "$450.00",
   },
   {
+    id: "sell-3",
     brand: "Christian Dior",
     title: "Lexiwarm Product Sample",
     image: "/images/smartWatch.webp",
     price: "$35.00",
   },
   {
+    id: "sell-4",
     brand: "Givenchy",
     title: "Lamlex Product Sample",
     image: "/images/laptopSell.webp",
@@ -251,6 +254,7 @@ export const sellingData = [
     oldPrice: "$500.00",
   },
   {
+    id: "sell-5",
     brand: "Armani",
     title: "Donkix Product Sample",
     image: "/images/iphone.webp",
@@ -258,18 +262,21 @@ export const sellingData = [
     oldPrice: "$85.90",
   },
   {
+    id: "sell-6",
     brand: "Dolc & Gabbana",
     title: "Newity Product Sample",
     image: "/images/ipadgreen.webp",
     price: "$80.00",
   },
   {
+    id: "sell-7",
     brand: "Armani",
     title: "Solton Product Sample",
     image: "/images/printer.webp",
     price: "$280.00",
   },
   {
+    id: "sell-8",
     brand: "Dolc & Gabbana",
     title: "Newity Product Sample",
     image: "/images/deal4.webp",
@@ -806,7 +813,7 @@ export const NewsData = [
     storyImage: "/images/newsStories1.webp"
   },
   {
-    title: "Apple Unveils Vision Pro 2",
+    title: "Apple Vision Pro 2",
     Posted: "Tech Insider",
     Published: "28 April, 2025",
     Comments: "902",
@@ -814,7 +821,7 @@ export const NewsData = [
     storyImage: "/images/newsStories2.webp"
   },
   {
-    title: "Google AI Breakthrough in Search",
+    title: "Google AI in Search",
     Posted: "AI Today",
     Published: "10 May, 2025",
     Comments: "2174",

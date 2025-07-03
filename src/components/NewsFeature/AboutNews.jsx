@@ -1,6 +1,7 @@
 import React from "react";
 import Input from "../shared/common/Input";
 import { SearchIcon } from "lucide-react";
+import { NewsData } from "../../data/data";
 
 const AboutNews = () => {
   return (
@@ -31,6 +32,18 @@ const AboutNews = () => {
           Top Stories
         </h1>
         <hr className="text-gray-300" />
+      </div>
+
+      <div className="story space-y-5 py-4">
+        {NewsData.map((story, i)=> (
+            <div className="flex items-center space-x-3" key={i}>
+                <img className="w-22 h-12 object-cover" src={story.storyImage} alt={story.title} />
+                <div className="text-gray-700">
+                    <h1 className="">{story.title}</h1>
+                    <p className="text-sm text-gray-500">{story.Published}</p>
+                </div>
+            </div>
+        ))}
       </div>
     </div>
   );
