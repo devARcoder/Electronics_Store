@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import News from '../components/NewsFeature/News';
+import AboutNews from '../components/NewsFeature/AboutNews';
 const Features = () => {
   return (
     <div className='px-4 py-4 md:px-24'>
@@ -10,7 +11,10 @@ const Features = () => {
         <ChevronRight size={18} color='gray' />
         <Link className='text-[15px] hover:text-yellow-300' to="/features">News</Link>
       </div>
+      <div className="flex flex-row">
       <News/>
+      <AboutNews/>
+      </div>
     </div>
   )
 }
