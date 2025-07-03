@@ -9,7 +9,7 @@ const BestSelling = () => {
         <Link to={`/product/${sellItem.id}`} key={index}>
           <div className="flex flex-row items-center cursor-pointer border-gray-200 border-b border-r hover:shadow-xl my-3 md:my-5">
             <div className="img pl-3">
-              <img className="w-32" src={sellItem.image} alt={sellItem.title} />
+              <img className="w-32 transition-transform duration-300 hover:scale-105" src={sellItem.image} alt={sellItem.title} />
             </div>
             <div className="headings space-y-12 px-3 py-3">
               <div className="topHead">

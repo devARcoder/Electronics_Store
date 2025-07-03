@@ -19,7 +19,7 @@ const Collections = () => {
     <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 py-6'>
       {allCollections.map((collection, i)=> (
         <div className="flex flex-col items-center text-center hover:shadow-lg hover:border hover:border-gray-100 transform px-3 py-7 border-b border-gray-200" key={i}>
-            <img className=' h-32 w-32' src={collection.img} alt="" />
+            <img className=' h-32 w-32 transition-transform duration-300 hover:scale-105' src={collection.img} alt="" />
             <h1 className='text-gray-500 text-lg'>{collection.name}</h1>
         </div>
       ))}

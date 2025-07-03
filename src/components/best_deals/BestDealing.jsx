@@ -22,7 +22,7 @@ const BestDealing = () => {
               <h1 className="text-gray-500 text-sm hover:text-yellow-400">{left.brand}</h1>
               <h1 className="line-clamp-1 text-blue-600 text-md font-bold hover:text-yellow-400">{left.title}</h1>
               <img
-                className="w-36 h-36 sm:w-64 sm:h-64 md:w-32 md:h-32 object-cover"
+                className="w-36 h-36 sm:w-64 sm:h-64 md:w-32 md:h-32 object-cover transition-transform duration-300 hover:scale-105"
                 src={left.image}
                 alt={left.title}
               />
@@ -53,7 +53,7 @@ const BestDealing = () => {
                   key={i}
                   src={thumb}
                   alt=""
-                  className="border border-gray-200 w-14 h-14 cursor-pointer hover:border-2 hover:border-b-yellow-400"
+                  className="border border-gray-200 w-14 h-14 cursor-pointer transition-transform duration-300 hover:scale-105  hover:border-2 hover:border-b-yellow-400"
                   onClick={(e) => {
                     e.preventDefault();
                     setMainImage(thumb);
@@ -78,7 +78,7 @@ const BestDealing = () => {
               <h1 className="text-gray-500 text-sm hover:text-yellow-400">{right.brand}</h1>
               <h1 className="line-clamp-1 text-blue-600 text-md font-bold hover:text-yellow-400">{right.title}</h1>
               <img
-                className="w-36 h-36 sm:w-64 sm:h-64 md:w-32 md:h-32 object-cover"
+                className="w-36 h-36 sm:w-64 sm:h-64 md:w-32 md:h-32 object-cover transition-transform duration-300 hover:scale-105"
                 src={right.image}
                 alt={right.title}
               />

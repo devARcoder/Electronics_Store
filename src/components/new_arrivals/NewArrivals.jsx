@@ -20,7 +20,7 @@ const NewArrivals = () => {
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full h-auto object-contain my-2"
+                className="w-full h-auto object-contain my-2 transition-transform duration-300 hover:scale-105"
               />
               <div className="flex space-x-2">
                 <h1 className="text-gray-700 text-md sm:text-xl">{item.price}</h1>
