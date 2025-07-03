@@ -16,7 +16,7 @@ const AboutNews = () => {
         </span>
       </div>
       <div className="py-6">
-        <h1 className="border-b-2 border-yellow-300 text-xl text-gray-700 font-semibold w-24 pb-3">
+        <h1 className="border-b-2 border-yellow-300 text-xl text-gray-700 font-semibold w-32 pb-3">
           About
         </h1>
         <hr className="text-gray-300" />
@@ -25,6 +25,13 @@ const AboutNews = () => {
         Explore curated highlights from the tech world, featuring groundbreaking
         updates, industry insights, and future-defining announcements.
       </p>
+
+      <div className="py-6">
+        <h1 className="border-b-2 border-yellow-300 text-xl text-gray-700 font-semibold w-32 pb-3">
+          Top Stories
+        </h1>
+        <hr className="text-gray-300" />
+      </div>
     </div>
   );
 };

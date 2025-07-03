@@ -802,21 +802,24 @@ export const NewsData = [
     Posted: "Arena Tech",
     Published: "13 March, 2025",
     Comments: "1358",
-    image: "/images/news4.png"
+    image: "/images/news4.png",
+    storyImage: "/images/newsStories1.webp"
   },
   {
     title: "Apple Unveils Vision Pro 2",
     Posted: "Tech Insider",
     Published: "28 April, 2025",
     Comments: "902",
-    image: "/images/news7.jpeg"
+    image: "/images/news7.jpeg",
+    storyImage: "/images/newsStories2.webp"
   },
   {
     title: "Google AI Breakthrough in Search",
     Posted: "AI Today",
     Published: "10 May, 2025",
     Comments: "2174",
-    image: "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=800&q=80"
+    image: "/images/news3.webp",
+    storyImage: "/images/newsStories3.webp"
   }
 ];
 
