@@ -7,15 +7,10 @@ import {
 import { Link } from 'react-router-dom';
 
 const BestDealing = () => {
-  const [mainImages, setMainImages] = useState(
-    centerData.map(item => item.image)
-  );
+  const [mainImage, setMainImage] = useState(centerData[0]?.image);
 
-  const handleImageClick = (index, newImage) => {
-    const updatedImages = [...mainImages];
-    updatedImages[index] = newImage;
-    setMainImages(updatedImages);
-  };
+  const thumbnails = ["/images/deal1.webp", "/images/deal1-2.webp", "/images/deal1-3.webp"];
+  const center = centerData[0]; // Only show the first center card
 
   return (
     <div className="container grid grid-cols-1 md:grid-cols-3 bg-gray-100 sm:mx-3 md:mx-0">
@@ -32,57 +27,47 @@ const BestDealing = () => {
                 alt={left.title}
               />
               <div className="cart flex justify-between items-center pr-4">
-                <h1 className="text-gray-700 text-lg sm:text-xl md:text-xl">{left.price}</h1>
-                {!left.soldOut && <p className="hidden">Cart</p>}
+                <h1 className="text-gray-700 text-lg">{left.price}</h1>
               </div>
             </div>
           </Link>
         ))}
       </div>
 
-      {/* CENTER SECTION */}
-      <div className="center flex flex-col items-center my-1 mx-0 md:my-0 md:mx-1">
-        {centerData.map((center, i) => (
-          
-            <div className="bg-white w-full px-3 pt-3 pb-3 md:pb-10 space-y-3 md:space-y-5 cursor-pointer hover:shadow-xl">
-              <h1 className="text-gray-500 text-md mb-2 hover:text-yellow-400">{center.brand}</h1>
-              <h1 className="line-clamp-1 text-blue-600 text-md font-bold hover:text-yellow-400">{center.title}</h1>
+      {/* CENTER SECTION - only 1 card */}
+      <div className="center flex justify-center items-center mx-1">
+        <Link to={`/product/${center.id}`} className="w-full">
+          <div className="bg-white px-4  space-y-4 cursor-pointer hover:shadow-xl text-center">
+            <h1 className="text-gray-500 text-md hover:text-yellow-400">{center.brand}</h1>
+            <h1 className="text-blue-600 text-lg font-bold hover:text-yellow-400">{center.title}</h1>
 
-              <img
-                className="w-80 sm:w-full md:w-[20rem] object-cover"
-                src={mainImages[i]}
-                alt={center.title}
-              />
+            <img
+              className="w-full object-cover transition-transform duration-300 hover:scale-105"
+              src={mainImage}
+              alt={center.title}
+            />
 
-              <div className="imgs flex space-x-2">
+            <div className="flex space-x-2">
+              {thumbnails.map((thumb, i) => (
                 <img
-                  className="border border-gray-200 w-16 cursor-pointer hover:border-2 hover:border-b-yellow-400"
-                  src="/images/deal1.webp"
+                  key={i}
+                  src={thumb}
                   alt=""
-                  onClick={() => handleImageClick(i, "/images/deal1.webp")}
+                  className="border border-gray-200 w-14 h-14 cursor-pointer hover:border-2 hover:border-b-yellow-400"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setMainImage(thumb);
+                  }}
                 />
-                <img
-                  className="border border-gray-200 w-16 cursor-pointer hover:border-2 hover:border-b-yellow-400"
-                  src="/images/deal1-2.webp"
-                  alt=""
-                  onClick={() => handleImageClick(i, "/images/deal1-2.webp")}
-                />
-                <img
-                  className="border border-gray-200 w-16 cursor-pointer hover:border-2 hover:border-b-yellow-400"
-                  src="/images/deal1-3.webp"
-                  alt=""
-                  onClick={() => handleImageClick(i, "/images/deal1-3.webp")}
-                />
-              </div>
-
-              <div className="cart flex space-x-4 items-center pr-4 pt-3 md:pt-7">
-                <h1 className="text-red-600 text-xl sm:text-xl md:text-xl">{center.price}</h1>
-                <h1 className="line-through text-gray-400 text-lg sm:text-xl md:text-xl">{center.oldPrice}</h1>
-                {!center.soldOut && <p className="hidden">Cart</p>}
-              </div>
+              ))}
             </div>
-          
-        ))}
+
+            <div className="flex items-center space-x-4 pb-3">
+              <h1 className="text-red-600 text-xl">{center.price}</h1>
+              <h1 className="line-through text-gray-400 text-lg">{center.oldPrice}</h1>
+            </div>
+          </div>
+        </Link>
       </div>
 
       {/* RIGHT SIDE */}
@@ -98,8 +83,7 @@ const BestDealing = () => {
                 alt={right.title}
               />
               <div className="cart flex justify-between items-center pr-4">
-                <h1 className="text-gray-700 text-lg sm:text-xl md:text-xl">{right.price}</h1>
-                {!right.soldOut && <p className="hidden">Cart</p>}
+                <h1 className="text-gray-700 text-lg">{right.price}</h1>
               </div>
             </div>
           </Link>

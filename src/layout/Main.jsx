@@ -11,10 +11,12 @@ import FAQs from '../pages/FAQs'
 import TermsCondition from '../pages/TermsCondition'
 import Features from '../pages/Features';
 import ProductDetails from '../components/shared/ProductDetails';
+
 const Main = () => {
   return (
     <main className="min-h-screen">
       <ScrollToTop />
+      
       <Routes>
         
         <Route path="/" element={<Home />} />

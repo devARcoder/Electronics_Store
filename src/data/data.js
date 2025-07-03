@@ -176,6 +176,33 @@ export const leftSideData = [
   },
 ];
 
+export const centerData = [
+  {
+    id: "center-1",
+    brand: "Givenchy",
+    title: "Dentoex Product Sample",
+    price: "$450.00",
+    oldPrice: "$499.00",
+    image: "/images/deal1.webp",
+  },
+  {
+    id: "center-2",
+    brand: "Givenchy",
+    title: "Dentoex Product Sample",
+    price: "$450.00",
+    oldPrice: "$499.00",
+    image: "/images/deal1-2.webp",
+  },
+  {
+    id: "center-3",
+    brand: "Givenchy",
+    title: "Dentoex Product Sample",
+    price: "$450.00",
+    oldPrice: "$499.00",
+    image: "/images/deal1-3.webp",
+  },
+];
+
 // center data
 export const centerCatagoryData = [
   {
