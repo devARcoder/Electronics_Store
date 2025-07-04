@@ -81,13 +81,17 @@ const ProductDetails = () => {
               //   {product.discount}
               // </div>
               <div className="absolute top-6 left-0 md:-left-7">
-                <img className="" src="/images/saleoffbanner.png" alt="" />
-                <p className="absolute top-2 text-white font-bold left-26 md:left-34 text-3xl md:-left-0">{product.discount} OFF</p>
+                <img className="rotate-1" src="/images/saleoffbanner.png" alt="" />
+                <p className="absolute top-2 md:top-4 text-white font-bold left-26 md:left-34 text-3xl md:-left-0">{product.discount} OFF</p>
               </div>
             )}
             {product.sold && (
-              <div className="absolute top-0 left-0 bg-gray-400 text-white text-xs font-semibold px-1 py-5 rounded-full shadow">
-                Sold Out
+              // <div className="absolute top-0 left-0 bg-gray-400 text-white text-xs font-semibold px-1 py-5 rounded-full shadow">
+              //   Sold Out
+              // </div>
+              <div className="absolute top-12 md:top-13 left-0 md:right-6">
+
+              <img className="" src="/images/topSeller.png" alt="" />
               </div>
             )}
           </div>

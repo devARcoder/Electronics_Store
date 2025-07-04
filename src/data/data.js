@@ -110,6 +110,7 @@ export const featuredItems = [
     type: "Donna Karan",
     title: "Freecof Product Sample",
     price: "$450.00",
+    sold: "Sold",
     image: "/images/appleTablet.webp",
   },
   {
