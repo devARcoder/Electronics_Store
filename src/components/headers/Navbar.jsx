@@ -10,10 +10,13 @@ import { Sidebar, TopBar, SearchBar } from "../shared/imports";
 import DiskBar from "./DiskBar";
 import { XIcon } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useWishlist } from "../../context/WishlistContext"; // ✅ Import useWishlist
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+  const { wishlist } = useWishlist(); // ✅ Access wishlist from context
 
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
   const toggleSearch = () => setIsSearchOpen((prev) => !prev);
@@ -34,7 +37,9 @@ const Navbar = () => {
             className="text-gray-700 mt-3 cursor-pointer md:hidden"
             onClick={toggleSidebar}
           />
-          <Link to="/"><h1 className="text-4xl font-bold text-gray-700">electro</h1></Link>
+          <Link to="/">
+            <h1 className="text-4xl font-bold text-gray-700">electro</h1>
+          </Link>
         </div>
 
         <div className="hidden md:block w-full max-w-xl">
@@ -42,7 +47,6 @@ const Navbar = () => {
         </div>
 
         <div className="right flex items-center space-x-3 md:space-x-6">
-          
           {!isSearchOpen ? (
             <SearchIcon className="md:hidden" onClick={toggleSearch} />
           ) : (
@@ -54,13 +58,19 @@ const Navbar = () => {
 
           <UserIcon className="md:hidden" />
 
-          <div className="hidden md:inline-block md:relative">
-            <HeartIcon size={28} />
-            <span className="bg-gray-700 text-white px-1 py-0.5 text-sm rounded-full absolute top-7 right-1 translate-x-1/2 -translate-y-1/2 font-semibold md:bg-yellow-300 md:text-black">
-              17
-            </span>
-          </div>
+          {/* Wishlist Button */}
+          <Link to="/wishlist">
+            <div className="hidden md:inline-block md:relative">
+              <HeartIcon size={28} />
+              {wishlist.length > 0 && (
+                <span className="bg-gray-700 text-white px-1.5 py-0.5 text-sm rounded-full absolute top-7 right-1 translate-x-1/2 -translate-y-1/2 font-semibold md:bg-yellow-300 md:text-black ">
+                  {wishlist.length}
+                </span>
+              )}
+            </div>
+          </Link>
 
+          {/* Shopping Cart Button (Static Count Placeholder) */}
           <div className="relative">
             <ShoppingBagIcon />
             <span className="bg-gray-700 text-white px-1 py-0.5 text-sm rounded-full absolute top-7 right-1 translate-x-1/2 -translate-y-1/2 font-semibold md:bg-yellow-300 md:text-black">
@@ -74,8 +84,9 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/* Mobile Search Input */}
       <div
-        className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden bg-white px-4 mt-18  ${
+        className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden bg-white px-4 mt-18 ${
           isSearchOpen ? "max-h-28 py-2" : "max-h-0 py-0"
         }`}
       >
@@ -85,7 +96,6 @@ const Navbar = () => {
             placeholder="Search products..."
             className="w-full px-4 py-2 border border-gray-300 rounded-md pr-10 focus:outline-none"
           />
-
           <SearchIcon className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
         </div>
       </div>

@@ -7,18 +7,14 @@ import {
   ChevronDownIcon,
   ChevronUpIcon,
 } from "../../assets/svg";
-
+import { useWishlist } from "../../context/WishlistContext";
 const Sidebar = ({ isOpen, onClose }) => {
-  const [isFavourite, setIsFavourite] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
-
-  const toggleFavourite = () => {
-    setIsFavourite((prev) => !prev);
-  };
 
   const toggleDropdown = (label) => {
     setOpenDropdown((prev) => (prev === label ? null : label));
   };
+   const { wishlist } = useWishlist();
 
   const SidebarNavigation = [
     { Label: "Home", to: "/" },
@@ -59,18 +55,20 @@ const Sidebar = ({ isOpen, onClose }) => {
           <CloseIcon size={32} strokeWidth={3} />
         </button>
 
+        <Link to="/wishlist" onClick={onClose}>
         <div className="relative">
           <HeartIcon
             size={28}
             className="cursor-pointer"
-            fill={isFavourite ? "red" : "none"}
-            stroke={isFavourite ? "black" : "currentColor"}
-            onClick={toggleFavourite}
+            
           />
-          <span className="bg-gray-700 text-white px-1 py-0.5 text-sm rounded-full absolute top-7 right-1 translate-x-1/2 -translate-y-1/2 font-semibold md:bg-yellow-300 md:text-black">
-            16
-          </span>
+          {wishlist.length > 0 && (
+            <span className="bg-gray-700 text-white px-1.5 py-0.5 text-sm rounded-full absolute top-7 right-1 translate-x-1/2 -translate-y-1/2 font-semibold md:bg-yellow-300 md:text-black ">
+                  {wishlist.length}
+                </span>
+              )}
         </div>
+              </Link>
       </div>
 
       <div className="flex flex-col">

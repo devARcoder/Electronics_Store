@@ -11,6 +11,7 @@ import FAQs from '../pages/FAQs'
 import TermsCondition from '../pages/TermsCondition'
 import Features from '../pages/Features';
 import ProductDetails from '../components/shared/ProductDetails';
+import Wishlist from '../components/shared/Wishlist';
 
 const Main = () => {
   return (
@@ -30,6 +31,7 @@ const Main = () => {
         <Route path="/faqs" element={<FAQs/>} />
         <Route path="/terms" element={<TermsCondition/>} />
         <Route path="/features" element={<Features/>} />
+        <Route path="/wishlist" element={<Wishlist/>} />
       </Routes>
     </main>
   );
