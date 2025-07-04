@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Expand, X } from "lucide-react";
 import { Button } from "./imports";
 const Wishlist = () => {
   const [wishlistItems, setWishlistItems] = useState([]);
@@ -63,14 +63,14 @@ const Wishlist = () => {
           <h1 className="text-3xl text-gray-700">My Wishlist</h1>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-1">
           {wishlistItems.map((item) => (
             <div
-              className="flex flex-row items-center space-x-5 py-4 my-2 px-3 shadow-md rounded-md border border-gray-300"
+              className="flex flex-row items-center space-x-5 py-4 my-2 px-3 shadow-md rounded-md border border-gray-300 sm:flex-col"
               key={item.id}
             >
               <div className="img">
-                <img className="w-24 h-24" src={item.image} alt="" />
+                <img className="w-24 h-24 sm:w-full sm:h-32" src={item.image} alt="" />
               </div>
               <div className="details space-y-3 text-center">
                 <h1 className="text-lg font-bold ">{item.title}</h1>
@@ -80,20 +80,21 @@ const Wishlist = () => {
                     to={`/product/${item.id}`}
                     className="text-lg text-blue-600 cursor-pointer "
                   >
-                    View
+                    <Expand/>
                   </Link>
                   <button
                     onClick={() => removeFromWishlist(item.id)}
                     className="text-lg text-red-600 cursor-pointer"
                   >
-                    Remove
+                    <X className="w-8 h-8"/>
                   </button>
                 </div>
                 <Button
                   name="Add to Cart"
-                  className="bg-yellow-400 text-white w-full py-2 rounded-full"
+                  className="bg-yellow-400 text-white w-full py-2 rounded-full font-bold"
                 />
               </div>
+              {/* expand icon */}
             </div>
           ))}
         </div>
