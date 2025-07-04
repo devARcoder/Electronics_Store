@@ -22,7 +22,7 @@ const BestDealing = () => {
               <h1 className="text-gray-500 text-sm hover:text-yellow-400">{left.brand}</h1>
               <h1 className="line-clamp-1 text-blue-600 text-md font-bold hover:text-yellow-400">{left.title}</h1>
               <img
-                className="w-36 h-36 sm:w-64 sm:h-64 md:w-32 md:h-32 object-cover transition-transform duration-300 hover:scale-105"
+                className={`w-36 h-36 sm:w-64 sm:h-64 md:w-32 md:h-32 object-cover transition-transform duration-300 hover:scale-105 ${left.sold ? "grayscale" : ""}`}
                 src={left.image}
                 alt={left.title}
               />
@@ -82,12 +82,16 @@ const BestDealing = () => {
               <h1 className="text-gray-500 text-sm hover:text-yellow-400">{right.brand}</h1>
               <h1 className="line-clamp-1 text-blue-600 text-md font-bold hover:text-yellow-400">{right.title}</h1>
               <img
-                className="w-36 h-36 sm:w-64 sm:h-64 md:w-32 md:h-32 object-cover transition-transform duration-300 hover:scale-105"
+                className={`w-36 h-36 sm:w-64 sm:h-64 md:w-32 md:h-32 object-cover transition-transform duration-300 hover:scale-105 ${right.sold ? "grayscale" : ""}`}
                 src={right.image}
                 alt={right.title}
               />
               <div className="cart flex justify-between items-center pr-4">
-                <h1 className="text-gray-700 text-lg">{right.price}</h1>
+                <h1 className="text-gray-700 text-lg">{right.price ? right.price : (
+                            <p className="text-gray-500 font-semibold text-lg sm:text-xl md:text-sm">
+                              Sold out
+                            </p>
+                          )}</h1>
               </div>
             </div>
           </Link>

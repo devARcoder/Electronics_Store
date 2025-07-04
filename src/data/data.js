@@ -110,7 +110,6 @@ export const featuredItems = [
     type: "Donna Karan",
     title: "Freecof Product Sample",
     price: "$450.00",
-    sold: "Sold",
     image: "/images/appleTablet.webp",
   },
   {
@@ -230,7 +229,8 @@ export const rightSideData = [
     id: "right-2",
     brand: "Donna Karan",
     title: "Kinairer Product",
-    price: "$320.00",
+    price: "",
+    sold: "Sold",
     image: "/images/deal5.webp",
   },
   {

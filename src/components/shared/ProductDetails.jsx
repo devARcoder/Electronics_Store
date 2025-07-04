@@ -89,9 +89,8 @@ const ProductDetails = () => {
               // <div className="absolute top-0 left-0 bg-gray-400 text-white text-xs font-semibold px-1 py-5 rounded-full shadow">
               //   Sold Out
               // </div>
-              <div className="absolute top-12 md:top-13 left-0 md:right-6">
-
-              <img className="" src="/images/topSeller.png" alt="" />
+              <div className="absolute -top-26 left-0 md:right-6">
+              <img className="" src="/images/bestSeller1.png" alt="" />
               </div>
             )}
           </div>
