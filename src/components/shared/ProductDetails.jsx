@@ -68,17 +68,21 @@ const ProductDetails = () => {
           <Link className="text-[15px] hover:text-yellow-400" to="/collections">
             All Collections
           </Link>
-          <ChevronRight size={18} color="gray" />
-          <Link className="text-[15px] hover:text-yellow-400" to="#">
+          <ChevronRight className="hidden sm:inline-block" size={18} color="gray" />
+          <Link className="hidden sm:inline-block text-[15px] hover:text-yellow-400" to="#">
             {product.title} Details
           </Link>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-0 mt-6">
-          <div className="relative">
+          <div className="relative pt-24 md:pt-25">
             <img className={`${product.sold ? "grayscale" : ""}`} src={product.image} alt="" />
             {product.discount && (
-              <div className="absolute top-0 left-0 md:-left-0 text-gray-600 bg-yellow-400 text-sm font-bold px-1 py-1.5 rounded-full shadow">
-                {product.discount}
+              // <div className="absolute top-0 left-0 md:-left-0 text-gray-600 bg-yellow-400 text-sm font-bold px-1 py-1.5 rounded-full shadow">
+              //   {product.discount}
+              // </div>
+              <div className="absolute top-6 left-0 md:-left-7">
+                <img className="" src="/images/saleoffbanner.png" alt="" />
+                <p className="absolute top-2 text-white font-bold left-26 md:left-34 text-3xl md:-left-0">{product.discount} OFF</p>
               </div>
             )}
             {product.sold && (
@@ -165,13 +169,13 @@ const ProductDetails = () => {
                 {product.oldPrice}
               </p>
             </div>
-            <div className="px-4 text-white font-bold space-y-4 py-10">
-              <div className="px-6 space-x-3 flex justify-center items-center w-full bg-yellow-400 py-3 rounded-full">
+            {!product.sold ? <div className="px-4 text-white font-bold space-y-4 py-10">
+              <div onClick={handleAddToCart} className="px-6 space-x-3 flex justify-center items-center w-full bg-yellow-400 py-3 rounded-full cursor-pointer">
                 {!product.sold && <ShoppingCart className="animate-bounce" />}
                 <button
                   disabled={product.sold}
-                  onClick={handleAddToCart}
-                  className={` font-bold text-white transition duration-300 ${
+                  
+                  className={` font-bold text-white transition duration-300 cursor-pointer ${
                     product.sold
                       ? "text-gray-400 cursor-not-allowed"
                       : "bg-yellow-400 hover:bg-yellow-400"
@@ -180,10 +184,17 @@ const ProductDetails = () => {
                   {product.sold ? "Sold Out" : "Add to Cart"}
                 </button>
               </div>
-              <div className="px-6 flex justify-center items-center w-full bg-slate-800 py-3 rounded-full">
+              {!product.sold && <div className="px-6 flex justify-center items-center w-full bg-slate-800 py-3 rounded-full">
                 <button className="flex items-center px-3  ">Buy it now</button>
+              </div>}
+            </div> : (
+              // <h1 className="text-center text-2xl text-gray-500 py-8 font-semibold animate-bounce">Product has Sold</h1>
+              <div className="flex flex-col items-center justify-center">
+
+                <img className="" src="/images/soldout.png" alt="" />
               </div>
-            </div>
+              
+            )}
           </div>
         </div>
       </div>

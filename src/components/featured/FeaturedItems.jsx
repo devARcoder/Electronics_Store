@@ -64,14 +64,14 @@ const FeaturedItems = () => {
                           {item.title}
                         </h1>
 
-                        <div className="relative my-5">
+                        <div className="relative my-5 transition-transform duration-300 hover:scale-105">
                           {item.discount && (
                             <div className="absolute bg-yellow-400 text-gray-600 rounded-full text-xs px-1 py-1 font-semibold">
                               {item.discount}
                             </div>
                           )}
                           <img
-                            className={`w-36 h-36 sm:w-64 sm:h-64 md:w-32 md:h-32 object-cover transition-transform duration-300 hover:scale-105 ${
+                            className={`w-36 h-36 sm:w-64 sm:h-64 md:w-32 md:h-32 object-cover  ${
                               item.sold ? "grayscale" : ""
                             }`}
                             src={item.image}
