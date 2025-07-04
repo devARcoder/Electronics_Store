@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight } from "lucide-react";
 import { Button } from "./imports";
 const Wishlist = () => {
   const [wishlistItems, setWishlistItems] = useState([]);
@@ -10,11 +10,11 @@ const Wishlist = () => {
     setWishlistItems(data);
   }, []);
 
-//   const removeFromWishlist = (id) => {
-//     const updated = wishlistItems.filter((item) => item.id !== id);
-//     setWishlistItems(updated);
-//     localStorage.setItem("wishlist", JSON.stringify(updated));
-//   };
+  const removeFromWishlist = (id) => {
+    const updated = wishlistItems.filter((item) => item.id !== id);
+    setWishlistItems(updated);
+    localStorage.setItem("wishlist", JSON.stringify(updated));
+  };
 
   if (wishlistItems.length === 0) {
     return (
@@ -47,34 +47,57 @@ const Wishlist = () => {
     //   </div>
     // </div>
     <>
-    <div className="px-4 py-4">
-        <div className='flex items-center text-gray-500 py-6 space-x-1'>
-        <Link className='text-[15px] hover:text-yellow-400' to="/">Home</Link>
-        <ChevronRight size={18} color='gray' />
-        <Link className='text-[15px] hover:text-yellow-300' to="/wishlist">Wishlist</Link>
-      </div>
+      <div className="px-4 py-4">
+        <div className="flex items-center text-gray-500 py-6 space-x-1">
+          <Link className="text-[15px] hover:text-yellow-400" to="/">
+            Home
+          </Link>
+          <ChevronRight size={18} color="gray" />
+          <Link className="text-[15px] hover:text-yellow-300" to="/wishlist">
+            Wishlist
+          </Link>
+        </div>
 
-      {/* Title */}
-      <div className="flex flex-col items-center justify-center space-y-2 pt-4 pb-8">
-        <h1 className='text-3xl text-gray-700'>My Wishlist</h1>
-        
-      </div>
+        {/* Title */}
+        <div className="flex flex-col items-center justify-center space-y-2 pt-4 pb-8">
+          <h1 className="text-3xl text-gray-700">My Wishlist</h1>
+        </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2">
-        {wishlistItems.map((item) => (
-            <div className="flex flex-row items-center space-x-5 py-4 my-2 px-3 shadow-md rounded-md border border-gray-300" key={item.id}>
-                <div className="img">
-                    <img className="w-24 h-24" src={item.image} alt="" />
+        <div className="grid grid-cols-1 sm:grid-cols-2">
+          {wishlistItems.map((item) => (
+            <div
+              className="flex flex-row items-center space-x-5 py-4 my-2 px-3 shadow-md rounded-md border border-gray-300"
+              key={item.id}
+            >
+              <div className="img">
+                <img className="w-24 h-24" src={item.image} alt="" />
+              </div>
+              <div className="details space-y-3 text-center">
+                <h1 className="text-lg font-bold ">{item.title}</h1>
+                <h1 className="text-xl font-bold">{item.price}</h1>
+                <div className="flex items-center space-x-3 justify-center mt-3">
+                  <Link
+                    to={`/product/${item.id}`}
+                    className="text-lg text-blue-600 cursor-pointer "
+                  >
+                    View
+                  </Link>
+                  <button
+                    onClick={() => removeFromWishlist(item.id)}
+                    className="text-lg text-red-600 cursor-pointer"
+                  >
+                    Remove
+                  </button>
                 </div>
-                <div className="details space-y-3 text-center">
-                    <h1 className="text-lg font-bold ">{item.title}</h1>
-                    <h1 className="text-xl font-bold">{item.price}</h1>
-                    <Button name="Add to Cart" className="bg-yellow-400 text-white w-full py-2 rounded-full"/>
-                </div>
+                <Button
+                  name="Add to Cart"
+                  className="bg-yellow-400 text-white w-full py-2 rounded-full"
+                />
+              </div>
             </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
     </>
   );
 };
