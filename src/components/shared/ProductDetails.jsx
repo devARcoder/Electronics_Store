@@ -212,17 +212,17 @@ const ProductDetails = () => {
                 </div>
 
                 {/* Buy it now */}
-                <div className="px-6 flex justify-center items-center w-full bg-slate-800 py-3 rounded-full">
+                {!product.sold && <div className="px-6 flex justify-center items-center w-full bg-slate-800 py-3 rounded-full">
                   <button className="flex items-center px-3">Buy it now</button>
-                </div>
+                </div>}
 
                 {/* Add to Wishlist */}
                 <div
                   onClick={handleAddToWishlist}
-                  className="px-6 flex justify-center items-center w-full bg-pink-600 py-3 rounded-full cursor-pointer"
+                  className="px-6 flex justify-center items-center w-full bg-green-600 py-3 rounded-full cursor-pointer"
                 >
                   <button className="flex items-center px-3 text-white font-semibold">
-                    ❤️ Add to Wishlist
+                    Add to Wishlist
                   </button>
                 </div>
               </div>
@@ -231,6 +231,14 @@ const ProductDetails = () => {
                 <img className="" src="/images/soldout.png" alt="" />
               </div>
             )}
+            {product.sold && <div
+                  onClick={handleAddToWishlist}
+                  className=" flex justify-center items-center mx-4 bg-green-600 py-3 rounded-full cursor-pointer"
+                >
+                  <button className="flex items-center px-3 text-white font-semibold">
+                    Add to Wishlist
+                  </button>
+                </div>}
           </div>
         </div>
       </div>

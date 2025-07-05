@@ -75,6 +75,7 @@ const Wishlist = () => {
               <div className="details space-y-3 text-center">
                 <h1 className="text-lg font-bold ">{item.title}</h1>
                 <h1 className="text-xl font-bold">{item.price}</h1>
+                <h1 className="text-xl font-bold">{item.newPrice}</h1>
                 <div className="flex items-center space-x-3 justify-center mt-3">
                   <Link
                     to={`/product/${item.id}`}

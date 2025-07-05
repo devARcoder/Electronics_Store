@@ -16,10 +16,13 @@ const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
-  const { wishlist } = useWishlist(); // ✅ Access wishlist from context
+  const { wishlist, loading } = useWishlist(); // ✅ Access wishlist from context
 
+  if (loading) return null;
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
   const toggleSearch = () => setIsSearchOpen((prev) => !prev);
+
+  
 
   return (
     <>

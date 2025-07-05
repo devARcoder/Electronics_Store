@@ -126,6 +126,7 @@ export const featuredItems = [
     type: "Bulgari",
     title: "Georgeous White Bag",
     sold: "Sold",
+    newPrice: "$245.00",
     image: "/images/iphone.webp",
   },
   {
@@ -150,6 +151,7 @@ export const leftSideData = [
     brand: "Bulgari",
     title: "Gorgeous White Bag",
     price: "",
+    newPrice: "$245.00",
     image: "/images/iphone.webp",
     sold: "Sold",
   },
@@ -230,6 +232,7 @@ export const rightSideData = [
     brand: "Donna Karan",
     title: "Kinairer Product",
     price: "",
+    newPrice: "$129.99",
     sold: "Sold",
     image: "/images/deal5.webp",
   },
