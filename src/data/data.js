@@ -379,20 +379,26 @@ export const newArrivalsData = [
 export const companiesBrand = [
   {
     image: "/images/brand1.png",
+    link: "https://www.airbnb.com",
   },
   {
     image: "/images/brand2.png",
+    link: "https://coinbuild.co",
   },
   {
     image: "/images/brand3.png",
+    link: "https://www.dribbble.com",
   },
   {
     image: "/images/brand4.png",
+    link: "https://www.netflix.com",
   },
   {
     image: "/images/brand5.png",
+    link: "https://www.pinterest.com",
   },
 ];
+
 // featured products data
 export const featuredProducts = [
   {
