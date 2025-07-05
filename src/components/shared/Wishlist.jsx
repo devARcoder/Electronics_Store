@@ -72,7 +72,7 @@ const Wishlist = () => {
               <div className="img">
                 <img className="w-24 h-24 sm:w-full sm:h-32" src={item.image} alt="" />
               </div>
-              <div className="details space-y-3 text-center">
+              <div className="details space-y-3 text-center w-52">
                 <h1 className="text-lg font-bold ">{item.title}</h1>
                 <h1 className="text-xl font-bold">{item.price}</h1>
                 <h1 className="text-xl font-bold">{item.newPrice}</h1>

@@ -860,4 +860,3 @@ export const NewsData = [
     storyImage: "/images/newsStories3.webp"
   }
 ];
-
