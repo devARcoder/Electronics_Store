@@ -63,17 +63,17 @@ const Wishlist = () => {
           <h1 className="text-3xl text-gray-700">My Wishlist</h1>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-1">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-">
           {wishlistItems.map((item) => (
             <div
-              className="flex flex-row items-center space-x-5 py-4 my-2 px-3 shadow-md rounded-md border border-gray-300 sm:flex-col"
+              className="flex flex-row items-center space-x-5 py-3 my-2 px-3 shadow-md rounded-md border border-gray-300 sm:flex-col"
               key={item.id}
             >
               <div className="img">
                 <img className="w-24 h-24 sm:w-full sm:h-32" src={item.image} alt="" />
               </div>
-              <div className="details space-y-3 text-center w-52">
-                <h1 className="text-lg font-bold ">{item.title}</h1>
+              <div className="details space-y-1 text-center w-52">
+                <h1 className="text-md truncate font-bold ">{item.title}</h1>
                 <h1 className="text-xl font-bold">{item.price}</h1>
                 <h1 className="text-xl font-bold">{item.newPrice}</h1>
                 <div className="flex items-center space-x-3 justify-center mt-3">
