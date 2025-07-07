@@ -188,14 +188,14 @@ const ProductDetails = () => {
           </div>
 
           {/* Purchase Section */}
-          <div className="stocks border border-gray-300 mt-6 sm:w-[40rem] md:w-[20rem] sm:mx-4 rounded-xl">
-            <h1 className="border-b border-gray-300 md:text-center px-3 md:mx-10 py-4">
-              Available: In stocks
+          <div className="stocks border border-gray-300 mt-6 sm:w-[40rem] md:w-[20rem] sm:mx-4 rounded-xl ">
+            <h1 className="border-b border-gray-300 md:text-center px-3 md:mx-10 py-4 text-center">
+              Available: <span className="text-green-500 font-bold">In stocks</span>
             </h1>
 
             <div className="price flex flex-col justify-center md:items-center px-3">
-              <h1 className="text-4xl">{product.price}</h1>
-              <p className="text-xl line-through text-gray-500">
+              <h1 className="text-3xl text-center">{product.price}</h1>
+              <p className="text-xl line-through text-gray-500 text-center">
                 {product.oldPrice}
               </p>
             </div>
