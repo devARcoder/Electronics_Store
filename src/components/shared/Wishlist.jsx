@@ -1,6 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { ChevronRight, Expand, X } from "lucide-react";
+import { ChevronRight, Chrome, Expand, Facebook, Linkedin, LinkIcon, Mail, Twitter, X } from "lucide-react";
+
+const socialData = [
+  {icon: <Facebook/>, Link: "wwww.facebook.com"},
+  {icon: <Linkedin/>, Link: "wwww.linkedin.com"},
+  {icon: <Twetter/>, Link: "wwww.twetter.com"},
+  {icon: <Mail/>, Link: "wwww.mail.com"},
+  {icon: <LinkIcon/>, Link: "wwww.facebook.com"},
+  {icon: <Chrome/>, Link: "wwww.chrome.com"},
+]
 import { Button } from "./imports";
 const Wishlist = () => {
   const [wishlistItems, setWishlistItems] = useState([]);
@@ -25,27 +34,6 @@ const Wishlist = () => {
   }
 
   return (
-    // <div className="px-4 py-6 md:px-20">
-    //   <h1 className="text-2xl font-bold mb-4">Your Wishlist</h1>
-    //   <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-    //     {wishlistItems.map((item) => (
-    //       <div key={item.id} className="border p-4 rounded-lg shadow hover:shadow-lg transition">
-    //         <img src={item.image} alt={item.title} className="w-full h-48 object-contain" />
-    //         <h2 className="mt-2 font-semibold text-lg">{item.title}</h2>
-    //         <p className="text-gray-500">{item.price}</p>
-    //         <div className="flex justify-between mt-3">
-    //           <Link to={`/product/${item.id}`} className="text-blue-600 hover:underline">View</Link>
-    //           <button
-    //             onClick={() => removeFromWishlist(item.id)}
-    //             className="text-red-600 hover:underline"
-    //           >
-    //             Remove
-    //           </button>
-    //         </div>
-    //       </div>
-    //     ))}
-    //   </div>
-    // </div>
     <>
       <div className="px-4 py-4">
         <div className="flex items-center text-gray-500 py-6 space-x-1">
@@ -60,8 +48,28 @@ const Wishlist = () => {
 
         {/* Title */}
         <div className="flex flex-col items-center justify-center space-y-2 pt-4 pb-8">
-          
+
           <h1 className="text-3xl text-gray-700">My Wishlist</h1>
+          <div className="socials flex space-x-3">
+            <span className="border p-2 rounded-full">
+              <Facebook size={24} className=" " />
+              </span>
+            <span className="border p-2 rounded-full">
+              <Linkedin size={24} className=" " />
+              </span>
+            <span className="border p-2 rounded-full">
+              <Twitter size={24} className=" " />
+              </span>
+            <span className="border p-2 rounded-full">
+              <Mail size={24} className=" " />
+              </span>
+            <span className="border p-2 rounded-full">
+              <LinkIcon size={24} className=" " />
+              </span>
+            <span className="border p-2 rounded-full">
+              <Chrome size={24} className=" " />
+              </span>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-">
