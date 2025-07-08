@@ -60,6 +60,7 @@ const Wishlist = () => {
 
         {/* Title */}
         <div className="flex flex-col items-center justify-center space-y-2 pt-4 pb-8">
+          
           <h1 className="text-3xl text-gray-700">My Wishlist</h1>
         </div>
 
