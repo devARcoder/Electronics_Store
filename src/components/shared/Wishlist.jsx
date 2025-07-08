@@ -51,6 +51,13 @@ const Wishlist = () => {
 
           <h1 className="text-3xl text-gray-700">My Wishlist</h1>
           <div className="socials flex space-x-3">
+            {socialData.map((data, i)=> (
+              <div className="" key={i}>
+                <p className="border p-2 rounded-full">
+                  waitinggggg
+                </p>
+              </div>
+            ))}
             <span className="border p-2 rounded-full">
               <Facebook size={24} className=" " />
               </span>
