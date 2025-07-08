@@ -24,7 +24,7 @@ import { useWishlist } from "../../context/WishlistContext"; // ✅ Wishlist Con
 const ProductDetails = () => {
   const [userRating, setUserRating] = useState(3);
   const { id } = useParams();
-  const { addToWishlist } = useWishlist(); // ✅ Get addToWishlist from context
+  const { addToWishlist } = useWishlist();
 
   const allProducts = [
     ...featuredItems,
