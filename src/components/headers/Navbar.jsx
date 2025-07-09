@@ -65,7 +65,11 @@ const Navbar = () => {
           <Link to="/wishlist">
             <div className="hidden md:inline-block md:relative">
               <HeartIcon size={28} />
-              {wishlist.length > 0 && (
+              {wishlist.length > 0 ? (
+                <span className="bg-gray-700 text-white px-1.5 py-0.5 text-sm rounded-full absolute top-7 right-1 translate-x-1/2 -translate-y-1/2 font-semibold md:bg-yellow-300 md:text-black ">
+                  {wishlist.length}
+                </span>
+              ) : (
                 <span className="bg-gray-700 text-white px-1.5 py-0.5 text-sm rounded-full absolute top-7 right-1 translate-x-1/2 -translate-y-1/2 font-semibold md:bg-yellow-300 md:text-black ">
                   {wishlist.length}
                 </span>
