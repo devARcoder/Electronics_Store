@@ -79,6 +79,8 @@ const Wishlist = () => {
         </div>
       </div>
 
+      
+
       {/* Wishlist Items */}
       <div className="grid grid-cols-1">
         {wishlistItems.map((item) => (
@@ -88,7 +90,7 @@ const Wishlist = () => {
           >
             {/* Product Image */}
             <div className="img">
-              <img className="sm:w-full sm:h-36" src={item.image} alt={item.title} />
+              <img className="w-full h-20 sm:w-full sm:h-36" src={item.image} alt={item.title} />
             </div>
 
             {/* Stock Status */}
@@ -96,7 +98,7 @@ const Wishlist = () => {
               <h1 className="text-sm font-semibold text-gray-600">Stock Status</h1>
               {item.isSoldOut ? (
                 <div>
-                  <p className="text-red-600 font-semibold">Not Available</p>
+                  
                   <p className="text-sm text-yellow-500 mt-1">
                     🚚 Available again in {getRandomArrival(item.id)}
                   </p>
@@ -109,7 +111,7 @@ const Wishlist = () => {
             {/* Product Details */}
             <div className="details space-y-1 text-center w-52">
               <h1 className="text-md truncate font-bold">{item.title}</h1>
-              <h1 className="text-xl font-bold line-through text-gray-400">{item.price}</h1>
+              
               <h1 className="text-xl font-bold text-green-600">{item.newPrice}</h1>
 
               {/* Action Buttons */}
