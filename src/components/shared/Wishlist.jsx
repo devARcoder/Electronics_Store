@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import { ChevronRight, Chrome, Expand, Facebook, Linkedin, LinkIcon, Mail, Twitter, X } from "lucide-react";
 
 const socialData = [
-  {icon: <Facebook/>, Link: "wwww.facebook.com"},
+  {icon: <Facebook />, Link: "wwww.facebook.com"},
   {icon: <Linkedin/>, Link: "wwww.linkedin.com"},
-  {icon: <Twetter/>, Link: "wwww.twetter.com"},
+  {icon: <Twitter/>, Link: "wwww.twetter.com"},
   {icon: <Mail/>, Link: "wwww.mail.com"},
-  {icon: <LinkIcon/>, Link: "wwww.facebook.com"},
+  {icon: <LinkIcon/>, Link: "wwww.google.com"},
   {icon: <Chrome/>, Link: "wwww.chrome.com"},
 ]
 import { Button } from "./imports";
@@ -53,29 +53,13 @@ const Wishlist = () => {
           <div className="socials flex space-x-3">
             {socialData.map((data, i)=> (
               <div className="" key={i}>
-                <p className="border p-2 rounded-full">
-                  waitinggggg
+                <a href={data.Link} target="_blank">
+                  <p className="border p-2 rounded-full">
+                  {data.icon}
                 </p>
+                  </a>
               </div>
             ))}
-            <span className="border p-2 rounded-full">
-              <Facebook size={24} className=" " />
-              </span>
-            <span className="border p-2 rounded-full">
-              <Linkedin size={24} className=" " />
-              </span>
-            <span className="border p-2 rounded-full">
-              <Twitter size={24} className=" " />
-              </span>
-            <span className="border p-2 rounded-full">
-              <Mail size={24} className=" " />
-              </span>
-            <span className="border p-2 rounded-full">
-              <LinkIcon size={24} className=" " />
-              </span>
-            <span className="border p-2 rounded-full">
-              <Chrome size={24} className=" " />
-              </span>
           </div>
         </div>
 
