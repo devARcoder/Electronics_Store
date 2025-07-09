@@ -27,7 +27,7 @@ const BestDealing = () => {
                 alt={left.title}
               />
               <div className="cart flex justify-between items-center pr-4">
-                <h1 className="text-gray-700 text-lg">{left.price ? left.price : (
+                <h1 className="text-gray-700 text-lg">${left.price ? left.price : (
                             <p className="text-gray-500 font-semibold text-lg sm:text-xl md:text-sm">
                               Sold out
                             </p>
@@ -67,8 +67,8 @@ const BestDealing = () => {
             </div>
 
             <div className="flex items-center space-x-4 pb-3">
-              <h1 className="text-red-600 text-xl">{center.price}</h1>
-              <h1 className="line-through text-gray-400 text-lg">{center.oldPrice}</h1>
+              <h1 className="text-red-600 text-xl">${center.price}</h1>
+              <h1 className="line-through text-gray-400 text-lg">${center.oldPrice}</h1>
             </div>
           </div>
         </Link>
@@ -87,7 +87,7 @@ const BestDealing = () => {
                 alt={right.title}
               />
               <div className="cart flex justify-between items-center pr-4">
-                <h1 className="text-gray-700 text-lg">{right.price ? right.price : (
+                <h1 className="text-gray-700 text-lg">${right.price ? right.price : (
                             <p className="text-gray-500 font-semibold text-lg sm:text-xl md:text-sm">
                               Sold out
                             </p>
