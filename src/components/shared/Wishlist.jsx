@@ -10,7 +10,6 @@ import {
   X,
 } from "lucide-react";
 import { Button } from "./imports";
-import Demo from "./Demo";
 
 const socialData = [
   { icon: <Facebook />, Link: "https://www.facebook.com" },
@@ -58,7 +57,7 @@ const Wishlist = () => {
   return (
     <>
     
-    <div className="px-4 py-4">
+    <div className="px-4 py-4 md:px-24">
       <div className="flex items-center text-gray-500 py-6 space-x-1">
         <Link className="text-[15px] hover:text-yellow-400" to="/">
           Home
@@ -80,8 +79,8 @@ const Wishlist = () => {
         </div>
       </div>
 
-      <div className="flex justify-between px-6 font-bold border-b border-gray-300 mb-3 py-3">
-        <h1>Product</h1>
+      <div className="flex justify-between px-6 text-gray-600 md:px-20 font-bold border-b border-t border-gray-300 mb-3 py-3 md:text-lg">
+        <h1 >Product</h1>
         <h1 className="hidden sm:inline-block">Stock Status</h1>
         <h1>Product Details</h1>
       </div>
@@ -90,19 +89,33 @@ const Wishlist = () => {
       <div className="grid grid-cols-1">
         {wishlistItems.map((item) => (
           <div
-            className="flex flex-row items-center sm:justify-between space-x-5 py-3 my-2 px-3 border-b "
+            className="flex flex-row items-center sm:justify-between space-x-5 py-3 my-2 px-3 border-b border-gray-300"
             key={item.id}
           >
             
             <div className="img">
-              <img className="w-full h-20 sm:w-full sm:h-36" src={item.image} alt={item.title} />
+              <img className="w-full h-20 sm:w-full sm:h-36 md:w-full md:h-52" src={item.image} alt={item.title} />
+              <div className="stocks  sm:hidden">
+              
+              {item.isSoldOut ? (
+                <div className="text-center">
+                  
+                  <p className="text-sm text-yellow-500 mt-1 w-26 font-semibold">
+                    Available again in <span className="text-green-600 font-bold">{getRandomArrival(item.id)}</span>
+                  </p>
+                </div>
+              ) : (
+                <div className="text-yellow-500 font-semibold text-center pt-3">Available <span className="text-green-600 font-bold text-center">In Stock</span></div>
+                
+              )}
+            </div>
             </div>
             <div className="stocks hidden sm:block py-7">
               
               {item.isSoldOut ? (
                 <div>
                   
-                  <p className="text-sm text-yellow-500 mt-1 w-26 font-semibold">
+                  <p className="text-sm md:text-lg text-yellow-500 mt-1 w-26 md:w-full font-semibold">
                     Available again in <span className="text-green-600 font-bold">{getRandomArrival(item.id)}</span>
                   </p>
                 </div>
@@ -111,7 +124,7 @@ const Wishlist = () => {
                 
               )}
             </div>
-            <div className="details space-y-1 text-center w-52 pl-7 py-4">
+            <div className="details space-y-1 text-center w-52 pl-7 py-4 md:w-76">
               <h1 className="text-md truncate font-bold">{item.title}</h1>
               
               <h1 className="text-xl font-bold text-green-600">{item.newPrice}</h1>
