@@ -157,10 +157,12 @@ const ProductDetails = () => {
             </ul>
 
             <hr className="text-gray-300 mr-8" />
+            {product.discount && <>
             <h1 className="font-bold">HURRY UP! OFFER ENDS IN</h1>
             <div className="time flex space-x-2">
               <CountDownOffer targetTime={countdownEnd} />
             </div>
+            </>}
 
             <div className="flex items-center space-x-2 py-3">
               <ShoppingCart className="animate-bounce" size={52} fill="white" color="yellow" />

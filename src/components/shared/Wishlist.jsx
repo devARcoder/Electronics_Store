@@ -9,14 +9,19 @@ import {
   Expand,
   X,
 } from "lucide-react";
-import { Button } from "./imports";
 
+
+import { Button } from "./imports";
+import AllProducts from "../all_Products/AllProducts";
+import CompaniesBrand from "../company_brands/CompaniesBrand";
+import NewsLetter from "../news_letter/NewsLetter";
 const socialData = [
   { icon: <Facebook />, Link: "https://www.facebook.com" },
   { icon: <Linkedin />, Link: "https://www.linkedin.com" },
   { icon: <Mail />, Link: "mailto:example@email.com" },
   { icon: <LinkIcon />, Link: "https://www.google.com" },
 ];
+
 
 const Wishlist = () => {
   const [wishlistItems, setWishlistItems] = useState([]);
@@ -48,8 +53,9 @@ const Wishlist = () => {
 
   if (wishlistItems.length === 0) {
     return (
-      <div className="text-center py-20 text-gray-500 text-2xl">
-        No items in wishlist.
+      <div className="flex flex-col justify-center items-center pt-20 relative">
+        <img className="" src="/images/wishlistEmpty.webp" alt="" />
+        <Link className="absolute top-77 sm:top-81 " to="/"><Button className="border bg-green-500 text-white px-4 sm:px-5 py-1 rounded-md text-[10px] font-semibold cursor-pointer" name="Start Shopping"/></Link>
       </div>
     );
   }
@@ -153,6 +159,9 @@ const Wishlist = () => {
         ))}
       </div>
     </div>
+    <AllProducts/>
+    <CompaniesBrand/>
+    <NewsLetter/>
     </>
   );
 };
