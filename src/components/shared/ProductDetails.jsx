@@ -19,12 +19,14 @@ import CountDownOffer from "./CountDownOffer";
 import AllProducts from "../all_Products/AllProducts";
 import CompaniesBrand from "../company_brands/CompaniesBrand";
 import NewsLetter from "../news_letter/NewsLetter";
-import { useWishlist } from "../../context/WishlistContext"; // ✅ Wishlist Context
+import { useWishlist } from "../../context/WishlistContext";
+import { useCart } from "../../context/CartContext"; // ✅ Import Cart Context
 
 const ProductDetails = () => {
   const [userRating, setUserRating] = useState(3);
   const { id } = useParams();
   const { addToWishlist } = useWishlist();
+  const { addToCart } = useCart(); // ✅ Access addToCart
 
   const allProducts = [
     ...featuredItems,
@@ -55,10 +57,17 @@ const ProductDetails = () => {
   }
 
   const handleAddToCart = () => {
+    addToCart({
+      id: product.id,
+      title: product.title,
+      image: product.image,
+      price: product.price,
+      oldPrice: product.oldPrice,
+      quantity: 1
+    });
     toast.success(`${product.title} added to cart`);
   };
 
-  // ✅ Updated: Include isSoldOut in wishlist data
   const handleAddToWishlist = () => {
     addToWishlist({
       id: product.id,
@@ -66,7 +75,7 @@ const ProductDetails = () => {
       image: product.image,
       price: product.oldPrice,
       newPrice: product.price,
-      isSoldOut: product.sold, // ✅ Add sold-out status
+      isSoldOut: product.sold,
     });
     toast.success(`${product.title} added to wishlist`);
   };
@@ -96,11 +105,7 @@ const ProductDetails = () => {
             />
             {product.discount && (
               <div className="absolute top-6 left-0 md:-left-7">
-                <img
-                  className="rotate-1"
-                  src="/images/saleoffbanner.png"
-                  alt=""
-                />
+                <img className="rotate-1" src="/images/saleoffbanner.png" alt="" />
                 <p className="absolute top-2 md:top-4 text-white font-bold left-26 md:left-34 text-3xl md:-left-0">
                   {product.discount} OFF
                 </p>
@@ -108,7 +113,7 @@ const ProductDetails = () => {
             )}
             {product.sold && (
               <div className="absolute -top-26 left-0 md:right-6">
-                <img className="" src="/images/bestSeller1.png" alt="Sold Out" />
+                <img src="/images/bestSeller1.png" alt="Sold Out" />
               </div>
             )}
           </div>
@@ -136,7 +141,7 @@ const ProductDetails = () => {
             </div>
 
             {/* Social Icons */}
-            <div className="socialIcons flex space-x-2">
+            <div className="flex space-x-2">
               <p className="flex bg-blue-900 text-white items-center w-fit px-1 py-1">
                 <FacebookIcon className="w-5 h-5" fill="white" /> Share
               </p>
@@ -157,12 +162,14 @@ const ProductDetails = () => {
             </ul>
 
             <hr className="text-gray-300 mr-8" />
-            {product.discount && <>
-            <h1 className="font-bold">HURRY UP! OFFER ENDS IN</h1>
-            <div className="time flex space-x-2">
-              <CountDownOffer targetTime={countdownEnd} />
-            </div>
-            </>}
+            {product.discount && (
+              <>
+                <h1 className="font-bold">HURRY UP! OFFER ENDS IN</h1>
+                <div className="time flex space-x-2">
+                  <CountDownOffer targetTime={countdownEnd} />
+                </div>
+              </>
+            )}
 
             <div className="flex items-center space-x-2 py-3">
               <ShoppingCart className="animate-bounce" size={52} fill="white" color="yellow" />
@@ -178,7 +185,7 @@ const ProductDetails = () => {
           </div>
 
           {/* Purchase Section */}
-          <div className="stocks border border-gray-300 mt-6 sm:w-[40rem] md:w-[20rem] sm:mx-4 rounded-xl ">
+          <div className="stocks border border-gray-300 mt-6 sm:w-[40rem] md:w-[20rem] sm:mx-4 rounded-xl">
             <h1 className="border-b border-gray-300 md:text-center px-3 md:mx-10 py-4 text-center">
               Available:{" "}
               <span className={`${product.sold ? "text-red-600" : "text-green-500"} font-bold`}>
@@ -187,8 +194,8 @@ const ProductDetails = () => {
             </h1>
 
             <div className="price flex flex-col justify-center md:items-center px-3">
-              <h1 className="text-3xl text-center">{product.price}</h1>
-              <p className="text-xl line-through text-gray-500 text-center">{product.oldPrice}</p>
+              <h1 className="text-3xl text-center">${product.price}</h1>
+              <p className="text-xl line-through text-gray-500 text-center">${product.oldPrice}</p>
             </div>
 
             {/* Action Buttons */}

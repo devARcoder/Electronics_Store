@@ -12,6 +12,7 @@ import TermsCondition from '../pages/TermsCondition'
 import Features from '../pages/Features';
 import ProductDetails from '../components/shared/ProductDetails';
 import Wishlist from '../components/shared/Wishlist';
+import Cart from '../pages/Cart';
 
 const Main = () => {
   return (
@@ -32,6 +33,7 @@ const Main = () => {
         <Route path="/terms" element={<TermsCondition/>} />
         <Route path="/features" element={<Features/>} />
         <Route path="/wishlist" element={<Wishlist/>} />
+        <Route path="/cart" element={<Cart/>} />
       </Routes>
     </main>
   );

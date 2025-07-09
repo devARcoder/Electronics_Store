@@ -82,7 +82,7 @@ const FeaturedItems = () => {
                         <div className="flex space-x-2 items-center">
                           {item.price ? (
                             <p className="text-red-500 text-lg sm:text-xl md:text-sm">
-                              {item.price}
+                              ${item.price}
                             </p>
                           ) : (
                             <p className="text-gray-500 font-semibold text-lg sm:text-xl md:text-sm">
@@ -91,7 +91,7 @@ const FeaturedItems = () => {
                           )}
                           {item.oldPrice && (
                             <p className="line-through text-gray-400 text-md sm:text-xl md:text-sm">
-                              {item.oldPrice}
+                              ${item.oldPrice}
                             </p>
                           )}
                         </div>

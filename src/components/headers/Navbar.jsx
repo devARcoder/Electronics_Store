@@ -78,12 +78,14 @@ const Navbar = () => {
           </Link>
 
           {/* Shopping Cart Button (Static Count Placeholder) */}
+          <Link to="/cart">
           <div className="relative">
             <ShoppingBagIcon />
             <span className="bg-gray-700 text-white px-1 py-0.5 text-sm rounded-full absolute top-7 right-1 translate-x-1/2 -translate-y-1/2 font-semibold md:bg-yellow-300 md:text-black">
               16
             </span>
           </div>
+          </Link>
 
           <p className="hidden md:inline-block font-bold text-gray-700">
             $0.00
