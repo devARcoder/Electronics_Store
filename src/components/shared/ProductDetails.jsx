@@ -58,38 +58,34 @@ const ProductDetails = () => {
     toast.success(`${product.title} added to cart`);
   };
 
+  // ✅ Updated: Include isSoldOut in wishlist data
   const handleAddToWishlist = () => {
-    addToWishlist(product);
+    addToWishlist({
+      id: product.id,
+      title: product.title,
+      image: product.image,
+      price: product.oldPrice,
+      newPrice: product.price,
+      isSoldOut: product.sold, // ✅ Add sold-out status
+    });
     toast.success(`${product.title} added to wishlist`);
   };
 
   return (
     <>
       <div className="px-4 py-4 md:px-24">
+        {/* Breadcrumb */}
         <div className="flex items-center text-gray-500 py-6 space-x-1">
-          <Link className="text-[15px] hover:text-yellow-400" to="/">
-            Home
-          </Link>
+          <Link className="text-[15px] hover:text-yellow-400" to="/">Home</Link>
           <ChevronRight size={18} color="gray" />
-          <Link
-            className="text-[15px] hover:text-yellow-400"
-            to="/collections"
-          >
-            All Collections
-          </Link>
-          <ChevronRight
-            className="hidden sm:inline-block"
-            size={18}
-            color="gray"
-          />
-          <Link
-            className="hidden sm:inline-block text-[15px] hover:text-yellow-400"
-            to="#"
-          >
+          <Link className="text-[15px] hover:text-yellow-400" to="/collections">All Collections</Link>
+          <ChevronRight className="hidden sm:inline-block" size={18} color="gray" />
+          <Link className="hidden sm:inline-block text-[15px] hover:text-yellow-400" to="#">
             {product.title} Details
           </Link>
         </div>
 
+        {/* Product Content */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-0 mt-6">
           {/* Image Section */}
           <div className="relative pt-24 md:pt-25">
@@ -112,17 +108,15 @@ const ProductDetails = () => {
             )}
             {product.sold && (
               <div className="absolute -top-26 left-0 md:right-6">
-                <img className="" src="/images/bestSeller1.png" alt="" />
+                <img className="" src="/images/bestSeller1.png" alt="Sold Out" />
               </div>
             )}
           </div>
 
-          {/* Details Section */}
+          {/* Info Section */}
           <div className="space-y-5 pt-3">
             <div>
-              <p className="text-sm text-gray-500">
-                {product.brand || product.type}
-              </p>
+              <p className="text-sm text-gray-500">{product.brand || product.type}</p>
               <h1 className="text-3xl text-gray-600">{product.title}</h1>
             </div>
             <div className="flex space-x-1 items-center">
@@ -141,6 +135,7 @@ const ProductDetails = () => {
               <p className="text-sm text-gray-500">7 reviews</p>
             </div>
 
+            {/* Social Icons */}
             <div className="socialIcons flex space-x-2">
               <p className="flex bg-blue-900 text-white items-center w-fit px-1 py-1">
                 <FacebookIcon className="w-5 h-5" fill="white" /> Share
@@ -157,7 +152,7 @@ const ProductDetails = () => {
               <li>Accept SIM card and call</li>
               <li>Take photos</li>
               <li>Make calling instead of mobile phone</li>
-              <li>Sync music play and sync control music</li>
+              <li>Sync music play and control music</li>
               <li>Sync Facebook, Twitter, email and calendar</li>
             </ul>
 
@@ -168,21 +163,14 @@ const ProductDetails = () => {
             </div>
 
             <div className="flex items-center space-x-2 py-3">
-              <ShoppingCart
-                className="animate-bounce"
-                size={52}
-                fill="white"
-                color="yellow"
-              />
+              <ShoppingCart className="animate-bounce" size={52} fill="white" color="yellow" />
               <p className="text-gray-500">
-                <span className="font-bold">Other people want this. </span>8
-                people have this in their carts right now.
+                <span className="font-bold">Other people want this. </span>8 people have this in their carts right now.
               </p>
             </div>
 
             <p className="text-gray-500 pr-5">
-              Want it delivered by{" "}
-              <span className="font-bold">Thursday, 26 June</span>? Order
+              Want it delivered by <span className="font-bold">Thursday, 26 June</span>? Order
               before <span className="font-bold text-yellow-400">14:00</span>
             </p>
           </div>
@@ -190,55 +178,50 @@ const ProductDetails = () => {
           {/* Purchase Section */}
           <div className="stocks border border-gray-300 mt-6 sm:w-[40rem] md:w-[20rem] sm:mx-4 rounded-xl ">
             <h1 className="border-b border-gray-300 md:text-center px-3 md:mx-10 py-4 text-center">
-              Available: <span className="text-green-500 font-bold">In stocks</span>
+              Available:{" "}
+              <span className={`${product.sold ? "text-red-600" : "text-green-500"} font-bold`}>
+                {product.sold ? "Sold Out" : "In Stock"}
+              </span>
             </h1>
 
             <div className="price flex flex-col justify-center md:items-center px-3">
               <h1 className="text-3xl text-center">{product.price}</h1>
-              <p className="text-xl line-through text-gray-500 text-center">
-                {product.oldPrice}
-              </p>
+              <p className="text-xl line-through text-gray-500 text-center">{product.oldPrice}</p>
             </div>
 
+            {/* Action Buttons */}
             {!product.sold ? (
               <div className="px-4 text-white font-bold space-y-4 py-10">
-                {/* Add to Cart */}
                 <div
                   onClick={handleAddToCart}
                   className="px-6 space-x-3 flex justify-center items-center w-full bg-yellow-400 py-3 rounded-full cursor-pointer"
                 >
-                  {!product.sold && <ShoppingCart className="animate-bounce" />}
+                  <ShoppingCart className="animate-bounce" />
                   <button className="font-bold text-white">Add to Cart</button>
                 </div>
 
-                {/* Buy it now */}
-                {!product.sold && <div className="px-6 flex justify-center items-center w-full bg-slate-800 py-3 rounded-full">
+                <div className="px-6 flex justify-center items-center w-full bg-slate-800 py-3 rounded-full">
                   <button className="flex items-center px-3">Buy it now</button>
-                </div>}
+                </div>
 
-                {/* Add to Wishlist */}
                 <div
                   onClick={handleAddToWishlist}
                   className="px-6 flex justify-center items-center w-full bg-green-600 py-3 rounded-full cursor-pointer"
                 >
-                  <button className="flex items-center px-3 text-white font-semibold">
-                    Add to Wishlist
-                  </button>
+                  <button className="flex items-center px-3 text-white font-semibold">Add to Wishlist</button>
                 </div>
               </div>
             ) : (
-              <div className="flex flex-col items-center justify-center">
-                <img className="" src="/images/soldout.png" alt="" />
+              <div className="flex flex-col items-center justify-center py-6">
+                <img src="/images/soldout.png" alt="Sold Out" className="w-32" />
+                <div
+                  onClick={handleAddToWishlist}
+                  className="mt-4 flex justify-center items-center bg-green-600 py-3 px-6 rounded-full cursor-pointer"
+                >
+                  <button className="flex items-center px-3 text-white font-semibold">Add to Wishlist</button>
+                </div>
               </div>
             )}
-            {product.sold && <div
-                  onClick={handleAddToWishlist}
-                  className=" flex justify-center items-center mx-4 bg-green-600 py-3 rounded-full cursor-pointer"
-                >
-                  <button className="flex items-center px-3 text-white font-semibold">
-                    Add to Wishlist
-                  </button>
-                </div>}
           </div>
         </div>
       </div>
