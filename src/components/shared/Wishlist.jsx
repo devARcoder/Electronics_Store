@@ -10,6 +10,7 @@ import {
   X,
 } from "lucide-react";
 import { Button } from "./imports";
+import Demo from "./Demo";
 
 const socialData = [
   { icon: <Facebook />, Link: "https://www.facebook.com" },
@@ -55,8 +56,9 @@ const Wishlist = () => {
   }
 
   return (
+    <>
+    
     <div className="px-4 py-4">
-      {/* Breadcrumb */}
       <div className="flex items-center text-gray-500 py-6 space-x-1">
         <Link className="text-[15px] hover:text-yellow-400" to="/">
           Home
@@ -67,10 +69,9 @@ const Wishlist = () => {
         </Link>
       </div>
 
-      {/* Title and Socials */}
       <div className="flex flex-col items-center justify-center space-y-2 pt-4 pb-8">
         <h1 className="text-3xl text-gray-700">My Wishlist</h1>
-        <div className="socials flex space-x-3">
+        <div className="socials flex space-x-3 py-3">
           {socialData.map((data, i) => (
             <a key={i} href={data.Link} target="_blank" rel="noopener noreferrer">
               <p className="border p-2 rounded-full hover:bg-gray-100">{data.icon}</p>
@@ -79,42 +80,41 @@ const Wishlist = () => {
         </div>
       </div>
 
-      
+      <div className="flex justify-between px-6 font-bold border-b border-gray-300 mb-3 py-3">
+        <h1>Product</h1>
+        <h1 className="hidden sm:inline-block">Stock Status</h1>
+        <h1>Product Details</h1>
+      </div>
 
-      {/* Wishlist Items */}
+      
       <div className="grid grid-cols-1">
         {wishlistItems.map((item) => (
           <div
-            className="flex flex-row items-center sm:justify-between space-x-5 py-3 my-2 px-3 shadow-md rounded-md border border-gray-300"
+            className="flex flex-row items-center sm:justify-between space-x-5 py-3 my-2 px-3 border-b "
             key={item.id}
           >
-            {/* Product Image */}
+            
             <div className="img">
               <img className="w-full h-20 sm:w-full sm:h-36" src={item.image} alt={item.title} />
             </div>
-
-            {/* Stock Status */}
-            <div className="stocks hidden sm:block">
-              <h1 className="text-sm font-semibold text-gray-600">Stock Status</h1>
+            <div className="stocks hidden sm:block py-7">
+              
               {item.isSoldOut ? (
                 <div>
                   
-                  <p className="text-sm text-yellow-500 mt-1">
-                    🚚 Available again in {getRandomArrival(item.id)}
+                  <p className="text-sm text-yellow-500 mt-1 w-26 font-semibold">
+                    Available again in <span className="text-green-600 font-bold">{getRandomArrival(item.id)}</span>
                   </p>
                 </div>
               ) : (
-                <span className="text-green-600 font-semibold">In Stock</span>
+                <span className="text-yellow-500 w-26 font-semibold">Available <span className="text-green-600 font-bold">In Stock</span></span>
+                
               )}
             </div>
-
-            {/* Product Details */}
-            <div className="details space-y-1 text-center w-52">
+            <div className="details space-y-1 text-center w-52 pl-7 py-4">
               <h1 className="text-md truncate font-bold">{item.title}</h1>
               
               <h1 className="text-xl font-bold text-green-600">{item.newPrice}</h1>
-
-              {/* Action Buttons */}
               <div className="flex items-center space-x-3 justify-center mt-3">
                 <Link to={`/product/${item.id}`} className="text-lg text-blue-600 cursor-pointer">
                   <Expand />
@@ -126,8 +126,6 @@ const Wishlist = () => {
                   <X className="w-8 h-8" />
                 </button>
               </div>
-
-              {/* Add to Cart Button */}
               <Button
                 name={item.isSoldOut ? "Out of Stock" : "Add to Cart"}
                 disabled={item.isSoldOut}
@@ -142,6 +140,7 @@ const Wishlist = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 
