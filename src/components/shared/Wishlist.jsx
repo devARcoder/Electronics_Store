@@ -31,10 +31,10 @@ const Wishlist = () => {
     const updated = wishlistItems.filter((item) => item.id !== id);
     setWishlistItems(updated);
     localStorage.setItem("wishlist", JSON.stringify(updated));
-    localStorage.removeItem(`arrival_time_${id}`); // remove stored arrival time too
+    localStorage.removeItem(`arrival_time_${id}`);
   };
 
-  // ✅ Random arrival time generator
+  
   const getRandomArrival = (id) => {
     const key = `arrival_time_${id}`;
     const cached = localStorage.getItem(key);
