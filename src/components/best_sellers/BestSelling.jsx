@@ -19,10 +19,10 @@ const BestSelling = () => {
                 </h1>
               </div>
               <div className="flex space-x-2 items-center">
-                <h1 className="text-gray-700 text-lg sm:text-xl md:text-xl">{sellItem.price}</h1>
+                <h1 className="text-gray-700 text-lg sm:text-xl md:text-xl">${sellItem.price}</h1>
                 {sellItem.oldPrice && (
                   <h1 className="line-through text-gray-400 text-lg sm:text-lg md:text-lg">
-                    {sellItem.oldPrice}
+                    ${sellItem.oldPrice}
                   </h1>
                 )}
               </div>

@@ -27,11 +27,13 @@ const BestDealing = () => {
                 alt={left.title}
               />
               <div className="cart flex justify-between items-center pr-4">
-                <h1 className="text-gray-700 text-lg">${left.price ? left.price : (
-                            <p className="text-gray-500 font-semibold text-lg sm:text-xl md:text-sm">
-                              Sold out
-                            </p>
-                          )}</h1>
+                {left.sold || !left.price ? (
+  <p className="text-gray-500 font-semibold pb-2 text-lg sm:text-xl md:text-sm">
+    Sold out
+  </p>
+) : (
+  <h1 className="text-gray-700 text-lg">${left.price}</h1>
+)}
               </div>
             </div>
           </Link>
@@ -39,9 +41,9 @@ const BestDealing = () => {
       </div>
 
       {/* CENTER SECTION - only 1 card */}
-      <div className="center flex justify-center items-center mx-1">
+      <div className="center flex justify-center items-center my-2 mx-0 md:my-0 md:mx-1">
         <Link to={`/product/${center.id}`} className="w-full">
-          <div className="bg-white px-4  space-y-4 cursor-pointer hover:shadow-xl text-center">
+          <div className="bg-white px-4  space-y-2 cursor-pointer hover:shadow-xl text-center">
             <h1 className="text-gray-500 text-md hover:text-yellow-400">{center.brand}</h1>
             <h1 className="text-blue-600 text-lg font-bold hover:text-yellow-400">{center.title}</h1>
 
@@ -87,11 +89,13 @@ const BestDealing = () => {
                 alt={right.title}
               />
               <div className="cart flex justify-between items-center pr-4">
-                <h1 className="text-gray-700 text-lg">${right.price ? right.price : (
-                            <p className="text-gray-500 font-semibold text-lg sm:text-xl md:text-sm">
-                              Sold out
-                            </p>
-                          )}</h1>
+                {right.sold || !right.price ? (
+  <p className="text-gray-500 font-semibold pb-2 text-lg sm:text-xl md:text-sm">
+    Sold out
+  </p>
+) : (
+  <h1 className="text-gray-700 text-lg">${right.price}</h1>
+)}
               </div>
             </div>
           </Link>
