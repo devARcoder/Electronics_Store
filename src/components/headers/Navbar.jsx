@@ -61,7 +61,7 @@ const Navbar = () => {
             />
           )}
 
-          <UserIcon className="md:hidden" />
+          <Link to="/accounts"><UserIcon className="md:hidden" /></Link>
 
           {/* Wishlist Button */}
           <Link to="/wishlist">
@@ -85,7 +85,7 @@ const Navbar = () => {
             <ShoppingBagIcon />
 
             {cart.length > 0 ? (
-              <span className="bg-gray-700 text-white px-1 py-0.5 text-sm rounded-full absolute top-7 right-1 translate-x-1/2 -translate-y-1/2 font-semibold md:bg-yellow-300 md:text-black">
+              <span className="bg-gray-700 text-white px-2 py-0.5 text-sm rounded-full absolute top-7 right-1 translate-x-1/2 -translate-y-1/2 font-semibold md:bg-yellow-300 md:text-black">
               {cart.length}
             </span>
             ) : (
