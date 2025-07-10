@@ -13,6 +13,8 @@ import Features from '../pages/Features';
 import ProductDetails from '../components/shared/ProductDetails';
 import Wishlist from '../components/shared/Wishlist';
 import Cart from '../pages/Cart';
+import PaymentPage from '../pages/PaymentPage';
+import PaymentSuccess from '../pages/PaymentSuccess';
 
 const Main = () => {
   return (
@@ -34,6 +36,8 @@ const Main = () => {
         <Route path="/features" element={<Features/>} />
         <Route path="/wishlist" element={<Wishlist/>} />
         <Route path="/cart" element={<Cart/>} />
+        <Route path="/payment" element={<PaymentPage />} />
+        <Route path="/payment-success" element={<PaymentSuccess />} />
       </Routes>
     </main>
   );

@@ -2,24 +2,25 @@
 import React from "react";
 import CartItem from "../components/cart/CartItem";
 import CartSummary from "../components/cart/CartSummary";
-import { useCart } from "../context/CartContext"; // ✅ Import useCart
+import { useCart } from "../context/CartContext";
 
 const Cart = () => {
-  const { cartItems } = useCart(); // ✅ Get live cart items
+  const { cart } = useCart(); // ✅ Correct context value
 
   return (
-    <div className="min-h-screen bg-gray-50 py-10 px-4 md:px-10">
-      <h2 className="text-2xl font-bold mb-6 text-gray-800">Your Cart</h2>
+    <div className="min-h-screen bg-gray-50 py-10 px-4 md:px-10 text-center">
+      
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2 space-y-4">
-          {cartItems.length > 0 ? (
-            cartItems.map((item) => <CartItem key={item.id} item={item} />)
+          {cart.length > 0 ? (
+            cart.map((item) => <CartItem key={item.id} item={item} />)
           ) : (
-            <p className="text-gray-500">Your cart is empty.</p>
+            // <p className="text-gray-500">Your cart is empty.</p>
+            <img className="md:pl-20" src="/images/emptycart.png" alt="" />
           )}
         </div>
 
-        <CartSummary cartItems={cartItems} /> {/* ✅ LIVE DATA */}
+        <CartSummary cartItems={cart} /> {/* ✅ Now sending correct prop */}
       </div>
     </div>
   );

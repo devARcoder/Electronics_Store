@@ -17,7 +17,7 @@ const TopBar = () => {
         <MapPinIcon size={16} className='cursor-pointer' />
         <p className="border-r border-black pr-3 cursor-pointer">Thall Main Road</p>
         <UserIcon size={16} className='cursor-pointer' />
-        <p className="border-r border-black pr-3 cursor-pointer">Sign in or Register</p>
+        <p className="border-r border-black pr-3"><span className='cursor-pointer font-bold text-yellow-400'>Sign in</span> or <span className='cursor-pointer font-bold text-yellow-400'>Register</span></p>
         <GlobeIcon size={16} className='cursor-pointer' />
       </div>
     </div>

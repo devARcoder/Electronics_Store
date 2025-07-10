@@ -11,12 +11,14 @@ import DiskBar from "./DiskBar";
 import { XIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useWishlist } from "../../context/WishlistContext"; // ✅ Import useWishlist
+import { useCart} from "../../context/CartContext";
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const { wishlist, loading } = useWishlist(); // ✅ Access wishlist from context
+  const { cart, getTotalPrice } = useCart();
 
   if (loading) return null;
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
@@ -81,14 +83,21 @@ const Navbar = () => {
           <Link to="/cart">
           <div className="relative">
             <ShoppingBagIcon />
-            <span className="bg-gray-700 text-white px-1 py-0.5 text-sm rounded-full absolute top-7 right-1 translate-x-1/2 -translate-y-1/2 font-semibold md:bg-yellow-300 md:text-black">
-              16
+
+            {cart.length > 0 ? (
+              <span className="bg-gray-700 text-white px-1 py-0.5 text-sm rounded-full absolute top-7 right-1 translate-x-1/2 -translate-y-1/2 font-semibold md:bg-yellow-300 md:text-black">
+              {cart.length}
             </span>
+            ) : (
+              <span className="bg-gray-700 text-white px-1 py-0.5 text-sm rounded-full absolute top-7 right-1 translate-x-1/2 -translate-y-1/2 font-semibold md:bg-yellow-300 md:text-black">
+              {cart.length}
+            </span>
+            ) }
           </div>
           </Link>
 
           <p className="hidden md:inline-block font-bold text-gray-700">
-            $0.00
+            ${getTotalPrice().toFixed(2)}
           </p>
         </div>
       </div>

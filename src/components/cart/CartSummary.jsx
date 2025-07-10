@@ -1,18 +1,50 @@
 // src/components/cart/CartSummary.jsx
-import React from "react";
-import { useCart } from "../../context/CartContext"; // ✅ Import context
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
+import { useCart } from "../../context/CartContext";
+import { Loader2 } from "lucide-react";
 
 const CartSummary = () => {
-  const { cartItems } = useCart();
+  const { cart } = useCart();
+  const navigate = useNavigate();
+  const [processing, setProcessing] = useState(false);
+  const [storedTotal, setStoredTotal] = useState(null);
 
-  // ✅ Convert string price to number using parseFloat
-  const subtotal = cartItems.reduce((sum, item) => {
-    const price = parseFloat(item.price); // "99.99" → 99.99
-    return sum + (isNaN(price) ? 0 : price);
+  const subtotal = cart.reduce((sum, item) => {
+    const price = parseFloat(item.price);
+    const qty = item.quantity || 1;
+    return sum + (isNaN(price) ? 0 : price * qty);
   }, 0);
 
   const shippingCost = 0;
   const total = subtotal + shippingCost;
+
+  // Save total bill to localStorage on render
+  useEffect(() => {
+    localStorage.setItem("totalBill", total.toFixed(2));
+    setStoredTotal(total.toFixed(2));
+  }, [total]);
+
+  const handleCheckout = () => {
+    if (cart.length === 0) {
+      toast.error("Your cart is empty. Add items before proceeding.");
+      return;
+    }
+
+    setProcessing(true);
+    toast.loading("Processing checkout...", { id: "checkout" });
+
+    setTimeout(() => {
+      toast.dismiss("checkout");
+      toast.success("Checkout successful! Redirecting to payment...", {
+        id: "checkoutSuccess",
+        duration: 2000,
+      });
+      setProcessing(false);
+      navigate("/payment");
+    }, 2000);
+  };
 
   return (
     <div className="bg-white p-6 rounded-xl shadow-md sticky top-24">
@@ -32,11 +64,26 @@ const CartSummary = () => {
 
       <div className="flex justify-between font-bold text-gray-800 mb-4">
         <span>Total</span>
-        <span>${total.toFixed(2)}</span>
+        <span>${storedTotal}</span>
       </div>
 
-      <button className="w-full bg-yellow-400 hover:bg-yellow-500 transition-colors text-black py-2 rounded-lg font-medium">
-        Proceed to Checkout
+      <button
+        onClick={handleCheckout}
+        disabled={processing || cart.length === 0}
+        className={`w-full flex justify-center items-center gap-2 transition-colors text-black py-2 rounded-lg font-medium ${
+          processing || cart.length === 0
+            ? "bg-gray-400 cursor-not-allowed"
+            : "bg-yellow-400 hover:bg-yellow-500"
+        }`}
+      >
+        {processing ? (
+          <>
+            <Loader2 className="w-5 h-5 animate-spin" />
+            Processing Checkout...
+          </>
+        ) : (
+          "Proceed to Checkout"
+        )}
       </button>
     </div>
   );
