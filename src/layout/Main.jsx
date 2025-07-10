@@ -2,9 +2,8 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from '../pages/Home';
 import About from '../pages/About';
-import Contact from '../pages/Contact'; // (Optional, if you're adding it)
+import Contact from '../pages/Contact';
 import Collections from '../components/collections/Collections';
-// import ItemDetails from '../components/featured/ItemsDetails';
 import ScrollToTop from '../components/shared/ScrollToTop';
 import StoreLocation from '../pages/StoreLocation';
 import FAQs from '../pages/FAQs'
