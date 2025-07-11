@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import html2pdf from "html2pdf.js";
 
 const PaymentSuccess = () => {
   const [order, setOrder] = useState(null);
@@ -14,20 +13,6 @@ const PaymentSuccess = () => {
       localStorage.setItem("totalBill", parsedOrder.total); // Save total for future reference
     }
   }, []);
-
-  const handleDownloadPDF = () => {
-    if (!invoiceRef.current) return;
-
-    const opt = {
-      margin: 0.3,
-      filename: "invoice.pdf",
-      image: { type: "jpeg", quality: 0.98 },
-      html2canvas: { scale: 2, useCORS: true },
-      jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
-    };
-
-    html2pdf().set(opt).from(invoiceRef.current).save();
-  };
 
   if (!order) {
     return (
@@ -110,12 +95,7 @@ const PaymentSuccess = () => {
         >
           Go to Home
         </Link>
-        <button
-          onClick={handleDownloadPDF}
-          className="text-white bg-green-600 px-4 py-2 rounded hover:bg-green-700"
-        >
-          Download Invoice PDF
-        </button>
+       
       </div>
     </div>
   );

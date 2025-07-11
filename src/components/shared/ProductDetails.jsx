@@ -62,7 +62,7 @@ const ProductDetails = () => {
   const handleAddToCart = () => {
     if (!user) {
       toast.error("Please sign in to add items to the cart.");
-      navigate("/signin");
+      navigate("/accounts");
       return;
     }
 

@@ -17,6 +17,7 @@ import PaymentSuccess from '../pages/PaymentSuccess';
 import SignIn from '../pages/SignIn';
 import SignUp from '../pages/SignUp';
 import Accounts from '../pages/Accounts';
+import Register from '../pages/Register';
 
 const Main = () => {
   return (
@@ -41,6 +42,7 @@ const Main = () => {
         <Route path="/signin" element={<SignIn/>} />
         <Route path="/signup" element={<SignUp/>} />
         <Route path="/accounts" element={<Accounts/>} />
+        <Route path="/register" element={<Register/>} />
         
       </Routes>
     </main>

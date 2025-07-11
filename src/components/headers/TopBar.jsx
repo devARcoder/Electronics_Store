@@ -19,7 +19,7 @@ const TopBar = () => {
         <p className="border-r border-black pr-3 cursor-pointer">Thall Main Road</p>
         <UserIcon size={16} className='cursor-pointer' />
         <p className="border-r border-black pr-3">
-          <Link to="/signin">
+          <Link to="/accounts">
           <span className='cursor-pointer font-bold text-yellow-400'>Login</span></Link> or <Link><span className='cursor-pointer font-bold text-yellow-400'>Register</span>
           </Link></p>
         <GlobeIcon size={16} className='cursor-pointer' />
