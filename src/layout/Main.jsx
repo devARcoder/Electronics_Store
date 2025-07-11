@@ -14,8 +14,6 @@ import Wishlist from '../components/shared/Wishlist';
 import Cart from '../pages/Cart';
 import PaymentPage from '../pages/PaymentPage';
 import PaymentSuccess from '../pages/PaymentSuccess';
-import SignIn from '../pages/SignIn';
-import SignUp from '../pages/SignUp';
 import Accounts from '../pages/Accounts';
 import Register from '../pages/Register';
 
@@ -39,8 +37,6 @@ const Main = () => {
         <Route path="/cart" element={<Cart/>} />
         <Route path="/payment" element={<PaymentPage />} />
         <Route path="/payment-success" element={<PaymentSuccess />} />
-        <Route path="/signin" element={<SignIn/>} />
-        <Route path="/signup" element={<SignUp/>} />
         <Route path="/accounts" element={<Accounts/>} />
         <Route path="/register" element={<Register/>} />
         
