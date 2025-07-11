@@ -25,7 +25,7 @@ const Login = () => {
 
     if (result.success) {
       toast.success("Login successful!");
-      setTimeout(() => navigate("/productdetails"), 1500);
+      setTimeout(() => navigate("/"), 1500);
     } else if (result.message === "No accounts found") {
       toast.error("No account found. Redirecting to Register...");
       setTimeout(() => navigate("/register"), 2000);
@@ -44,7 +44,7 @@ const Login = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2">
         {/* Login Form */}
-        <div className="side1 md:pr-20 md:border-r">
+        <div className="side1 md:pr-20 md:border-r md:border-gray-300">
           <form onSubmit={handleSignIn} className="form space-y-3">
             <div>
               <h1 className="border-b-2 border-yellow-400 text-xl md:text-2xl text-gray-700 font-semibold w-24 pb-3">Login</h1>
