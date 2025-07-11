@@ -12,8 +12,6 @@ const Login = () => {
         <ChevronRight size={18} color='gray' />
         <Link className='text-[15px] hover:text-yellow-300' to="/accounts">Accounts</Link>
       </div>
-
-      {/* Shipping Info Section */}
       
 
         
