@@ -102,7 +102,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Search Input */}
+      
       <div
         className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden bg-white px-4 mt-18 ${
           isSearchOpen ? "max-h-28 py-2" : "max-h-0 py-0"
