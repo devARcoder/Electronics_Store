@@ -100,7 +100,6 @@ const PaymentSuccess = () => {
     //   </div>
     // </div>
     <>
-    
     <div className="shadow-2xl rounded-2xl mx-6 my-6 sm:mx-14 sm:my-10 md:mx-32 md:my-8 p-4 bg-gradient-to-t from-yellow-400 to-white">
       <div className="img flex flex-col items-center border-b border-white text-center py-4">
         <img className="w-24 h-24 object-cover" src="/images/greenTick.png" alt="" />
