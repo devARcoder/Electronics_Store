@@ -65,7 +65,7 @@ const Sidebar = ({ isOpen, onClose }) => {
         </Link>
       </div>
 
-      {/* Scrollable navigation */}
+      
       <div className="flex-1 overflow-y-auto">
         <div className="flex flex-col pb-6">
           {SidebarNavigation.map((item, index) => (
