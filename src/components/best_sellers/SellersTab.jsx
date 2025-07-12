@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Heading from '../shared/common/Heading';
 
 const SellersTab = ({ className }) => {
   const featureTab = ["Top 20", "Phones & Tablets", "Laptops & Computers", "Video Cameras"];

@@ -1,8 +1,7 @@
 import React from 'react'
 import { NavigationIcon } from '../../assets/svg'
 import Input from '../shared/common/Input'
-import { Button } from '../shared/imports'
-
+import Button from '../shared/common/Button'
 const NewsLetter = () => {
   return (
     <div className='bg-yellow-400 flex flex-col justify-normal md:flex-row md:justify-between md:items-center px-8 py-4 space-y-4 md:space-y-0 md:px-24 mt-6'>

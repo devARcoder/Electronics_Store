@@ -10,7 +10,7 @@ import {
   X,
 } from "lucide-react";
 
-import { Button } from "./imports";
+import Button from '../shared/common/Button'
 import AllProducts from "../all_Products/AllProducts";
 import CompaniesBrand from "../company_brands/CompaniesBrand";
 import NewsLetter from "../news_letter/NewsLetter";

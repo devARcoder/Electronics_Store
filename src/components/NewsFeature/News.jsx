@@ -1,6 +1,6 @@
 import React from 'react'
 import { NewsData } from '../../data/data'
-import { Button } from '../shared/imports'
+import Button from '../shared/common/Button'
 import { MessageCircle } from 'lucide-react'
 const News = () => {
   return (

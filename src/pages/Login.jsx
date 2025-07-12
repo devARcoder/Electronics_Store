@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import Input from "../components/shared/common/Input";
-import { Button } from "../components/shared/imports";
+import Button from '../components/shared/common/Button'
 import { useAuth } from "../context/AuthContext";
 import toast from "react-hot-toast";
 

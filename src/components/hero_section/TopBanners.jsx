@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { slides } from '../../data/data';
-import { Button } from '../shared/imports';
+import Button from '../shared/common/Button';
 import OfferProducts from './OfferProducts';
 const TopBanners = () => {
   const [current, setCurrent] = useState(0);
