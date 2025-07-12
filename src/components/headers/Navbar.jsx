@@ -6,7 +6,10 @@ import {
   ShoppingBagIcon,
   UserIcon,
 } from "../../assets/svg";
-import { Sidebar, TopBar, SearchBar } from "../shared/imports";
+// import { Sidebar, TopBar, SearchBar } from "../shared/imports.";
+import Sidebar from "./Sidebar";
+import TopBar from "./TopBar";
+import SearchBar from "./SearchBar";
 import DiskBar from "./DiskBar";
 import { XIcon } from "lucide-react";
 import { Link } from "react-router-dom";
