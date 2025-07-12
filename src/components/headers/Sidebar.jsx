@@ -44,7 +44,7 @@ const Sidebar = ({ isOpen, onClose }) => {
         isOpen ? "translate-x-0" : "-translate-x-full"
       } flex flex-col`}
     >
-      {/* Header */}
+      
       <div className="flex justify-between items-center bg-yellow-300 px-4 pt-5 pb-5">
         <button onClick={onClose}>
           <CloseIcon size={32} strokeWidth={3} />
