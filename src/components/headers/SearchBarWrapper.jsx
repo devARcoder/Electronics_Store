@@ -1,7 +1,7 @@
 // src/components/SearchBarWrapper.jsx
 
 import React, { useEffect, useState } from 'react';
-import SearchBar from './SearchBar'; // adjust the path if needed
+import SearchBar from './SearchBar'; 
 
 const SearchBarWrapper = () => {
   const [isSticky, setIsSticky] = useState(false);
