@@ -142,7 +142,7 @@ const PaymentSuccess = () => {
       </div>
     </div>
 
-    <Link><Button name="Want Shopping" className=""/></Link>
+    <Link to="/" className="flex items-center justify-center mb-8 "><Button name="Want Shopping" className="border rounded-md bg-green-600 text-white px-6 py-4"/></Link>
     </>
   );
 };
