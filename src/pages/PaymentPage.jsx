@@ -64,7 +64,7 @@ const PaymentPage = () => {
   };
 
   const handlePayNow = () => {
-    if (cardHolder.trim()) {
+    if (!cardHolder.trim()) {
       toast.error("Please enter card holder name");
       return;
     }
