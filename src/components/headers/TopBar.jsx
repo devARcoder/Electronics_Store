@@ -22,7 +22,9 @@ const TopBar = () => {
           <Link to="/accounts">
           <span className='cursor-pointer font-bold text-yellow-400'>Login</span></Link> or <Link to="/register"><span className='cursor-pointer font-bold text-yellow-400'>Register</span>
           </Link></p>
+        <a href='https://devarcoder.vercel.app/' target='_blank' rel="noopener noreferrer">
         <GlobeIcon size={16} className='cursor-pointer' />
+        </a>
       </div>
     </div>
   );

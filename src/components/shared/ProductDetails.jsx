@@ -29,6 +29,9 @@ import { useAuth } from "../../context/AuthContext";
 
 const ProductDetails = () => {
   const [userRating, setUserRating] = useState(3);
+  const [loading, setLoading] = useState(true);
+  const [product, setProduct] = useState(null);
+
   const { id } = useParams();
   const navigate = useNavigate();
   const { addToWishlist } = useWishlist();
@@ -51,21 +54,21 @@ const ProductDetails = () => {
   countdownEnd.setDate(countdownEnd.getDate() + 1);
   countdownEnd.setHours(countdownEnd.getHours() + 7);
 
-  const product = allProducts.find((item) => item.id === id);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const found = allProducts.find((item) => item.id === id);
+      setProduct(found);
+      setLoading(false);
+    }, 1000); // simulate 1 second load
+
+    return () => clearTimeout(timer);
+  }, [id]);
 
   useEffect(() => {
     document.title = product
       ? `${product.title} | AR Electronics`
       : "Product Not Found | AR Electronics";
   }, [product]);
-
-  if (!product) {
-    return (
-      <div className="text-center mt-20 text-red-600 font-bold text-2xl">
-        Product Not Found
-      </div>
-    );
-  }
 
   const handleAddToCart = () => {
     if (!user) {
@@ -92,10 +95,40 @@ const ProductDetails = () => {
       image: product.image,
       price: product.oldPrice,
       newPrice: product.price,
-      isSoldOut: product.sold,
+      isSoldOut: product.sold || false,
     });
     toast.success(`${product.title} added to wishlist`);
   };
+
+  if (loading) {
+    return (
+      <div className="px-4 py-4 md:px-24 animate-pulse space-y-6">
+        <div className="h-4 bg-gray-300 rounded w-1/3"></div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="h-64 bg-gray-300 rounded"></div>
+          <div className="space-y-3">
+            <div className="h-6 bg-gray-300 rounded w-2/3"></div>
+            <div className="h-4 bg-gray-300 rounded w-1/2"></div>
+            <div className="h-4 bg-gray-300 rounded w-full"></div>
+            <div className="h-4 bg-gray-300 rounded w-3/4"></div>
+            <div className="flex space-x-2">
+              <div className="h-8 w-24 bg-gray-300 rounded"></div>
+              <div className="h-8 w-24 bg-gray-300 rounded"></div>
+            </div>
+          </div>
+          <div className="h-64 bg-gray-300 rounded"></div>
+        </div>
+      </div>
+    );
+  }
+
+  if (!product) {
+    return (
+      <div className="text-center mt-20 text-red-600 font-bold text-2xl">
+        Product Not Found
+      </div>
+    );
+  }
 
   return (
     <>
@@ -116,7 +149,13 @@ const ProductDetails = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-0 mt-6">
           <div className="relative pt-24 md:pt-25">
-            <img className={`${product.sold ? "grayscale" : ""}`} src={product.image} alt="" />
+            {product.image && (
+              <img
+                className={`${product.sold ? "grayscale" : ""}`}
+                src={product.image}
+                alt={product.title}
+              />
+            )}
             {product.discount && (
               <div className="absolute top-6 left-0 md:-left-7">
                 <img className="rotate-1" src="/images/saleoffbanner.png" alt="" />
@@ -203,8 +242,14 @@ const ProductDetails = () => {
             </h1>
 
             <div className="price flex flex-col justify-center md:items-center px-3 pt-5">
-              <h1 className="text-3xl text-center">{product.sold ? product.price : `$${product.price}`}</h1>
-              <p className="text-xl line-through text-gray-500 text-center">{product.sold ? product.oldPrice : `$${product.oldPrice}`}</p>
+              <h1 className="text-3xl text-center">
+                {product.sold ? product.price : `$${product.price}`}
+              </h1>
+              {product.oldPrice && (
+                <p className="text-xl line-through text-gray-500 text-center">
+                  {product.sold ? product.oldPrice : `$${product.oldPrice}`}
+                </p>
+              )}
             </div>
 
             {!product.sold ? (
