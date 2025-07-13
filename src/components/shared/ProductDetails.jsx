@@ -7,6 +7,7 @@ import {
   centerData,
   rightSideData,
   sellingData,
+  newArrivalsData,
 } from "../../data/data";
 import {
   ChevronRight,
@@ -37,6 +38,7 @@ const ProductDetails = () => {
     ...centerData,
     ...rightSideData,
     ...sellingData,
+    ...newArrivalsData,
   ];
 
   const countdownEnd = new Date();

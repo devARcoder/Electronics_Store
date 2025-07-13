@@ -6,7 +6,7 @@ const BestSelling = () => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 my-3">
       {sellingData.map((sellItem, index) => (
-        <Link to={`/product/${sellItem.id}`} key={index}>
+        <Link to={`/product/${sellItem.id}`} key={`left-${index}`}>
           <div className="flex flex-row items-center cursor-pointer border-gray-200 border-b border-r hover:shadow-xl my-3 md:my-5">
             <div className="img pl-3">
               <img className="w-32 transition-transform duration-300 hover:scale-105" src={sellItem.image} alt={sellItem.title} />

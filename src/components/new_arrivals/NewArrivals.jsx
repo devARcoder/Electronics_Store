@@ -1,5 +1,6 @@
 import React from "react";
 import { newArrivalsData } from "../../data/data";
+import { Link } from "react-router-dom";
 
 const NewArrivals = () => {
   const allItems = [...newArrivalsData, ...newArrivalsData];
@@ -9,10 +10,10 @@ const NewArrivals = () => {
       <div className="relative w-full overflow-hidden group">
         <div className="marquee-track flex gap-4 group-hover:paused">
           {allItems.map((item, index) => (
+            <Link to={`/product/${item.id}`} key={`arrival-${index}`}>
             <div
-              key={index}
               className="flex-shrink-0 w-[50vw] md:w-[15vw] border-r border-t border-gray-200 bg-white cursor-pointer hover:shadow-xl px-3 py-3"
-            >
+              >
               <h1 className="text-gray-500 text-sm hover:text-yellow-400">{item.brand}</h1>
               <h1 className="line-clamp-1 text-blue-600 text-md font-bold hover:text-yellow-400">
                 {item.title}
@@ -27,6 +28,7 @@ const NewArrivals = () => {
                 <h1 className="line-through text-gray-400 text-md sm:text-lg">{item.oldPrice}</h1>
               </div>
             </div>
+                </Link>
           ))}
         </div>
       </div>

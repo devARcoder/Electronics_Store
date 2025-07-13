@@ -315,30 +315,35 @@ export const sellingData = [
 // new arrivals data
 export const newArrivalsData = [
   {
+    id: "arrival-1",
     brand: "Samsung",
     title: "Galaxy Watch 5 Pro (Black Titanium)",
     image: "/images/smartWatch.webp",
     price: "219.00",
   },
   {
+    id: "arrival-2",
     brand: "Apple",
     title: "AirPods Max (Silver)",
     image: "/images/deal5.webp",
     price: "479.00",
   },
   {
+    id: "arrival-3",
     brand: "OnePlus",
     title: "OnePlus Nord 2T 5G (Gray Shadow)",
     image: "/images/onePlus.webp",
     price: "349.00",
   },
   {
+    id: "arrival-4",
     brand: "Dolce & Gabbana",
     title: "Light Blue Eau Intense Pour Homme",
     image: "/images/deal4.webp",
     price: "86.00",
   },
   {
+    id: "arrival-5",
     brand: "HP",
     title: "HP Spectre x360 14 (2-in-1 Laptop)",
     image: "/images/laptopSell.webp",
@@ -347,6 +352,7 @@ export const newArrivalsData = [
     discount: "14%",
   },
   {
+    id: "arrival-6",
     brand: "Apple",
     title: "iPhone 14 Pro (Deep Purple, 256GB)",
     image: "/images/iphone2.webp",
@@ -355,12 +361,14 @@ export const newArrivalsData = [
     discount: "14%",
   },
   {
+    id: "arrival-7",
     brand: "Apple",
     title: "iPad Air 5th Gen (Green, 64GB)",
     image: "/images/ipadgreen.webp",
     price: "429.00",
   },
   {
+    id: "arrival-8",
     brand: "HP",
     title: "HP LaserJet MFP M236sdw Printer",
     image: "/images/printer.webp",
