@@ -2,7 +2,7 @@ import React from "react";
 import { newArrivalsData } from "../../data/data";
 
 const NewArrivals = () => {
-  const allItems = [...newArrivalsData, ...newArrivalsData]; // For seamless loop
+  const allItems = [...newArrivalsData, ...newArrivalsData];
 
   return (
     <div className="w-full overflow-hidden bg-white py-2">
