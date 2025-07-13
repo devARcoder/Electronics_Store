@@ -54,14 +54,28 @@ const Wishlist = () => {
 
   if (wishlistItems.length === 0) {
     return (
-      <div className="flex flex-col justify-center items-center pt-20 relative">
-        <img src="/images/wishlistEmpty.webp" alt="Empty Wishlist" />
-        <Link className="absolute top-77 sm:top-81" to="/">
-          <Button
-            className="border bg-green-500 text-white px-4 sm:px-5 py-1 rounded-md text-[10px] font-semibold cursor-pointer"
-            name="Start Shopping"
-          />
-        </Link>
+      // <div className="flex flex-col justify-center items-center pt-8 relative">
+      //   <img src="/images/emptywishlist.png" alt="Empty Wishlist" />
+      //   <Link className="absolute top-77 sm:top-81" to="/">
+      //     <Button
+      //       className="border bg-green-500 text-white px-4 sm:px-5 py-1 rounded-md text-[10px] font-semibold cursor-pointer"
+      //       name="Start Shopping"
+      //     />
+      //   </Link>
+      // </div>
+
+      <div className="flex flex-col justify-center items-center">
+        <div className="">
+          <img src="/images/emptywishlist.png" alt="" />
+        </div>
+
+        <div className="side2 flex flex-col items-center space-y-3 font-medium">
+          <h1 className="text-3xl font-bold text-gray-700">Your wishlist is empty</h1>
+          <p className="text-gray-500">Create your first wishlist request</p>
+          <Link to="/">
+          <Button name="Create new wish" className="border  bg-yellow-400 text-white px-8 py-3 rounded-lg cursor-pointer transition duration-300 hover:bg-yellow-500"/>
+          </Link>
+        </div>
       </div>
     );
   }

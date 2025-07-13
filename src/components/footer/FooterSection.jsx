@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ChevronDownIcon, ChevronUpIcon, HeadsetIcon } from "../../assets/svg";
+import { Link } from "react-router-dom";
 
 const FooterSection = () => {
   const [isFindOpen1, setIsFindOpen1] = useState(false);
@@ -65,15 +66,25 @@ const FooterSection = () => {
             </div>
           </div>
           <div
-            className={`text-gray-600 space-y-3 text-sm mt-5 ${
+            className={`text-gray-600 space-y-3 text-sm mt-5  ${
               isFindOpen2 ? "block" : "hidden"
             } md:block`}
           >
-            <h1>About Us</h1>
-            <h1>Contact Us</h1>
-            <h1>All Collections</h1>
-            <h1>Privacy policy</h1>
-            <h1>Terms & Conditions</h1>
+            <h1>
+            <Link to="/about">About Us</Link>
+            </h1>
+            <h1>
+              <Link to="/contact">Contact Us</Link>
+              </h1>
+            <h1>
+              <Link to="/collections">All Collections</Link>
+              </h1>
+            <h1>
+              <Link to="/terms">Privacy Policy</Link>
+              </h1>
+            <h1>
+              <Link to="/terms">Terms & Conditions</Link>
+              </h1>
           </div>
         </div>
 
@@ -93,12 +104,13 @@ const FooterSection = () => {
               isFindOpen3 ? "block" : "hidden"
             } md:block`}
           >
-            <h1>Contact Us</h1>
-            <h1>Whislist</h1>
-            <h1>Shopping Cart</h1>
+            <h1>
+              <Link to="/contact">Contact Us</Link>
+              </h1>
+            <h1><Link to="/wishlist">Wishlist</Link></h1>
+            <h1><Link to="/cart">Shopping Cart</Link></h1>
             <h1>Shipping & Return</h1>
-            <h1>FAQs</h1>
-            <h1>About Us</h1>
+            <h1><Link to="/faqs">FAQs</Link></h1>
           </div>
         </div>
 
