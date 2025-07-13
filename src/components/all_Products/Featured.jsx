@@ -1,6 +1,7 @@
 import React from "react";
 import Heading from "../shared/common/Heading";
 import { featuredProducts } from "../../data/data";
+import { Link } from "react-router-dom";
 const Featured = () => {
   return (
     <>
@@ -10,7 +11,8 @@ const Featured = () => {
         <hr className="text-gray-200" />
         <div className=" mt-8 space-y-10">
           {featuredProducts.map((featured, i) => (
-            <div className="flex space-x-2" key={i}>
+            <Link to={`/product/${featured.id}`} key={`allProducts-${i}`}>
+            <div className="flex space-x-2 space-y-10">
               <div className="img">
                 <img
                   className="w-24 md:w-20 "
@@ -32,6 +34,7 @@ const Featured = () => {
                 </div>
               </div>
             </div>
+                  </Link>
           ))}
         </div>
       </div>

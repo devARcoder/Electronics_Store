@@ -1,6 +1,7 @@
 import React from "react";
 import Heading from "../shared/common/Heading";
 import { onSaleProducts } from "../../data/data";
+import { Link } from "react-router-dom";
 const OnSale = () => {
   return (
     <>
@@ -10,7 +11,8 @@ const OnSale = () => {
         <hr className="text-gray-200" />
         <div className=" mt-8 space-y-10">
           {onSaleProducts.map((sale, i) => (
-            <div className="flex space-x-2" key={i}>
+            <Link to={`/product/${sale.id}`} key={`allProducts-${i}`}>
+              <div className="flex space-x-2 space-y-10" key={i}>
               <div className="img">
                 <img
                   className="w-24 md:w-20"
@@ -32,6 +34,7 @@ const OnSale = () => {
                 </div>
               </div>
             </div>
+              </Link>
           ))}
         </div>
       </div>

@@ -403,18 +403,21 @@ export const companiesBrand = [
 // featured products data
 export const featuredProducts = [
   {
+    id: "allProducts-1",
     image: "/images/ipadgreen.webp",
     title: "iPad Air 5th Gen (Green, 64GB)",
     price: "$429.00",
     oldPrice: "$599.00",
   },
   {
+    id: "allProducts-2",
     image: "/images/printer.webp",
     title: "HP LaserJet MFP M236sdw Printer",
     price: "$199.00",
     oldPrice: "$259.00",
   },
   {
+    id: "allProducts-3",
     image: "/images/ipadLap.webp",
     title: "iPad Pro with Magic Keyboard",
     price: "$1,099.00",
@@ -424,18 +427,21 @@ export const featuredProducts = [
 // on sale products data
 export const onSaleProducts = [
   {
+    id: "allProducts-4",
     image: "/images/deal4.webp",
     title: "Light Blue Eau Intense Pour Homme",
     price: "$86.00",
     oldPrice: "$99.00",
   },
   {
+    id: "allProducts-5",
     image: "/images/iphone.webp",
     title: "iPhone 13 Pro Max (Silver, 128GB)",
     price: "$599.00",
     oldPrice: "$699.00",
   },
   {
+    id: "allProducts-6",
     image: "/images/printer.webp",
     title: "HP LaserJet MFP M236sdw Printer",
     price: "$199.00",
@@ -446,16 +452,19 @@ export const onSaleProducts = [
 // top rated products data
 export const topRatedProducts = [
   {
+    id: "allProducts-7",
     image: "/images/appleTablet.webp",
     title: "iPad 10th Gen (Silver, 256GB)",
     price: "$449.00",
   },
   {
+    id: "allProducts-8",
     image: "/images/deal5.webp",
     title: "AirPods Max (Silver)",
     price: "$479.00",
   },
   {
+    id: "allProducts-9",
     image: "/images/smartWatch.webp",
     title: "Galaxy Watch 5 Pro (Black Titanium)",
     price: "$219.00",

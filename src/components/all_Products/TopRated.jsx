@@ -1,6 +1,7 @@
 import React from "react";
 import Heading from "../shared/common/Heading";
 import { topRatedProducts } from "../../data/data";
+import { Link } from "react-router-dom";
 
 const TopRated = () => {
   return (
@@ -11,7 +12,8 @@ const TopRated = () => {
         <hr className="text-gray-200" />
         <div className=" mt-8 space-y-10">
           {topRatedProducts.map((top, i) => (
-            <div className="flex space-x-2" key={i}>
+            <Link to={`/product/${top.id}`} key={`allProducts-${i}`}>
+              <div className="flex space-x-2 space-y-7">
               <div className="img">
                 <img className="w-24 md:w-20" src={top.image} alt={top.title} />
               </div>
@@ -29,6 +31,7 @@ const TopRated = () => {
                 </div>
               </div>
             </div>
+              </Link>
           ))}
         </div>
       </div>

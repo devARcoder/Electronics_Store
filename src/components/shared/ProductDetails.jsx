@@ -8,6 +8,9 @@ import {
   rightSideData,
   sellingData,
   newArrivalsData,
+  featuredProducts,
+  onSaleProducts,
+  topRatedProducts,
 } from "../../data/data";
 import {
   ChevronRight,
@@ -39,6 +42,9 @@ const ProductDetails = () => {
     ...rightSideData,
     ...sellingData,
     ...newArrivalsData,
+    ...featuredProducts,
+    ...onSaleProducts,
+    ...topRatedProducts,
   ];
 
   const countdownEnd = new Date();
