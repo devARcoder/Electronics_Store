@@ -54,16 +54,6 @@ const Wishlist = () => {
 
   if (wishlistItems.length === 0) {
     return (
-      // <div className="flex flex-col justify-center items-center pt-8 relative">
-      //   <img src="/images/emptywishlist.png" alt="Empty Wishlist" />
-      //   <Link className="absolute top-77 sm:top-81" to="/">
-      //     <Button
-      //       className="border bg-green-500 text-white px-4 sm:px-5 py-1 rounded-md text-[10px] font-semibold cursor-pointer"
-      //       name="Start Shopping"
-      //     />
-      //   </Link>
-      // </div>
-
       <div className="flex flex-col justify-center items-center">
         <div className="">
           <img src="/images/emptywishlist.png" alt="" />
