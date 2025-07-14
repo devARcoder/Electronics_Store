@@ -26,7 +26,7 @@ const socialData = [
 
 const Wishlist = () => {
   const [wishlistItems, setWishlistItems] = useState([]);
-  const { addToCart } = useCart(); // ✅ Use Cart Context
+  const { addToCart } = useCart();
 
   useEffect(() => {
     const data = JSON.parse(localStorage.getItem("wishlist")) || [];
