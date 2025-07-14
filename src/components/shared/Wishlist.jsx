@@ -14,7 +14,7 @@ import Button from '../shared/common/Button'
 import AllProducts from "../all_Products/AllProducts";
 import CompaniesBrand from "../company_brands/CompaniesBrand";
 import NewsLetter from "../news_letter/NewsLetter";
-import { useCart } from "../../context/CartContext"; // ✅ Import Cart Context
+import { useCart } from "../../context/CartContext";
 import toast from "react-hot-toast";
 
 const socialData = [
