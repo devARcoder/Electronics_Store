@@ -59,7 +59,7 @@ const ProductDetails = () => {
       const found = allProducts.find((item) => item.id === id);
       setProduct(found);
       setLoading(false);
-    }, 1000); // simulate 1 second load
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, [id]);
