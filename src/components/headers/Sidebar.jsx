@@ -116,10 +116,8 @@ const Sidebar = ({ isOpen, onClose }) => {
                   {openDropdown === item.Label && (
                     <div className="bg-gray-50 px-4 pb-4 flex flex-col gap-3">
                       {giftCardItems.slice(0, 4).map((card, i) => (
-                        <Link
+                        <p
                           key={i}
-                          to="/giftcards"
-                          onClick={onClose}
                           className="flex items-center gap-3 bg-white rounded-lg p-2 shadow-sm hover:shadow-md transition-all"
                         >
                           <img
@@ -147,7 +145,7 @@ const Sidebar = ({ isOpen, onClose }) => {
                               )}
                             </div>
                           </div>
-                        </Link>
+                        </p>
                       ))}
                     </div>
                   )}
