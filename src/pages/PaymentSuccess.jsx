@@ -10,7 +10,7 @@ const PaymentSuccess = () => {
     if (savedOrder) {
       const parsedOrder = JSON.parse(savedOrder);
       setOrder(parsedOrder);
-      localStorage.setItem("totalBill", parsedOrder.total); // Save total for future reference
+      localStorage.setItem("totalBill", parsedOrder.total);
     }
   }, []);
 
@@ -27,7 +27,7 @@ const PaymentSuccess = () => {
 
   return (
     <>
-    <div className="shadow-2xl rounded-2xl mx-6 my-6 sm:mx-14 sm:my-10 md:mx-32 md:my-8 p-4 bg-gradient-to-t from-yellow-400 to-white">
+    <div className="shadow-2xl rounded-2xl mx-12 my-6 sm:mx-30 sm:my-10 md:mx-90 md:my-8 p-4 bg-gradient-to-t from-gray-100 to-white">
       <div className="img flex flex-col items-center border-b border-white text-center py-4">
         <img className="w-24 h-24 object-cover" src="/images/greenTick.png" alt="" />
         <h1 className="text-2xl font-bold pt-4">Payment Successful!</h1>
@@ -38,7 +38,7 @@ const PaymentSuccess = () => {
         <h1 className="text-center text-xl font-semibold text-gray-600">{order.date}</h1>
 
         <hr className="text-white my-5"/>
-        <div className="space-y-4 font-medium text-gray-800">
+        <div className="space-y-4 font-medium text-gray-800 px-6 sm:px-10 md:px-30">
           <div className="flex justify-between items-center">
             <span className="text-xl font-semibold">Status:</span>
             <span className=""><img className="w-10 h-10 object-cover pr-1" src="/images/greenTick.png" alt="" /></span>
@@ -68,7 +68,7 @@ const PaymentSuccess = () => {
       </div>
     </div>
 
-    <Link to="/" className="flex items-center justify-center mb-8 "><button className="border rounded-md bg-green-600 text-white px-6 py-4">Want Shopping</button></Link>
+    <Link to="/" className="flex items-center justify-center mb-8 "><button className="border rounded-xl bg-green-600 text-white px-6 py-4 transform transition-all duration-500 hover:bg-green-700 animate-bounce">🛍 Want Shopping</button></Link>
     </>
   );
 };
