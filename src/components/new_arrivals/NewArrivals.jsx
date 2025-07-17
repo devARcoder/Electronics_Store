@@ -23,10 +23,14 @@ const NewArrivals = () => {
                 alt={item.title}
                 className="w-full h-auto object-contain my-2 transition-transform duration-300 hover:scale-105"
               />
-              <div className="flex space-x-2">
-                <h1 className="text-gray-700 text-md sm:text-xl">${item.price}</h1>
-                <h1 className="line-through text-gray-400 text-md sm:text-lg">${item.oldPrice}</h1>
-              </div>
+              <div className="flex space-x-2 items-center">
+  <h1 className="text-gray-700 text-md sm:text-xl">${item.price}</h1>
+  {item.oldPrice && (
+    <h1 className="line-through text-gray-400 text-md sm:text-lg">
+      ${item.oldPrice}
+    </h1>
+  )}
+</div>
             </div>
                 </Link>
           ))}
