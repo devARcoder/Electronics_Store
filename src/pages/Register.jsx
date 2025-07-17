@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import Input from '../components/shared/common/Input';
-import Button from '../components/shared/common/Button'
+import Button from '../components/shared/common/Button';
 import toast from 'react-hot-toast';
 
 const Register = () => {
@@ -28,7 +28,7 @@ const Register = () => {
     localStorage.setItem('user', JSON.stringify(newUser));
 
     toast.success('Account created successfully!');
-    setTimeout(() => navigate('/accounts'), 1500); // Go to login page
+    setTimeout(() => navigate('/accounts'), 1500);
   };
 
   return (
@@ -75,6 +75,7 @@ const Register = () => {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                placeholder="example@mail.com"
                 className="py-3 px-3 border border-gray-300 rounded-full focus:outline-none"
               />
             </div>
@@ -85,6 +86,7 @@ const Register = () => {
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+                placeholder="••••••••"
                 className="py-3 px-3 border border-gray-300 rounded-full focus:outline-none"
               />
             </div>

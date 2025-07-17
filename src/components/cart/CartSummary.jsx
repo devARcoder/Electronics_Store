@@ -1,4 +1,3 @@
-// src/components/cart/CartSummary.jsx
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
@@ -17,10 +16,10 @@ const CartSummary = () => {
     return sum + (isNaN(price) ? 0 : price * qty);
   }, 0);
 
-  const shippingCost = 0;
+  // ✅ Shipping logic: free if subtotal >= 2000
+  const shippingCost = subtotal >= 2000 ? 0 : 10;
   const total = subtotal + shippingCost;
 
-  // Save total bill to localStorage on render
   useEffect(() => {
     localStorage.setItem("totalBill", total.toFixed(2));
     setStoredTotal(total.toFixed(2));

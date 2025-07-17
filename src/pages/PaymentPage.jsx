@@ -27,9 +27,9 @@ const PaymentPage = () => {
           return sum + (isNaN(price) ? 0 : price);
         }, 0);
 
-  const taxRate = 0.1;
+  const taxRate = 0.05;
   const tax = subtotal * taxRate;
-  const shipping = subtotal > 100 ? 0 : 10;
+  const shipping = subtotal > 2000 ? 0 : 10; // ✅ updated logic
   const totalPrice = subtotal + tax + shipping;
 
   const handleCardChange = (e) => {
@@ -77,7 +77,6 @@ const PaymentPage = () => {
       return;
     }
 
-    // ✅ Save order & simulate payment
     const order = {
       date: new Date().toLocaleString(),
       items: cartItems,
@@ -88,7 +87,7 @@ const PaymentPage = () => {
     };
 
     localStorage.setItem("lastOrder", JSON.stringify(order));
-    localStorage.setItem("totalBill", order.total); // Save total separately
+    localStorage.setItem("totalBill", order.total);
 
     setIsProcessing(true);
     setTimeout(() => {
@@ -152,7 +151,6 @@ const PaymentPage = () => {
             />
           </div>
 
-          {/* ✅ Cart Item Details */}
           {cartItems.length > 0 && (
             <div className="border-t border-gray-300 pt-4 space-y-2 text-gray-700 font-medium">
               <h2 className="text-lg font-semibold mb-2">Cart Items</h2>
@@ -166,20 +164,27 @@ const PaymentPage = () => {
             </div>
           )}
 
-          {/* ✅ Billing Breakdown */}
           <div className="space-y-2 border-t pt-4 text-gray-700 font-medium">
             <div className="flex justify-between">
               <span>Subtotal:</span>
               <span>${subtotal.toFixed(2)}</span>
             </div>
             <div className="flex justify-between">
-              <span>Tax (10%):</span>
+              <span>Tax (05%):</span>
               <span>${tax.toFixed(2)}</span>
             </div>
             <div className="flex justify-between">
               <span>Shipping:</span>
               <span>{shipping === 0 ? "Free" : `$${shipping.toFixed(2)}`}</span>
             </div>
+
+            {/* ✅ Show shipping note if subtotal < 2000 */}
+            {subtotal < 2000 && (
+              <p className="text-sm text-gray-500 text-right">
+                Free shipping on orders above $2000
+              </p>
+            )}
+
             <hr className="my-2" />
             <div className="flex justify-between text-xl font-bold">
               <span>Total:</span>

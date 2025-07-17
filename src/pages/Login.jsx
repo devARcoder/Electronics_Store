@@ -65,9 +65,10 @@ const Login = () => {
             <div className="flex flex-col space-y-2 mt-3">
               <label className="font-bold text-gray-600 text-[15px]">Password*</label>
               <Input
+                type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                type="password"
+                placeholder="••••••••"
                 className="py-3 px-3 border border-gray-300 rounded-full focus:outline-none"
               />
             </div>

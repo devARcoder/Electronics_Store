@@ -1,12 +1,21 @@
-import React from 'react'
+import React from 'react';
 
-const Input = ({type, placeholder, className, value, onChange,}) => {
+const Input = ({
+  type = "text",
+  placeholder,
+  className = "",
+  value,
+  onChange,
+}) => {
   return (
-    <>
-      <input value={value}
-      onChange={onChange} type={`"text" ${type}`} placeholder={placeholder} className={className} />
-    </>
-  )
-}
+    <input
+      type={type}
+      value={value}
+      onChange={onChange}
+      placeholder={placeholder}
+      className={className}
+    />
+  );
+};
 
-export default Input
+export default Input;
