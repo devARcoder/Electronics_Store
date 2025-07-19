@@ -40,7 +40,7 @@ const Register = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 px-4 md:px-24">
-        {/* Register Form */}
+        
         <div className="side1 md:pr-20 md:border-r md:border-gray-300">
           <form className="form space-y-3" onSubmit={handleRegister}>
             <div>
