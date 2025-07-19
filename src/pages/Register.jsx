@@ -106,7 +106,7 @@ const Register = () => {
           </form>
         </div>
 
-        {/* Login Redirect */}
+        
         <div className="side2 border-t border-gray-400 md:border-none md:pl-20">
           <div>
             <h1 className="border-b-2 border-yellow-400 text-2xl text-gray-700 font-semibold w-32 pb-3">Login</h1>
