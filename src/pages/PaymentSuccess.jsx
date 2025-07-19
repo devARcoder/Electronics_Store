@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 const PaymentSuccess = () => {
   const [order, setOrder] = useState(null);
-  // const invoiceRef = useRef();
 
   useEffect(() => {
     const savedOrder = localStorage.getItem("lastOrder");
