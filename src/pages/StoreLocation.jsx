@@ -31,7 +31,7 @@ const StoreLocation = () => {
   return (
     <>
     <div className='px-4 py-4 md:px-24'>
-      {/* Breadcrumb */}
+      
       <div className='flex items-center text-gray-500 py-6 space-x-1'>
         <Link className='text-[15px] hover:text-yellow-400' to="/">Home</Link>
         <ChevronRight size={18} color='gray' />
